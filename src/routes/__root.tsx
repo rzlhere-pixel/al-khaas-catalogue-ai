@@ -89,6 +89,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Al Khaas — Premium Confectionery Catalogue" },
+      { name: "description", content: "Al Khaas Showcase is a modern, AI-powered digital product catalogue for Al Khaas General Trading." },
+      { property: "og:description", content: "Al Khaas Showcase is a modern, AI-powered digital product catalogue for Al Khaas General Trading." },
+      { name: "twitter:description", content: "Al Khaas Showcase is a modern, AI-powered digital product catalogue for Al Khaas General Trading." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/aa2fb1aa-75af-4c2d-a0d5-b41dcfc00786/id-preview-77ec1e1d--9b9a05d6-da3b-4099-89b5-6a20202fd8c2.lovable.app-1782215930897.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/aa2fb1aa-75af-4c2d-a0d5-b41dcfc00786/id-preview-77ec1e1d--9b9a05d6-da3b-4099-89b5-6a20202fd8c2.lovable.app-1782215930897.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
