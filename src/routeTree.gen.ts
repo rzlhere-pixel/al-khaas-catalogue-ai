@@ -13,6 +13,7 @@ import { Route as SearchRouteImport } from './routes/search'
 import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as BrandsRouteImport } from './routes/brands'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProductIdRouteImport } from './routes/product.$id'
 import { Route as CategoryCatRouteImport } from './routes/category.$cat'
 import { Route as BrandBrandRouteImport } from './routes/brand.$brand'
 
@@ -36,6 +37,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProductIdRoute = ProductIdRouteImport.update({
+  id: '/product/$id',
+  path: '/product/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CategoryCatRoute = CategoryCatRouteImport.update({
   id: '/category/$cat',
   path: '/category/$cat',
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/search': typeof SearchRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
+  '/product/$id': typeof ProductIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/search': typeof SearchRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
+  '/product/$id': typeof ProductIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,6 +79,7 @@ export interface FileRoutesById {
   '/search': typeof SearchRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
+  '/product/$id': typeof ProductIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,6 +90,7 @@ export interface FileRouteTypes {
     | '/search'
     | '/brand/$brand'
     | '/category/$cat'
+    | '/product/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -89,6 +99,7 @@ export interface FileRouteTypes {
     | '/search'
     | '/brand/$brand'
     | '/category/$cat'
+    | '/product/$id'
   id:
     | '__root__'
     | '/'
@@ -97,6 +108,7 @@ export interface FileRouteTypes {
     | '/search'
     | '/brand/$brand'
     | '/category/$cat'
+    | '/product/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -106,6 +118,7 @@ export interface RootRouteChildren {
   SearchRoute: typeof SearchRoute
   BrandBrandRoute: typeof BrandBrandRoute
   CategoryCatRoute: typeof CategoryCatRoute
+  ProductIdRoute: typeof ProductIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -138,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/product/$id': {
+      id: '/product/$id'
+      path: '/product/$id'
+      fullPath: '/product/$id'
+      preLoaderRoute: typeof ProductIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/category/$cat': {
       id: '/category/$cat'
       path: '/category/$cat'
@@ -162,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   SearchRoute: SearchRoute,
   BrandBrandRoute: BrandBrandRoute,
   CategoryCatRoute: CategoryCatRoute,
+  ProductIdRoute: ProductIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
