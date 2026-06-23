@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VisitRouteImport } from './routes/visit'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as EnquiryRouteImport } from './routes/enquiry'
 import { Route as CategoriesRouteImport } from './routes/categories'
@@ -18,6 +19,11 @@ import { Route as ProductIdRouteImport } from './routes/product.$id'
 import { Route as CategoryCatRouteImport } from './routes/category.$cat'
 import { Route as BrandBrandRouteImport } from './routes/brand.$brand'
 
+const VisitRoute = VisitRouteImport.update({
+  id: '/visit',
+  path: '/visit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SearchRoute = SearchRouteImport.update({
   id: '/search',
   path: '/search',
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/categories': typeof CategoriesRoute
   '/enquiry': typeof EnquiryRoute
   '/search': typeof SearchRoute
+  '/visit': typeof VisitRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
   '/product/$id': typeof ProductIdRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/categories': typeof CategoriesRoute
   '/enquiry': typeof EnquiryRoute
   '/search': typeof SearchRoute
+  '/visit': typeof VisitRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
   '/product/$id': typeof ProductIdRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/categories': typeof CategoriesRoute
   '/enquiry': typeof EnquiryRoute
   '/search': typeof SearchRoute
+  '/visit': typeof VisitRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
   '/product/$id': typeof ProductIdRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/categories'
     | '/enquiry'
     | '/search'
+    | '/visit'
     | '/brand/$brand'
     | '/category/$cat'
     | '/product/$id'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/categories'
     | '/enquiry'
     | '/search'
+    | '/visit'
     | '/brand/$brand'
     | '/category/$cat'
     | '/product/$id'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/categories'
     | '/enquiry'
     | '/search'
+    | '/visit'
     | '/brand/$brand'
     | '/category/$cat'
     | '/product/$id'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   CategoriesRoute: typeof CategoriesRoute
   EnquiryRoute: typeof EnquiryRoute
   SearchRoute: typeof SearchRoute
+  VisitRoute: typeof VisitRoute
   BrandBrandRoute: typeof BrandBrandRoute
   CategoryCatRoute: typeof CategoryCatRoute
   ProductIdRoute: typeof ProductIdRoute
@@ -136,6 +149,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/visit': {
+      id: '/visit'
+      path: '/visit'
+      fullPath: '/visit'
+      preLoaderRoute: typeof VisitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/search': {
       id: '/search'
       path: '/search'
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   CategoriesRoute: CategoriesRoute,
   EnquiryRoute: EnquiryRoute,
   SearchRoute: SearchRoute,
+  VisitRoute: VisitRoute,
   BrandBrandRoute: BrandBrandRoute,
   CategoryCatRoute: CategoryCatRoute,
   ProductIdRoute: ProductIdRoute,
