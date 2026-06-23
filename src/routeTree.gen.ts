@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VisitRouteImport } from './routes/visit'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as EnquiryRouteImport } from './routes/enquiry'
 import { Route as CategoriesRouteImport } from './routes/categories'
@@ -22,6 +23,11 @@ import { Route as BrandBrandRouteImport } from './routes/brand.$brand'
 const VisitRoute = VisitRouteImport.update({
   id: '/visit',
   path: '/visit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SearchRoute = SearchRouteImport.update({
@@ -71,6 +77,7 @@ export interface FileRoutesByFullPath {
   '/categories': typeof CategoriesRoute
   '/enquiry': typeof EnquiryRoute
   '/search': typeof SearchRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
@@ -82,6 +89,7 @@ export interface FileRoutesByTo {
   '/categories': typeof CategoriesRoute
   '/enquiry': typeof EnquiryRoute
   '/search': typeof SearchRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
@@ -94,6 +102,7 @@ export interface FileRoutesById {
   '/categories': typeof CategoriesRoute
   '/enquiry': typeof EnquiryRoute
   '/search': typeof SearchRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
@@ -107,6 +116,7 @@ export interface FileRouteTypes {
     | '/categories'
     | '/enquiry'
     | '/search'
+    | '/sitemap.xml'
     | '/visit'
     | '/brand/$brand'
     | '/category/$cat'
@@ -118,6 +128,7 @@ export interface FileRouteTypes {
     | '/categories'
     | '/enquiry'
     | '/search'
+    | '/sitemap.xml'
     | '/visit'
     | '/brand/$brand'
     | '/category/$cat'
@@ -129,6 +140,7 @@ export interface FileRouteTypes {
     | '/categories'
     | '/enquiry'
     | '/search'
+    | '/sitemap.xml'
     | '/visit'
     | '/brand/$brand'
     | '/category/$cat'
@@ -141,6 +153,7 @@ export interface RootRouteChildren {
   CategoriesRoute: typeof CategoriesRoute
   EnquiryRoute: typeof EnquiryRoute
   SearchRoute: typeof SearchRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   VisitRoute: typeof VisitRoute
   BrandBrandRoute: typeof BrandBrandRoute
   CategoryCatRoute: typeof CategoryCatRoute
@@ -154,6 +167,13 @@ declare module '@tanstack/react-router' {
       path: '/visit'
       fullPath: '/visit'
       preLoaderRoute: typeof VisitRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/search': {
@@ -221,6 +241,7 @@ const rootRouteChildren: RootRouteChildren = {
   CategoriesRoute: CategoriesRoute,
   EnquiryRoute: EnquiryRoute,
   SearchRoute: SearchRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   VisitRoute: VisitRoute,
   BrandBrandRoute: BrandBrandRoute,
   CategoryCatRoute: CategoryCatRoute,
