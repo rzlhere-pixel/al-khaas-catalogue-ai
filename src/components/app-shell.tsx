@@ -35,13 +35,16 @@ function Header() {
           {menu ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-cocoa text-cream font-display text-base shadow-soft">
-            AK
-          </span>
+          <img
+            src={alkhaasLogo.url}
+            alt="Al Khaas General Trading"
+            className="h-10 w-10 shrink-0 object-contain"
+          />
           <div className="hidden sm:block leading-none">
-            <div className="font-display text-base text-foreground">Al Khaas</div>
+            <div className="font-display text-base font-bold text-foreground tracking-tight">Al Khaas</div>
             <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">General Trading</div>
           </div>
+
         </Link>
 
         <nav className="ml-3 hidden items-center gap-1 md:flex">
