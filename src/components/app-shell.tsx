@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { useEnquiryCount, useHydrated } from "@/lib/enquiry-store";
 import { ALL_CATEGORIES, searchProducts } from "@/lib/catalog";
 import { ProductImage } from "@/components/product-image";
+import alkhaasLogo from "@/assets/alkhaas-logo.png.asset.json";
+
 
 function Header() {
   const navigate = useNavigate();
