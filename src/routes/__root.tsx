@@ -10,7 +10,9 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import alkhaasLogo from "@/assets/alkhaas-logo.png.asset.json";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+
 
 function NotFoundComponent() {
   return (
@@ -75,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
-      { name: "theme-color", content: "#1a1410" },
+      { name: "theme-color", content: "#fe7e34" },
       { title: "Al Khaas — Premium Confectionery Catalogue" },
       {
         name: "description",
@@ -90,21 +92,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Al Khaas — Premium Confectionery Catalogue" },
-      { name: "description", content: "Al Khaas Showcase is a modern, AI-powered digital product catalogue for Al Khaas General Trading." },
-      { property: "og:description", content: "Al Khaas Showcase is a modern, AI-powered digital product catalogue for Al Khaas General Trading." },
-      { name: "twitter:description", content: "Al Khaas Showcase is a modern, AI-powered digital product catalogue for Al Khaas General Trading." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/aa2fb1aa-75af-4c2d-a0d5-b41dcfc00786/id-preview-77ec1e1d--9b9a05d6-da3b-4099-89b5-6a20202fd8c2.lovable.app-1782215930897.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/aa2fb1aa-75af-4c2d-a0d5-b41dcfc00786/id-preview-77ec1e1d--9b9a05d6-da3b-4099-89b5-6a20202fd8c2.lovable.app-1782215930897.png" },
+      { name: "twitter:description", content: "Official digital catalogue from Al Khaas General Trading, Dubai." },
+      { property: "og:image", content: alkhaasLogo.url },
+      { name: "twitter:image", content: alkhaasLogo.url },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/png", href: alkhaasLogo.url },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap",
       },
     ],
+
   }),
   shellComponent: RootShell,
   component: RootComponent,

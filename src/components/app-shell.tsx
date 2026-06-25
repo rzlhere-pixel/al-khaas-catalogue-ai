@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { useEnquiryCount, useHydrated } from "@/lib/enquiry-store";
 import { ALL_CATEGORIES, searchProducts } from "@/lib/catalog";
 import { ProductImage } from "@/components/product-image";
+import alkhaasLogo from "@/assets/alkhaas-logo.png.asset.json";
+
 
 function Header() {
   const navigate = useNavigate();
@@ -33,13 +35,16 @@ function Header() {
           {menu ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-cocoa text-cream font-display text-base shadow-soft">
-            AK
-          </span>
+          <img
+            src={alkhaasLogo.url}
+            alt="Al Khaas General Trading"
+            className="h-10 w-10 shrink-0 object-contain"
+          />
           <div className="hidden sm:block leading-none">
-            <div className="font-display text-base text-foreground">Al Khaas</div>
+            <div className="font-display text-base font-bold text-foreground tracking-tight">Al Khaas</div>
             <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">General Trading</div>
           </div>
+
         </Link>
 
         <nav className="ml-3 hidden items-center gap-1 md:flex">
@@ -150,13 +155,14 @@ function Footer() {
       <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream text-cocoa font-display">
-              AK
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-cream p-1.5 shadow-soft">
+              <img src={alkhaasLogo.url} alt="Al Khaas" className="h-full w-full object-contain" />
             </span>
             <div>
-              <div className="font-display text-lg">Al Khaas</div>
+              <div className="font-display text-lg font-bold">Al Khaas</div>
               <div className="text-[10px] uppercase tracking-[0.22em] opacity-70">General Trading LLC</div>
             </div>
+
           </div>
           <p className="mt-4 max-w-xs text-sm opacity-80">
             Premium confectionery & FMCG distribution across the UAE since over a decade.
