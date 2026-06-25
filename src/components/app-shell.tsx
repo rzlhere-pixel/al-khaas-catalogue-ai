@@ -155,13 +155,14 @@ function Footer() {
       <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream text-cocoa font-display">
-              AK
+            <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-cream p-1.5 shadow-soft">
+              <img src={alkhaasLogo.url} alt="Al Khaas" className="h-full w-full object-contain" />
             </span>
             <div>
-              <div className="font-display text-lg">Al Khaas</div>
+              <div className="font-display text-lg font-bold">Al Khaas</div>
               <div className="text-[10px] uppercase tracking-[0.22em] opacity-70">General Trading LLC</div>
             </div>
+
           </div>
           <p className="mt-4 max-w-xs text-sm opacity-80">
             Premium confectionery & FMCG distribution across the UAE since over a decade.
