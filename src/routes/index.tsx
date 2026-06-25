@@ -166,7 +166,7 @@ function Home() {
                   params={{ id: p.id }}
                   className="card-hover block rounded-2xl bg-cream/5 backdrop-blur-sm overflow-hidden border border-cream/10"
                 >
-                  <ProductImage name={p.name} brand={p.brand} className="aspect-square w-full" rounded="rounded-none" />
+                  <ProductImage productId={p.id} name={p.name} brand={p.brand} className="aspect-square w-full" rounded="rounded-none" />
                   <div className="p-3">
                     <div className="text-[10px] uppercase tracking-[0.18em] text-gold">{p.brand}</div>
                     <div className="mt-1 line-clamp-2 text-sm">{p.name}</div>

@@ -84,7 +84,7 @@ function Header() {
                   params={{ id: r.id }}
                   className="flex items-center gap-3 rounded-xl p-2 hover:bg-secondary"
                 >
-                  <ProductImage name={r.name} brand={r.brand} className="h-12 w-12 shrink-0" rounded="rounded-lg" />
+                  <ProductImage productId={r.id} name={r.name} brand={r.brand} className="h-12 w-12 shrink-0" rounded="rounded-lg" />
                   <div className="min-w-0">
                     <div className="truncate text-[11px] uppercase tracking-wider text-muted-foreground">{r.brand}</div>
                     <div className="truncate text-sm text-foreground">{r.name}</div>
