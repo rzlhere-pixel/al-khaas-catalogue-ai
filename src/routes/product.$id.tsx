@@ -1,7 +1,9 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { AppShell } from "@/components/app-shell";
 import { ProductCard } from "@/components/product-card";
-import { ProductImage } from "@/components/product-image";
+import { ProductImage, useProductImage } from "@/components/product-image";
 import { ContactPicker } from "@/components/contact-picker";
 import {
   alternatives,
@@ -11,7 +13,8 @@ import {
 } from "@/lib/catalog";
 import { useEnquiry, useHydrated } from "@/lib/enquiry-store";
 import { buildEnquiryMessage } from "@/lib/contacts";
-import { ChevronLeft, Minus, Plus, ShoppingBag, Check, Sparkles } from "lucide-react";
+import { lookupProductImage } from "@/lib/product-images.functions";
+import { ChevronLeft, Minus, Plus, ShoppingBag, Check, Sparkles, Wand2, Loader2 } from "lucide-react";
 import { useState } from "react";
 import type { Product } from "@/data/products";
 
