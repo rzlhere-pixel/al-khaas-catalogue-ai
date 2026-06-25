@@ -59,7 +59,8 @@ function ProductPage() {
       <section className="mx-auto max-w-7xl px-6 py-8 sm:py-12">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <ProductImage name={product.name} brand={product.brand} className="aspect-square w-full" rounded="rounded-3xl" />
+            <ProductImage productId={product.id} name={product.name} brand={product.brand} className="aspect-square w-full" rounded="rounded-3xl" />
+            <AiImageLookup product={product} />
           </div>
           <div>
             <Link to="/brand/$brand" params={{ brand: product.brand }} className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground hover:text-foreground">
