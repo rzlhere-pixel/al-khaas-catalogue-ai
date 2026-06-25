@@ -189,7 +189,7 @@ function AlternativeColumn({ title, items }: { title: string; items: Product[] }
               params={{ id: p.id }}
               className="flex items-center gap-3 rounded-2xl bg-card p-3 shadow-soft hover:bg-secondary"
             >
-              <ProductImage name={p.name} brand={p.brand} className="h-14 w-14 shrink-0" rounded="rounded-xl" />
+              <ProductImage productId={p.id} name={p.name} brand={p.brand} className="h-14 w-14 shrink-0" rounded="rounded-xl" />
               <div className="min-w-0 flex-1">
                 <div className="truncate text-[11px] uppercase tracking-wider text-muted-foreground">{p.brand}</div>
                 <div className="line-clamp-1 text-sm text-foreground">{p.name}</div>

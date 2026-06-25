@@ -11,7 +11,7 @@ export function ProductCard({ p }: { p: Product }) {
       params={{ id: p.id }}
       className="card-hover group block rounded-2xl bg-card shadow-soft overflow-hidden border border-border/60"
     >
-      <ProductImage name={p.name} brand={p.brand} className="aspect-square w-full" rounded="rounded-none" />
+      <ProductImage productId={p.id} name={p.name} brand={p.brand} className="aspect-square w-full" rounded="rounded-none" />
       <div className="p-3 sm:p-4">
         <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">{p.brand}</div>
         <h3 className="mt-1 line-clamp-2 text-sm font-medium leading-snug text-foreground sm:text-[15px]">
