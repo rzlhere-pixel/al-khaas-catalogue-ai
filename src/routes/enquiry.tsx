@@ -62,7 +62,7 @@ function EnquiryPage() {
               {items.map(({ line, p }) => (
                 <div key={p.id} className="flex items-center gap-3 rounded-2xl border border-border bg-card p-3 shadow-soft sm:gap-4 sm:p-4">
                   <Link to="/product/$id" params={{ id: p.id }}>
-                    <ProductImage name={p.name} brand={p.brand} className="h-16 w-16 sm:h-20 sm:w-20 shrink-0" rounded="rounded-xl" />
+                    <ProductImage productId={p.id} name={p.name} brand={p.brand} className="h-16 w-16 sm:h-20 sm:w-20 shrink-0" rounded="rounded-xl" />
                   </Link>
                   <div className="min-w-0 flex-1">
                     <Link to="/product/$id" params={{ id: p.id }}>

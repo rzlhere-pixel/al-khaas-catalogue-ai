@@ -1,7 +1,9 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { AppShell } from "@/components/app-shell";
 import { ProductCard } from "@/components/product-card";
-import { ProductImage } from "@/components/product-image";
+import { ProductImage, useProductImage } from "@/components/product-image";
 import { ContactPicker } from "@/components/contact-picker";
 import {
   alternatives,
@@ -11,7 +13,8 @@ import {
 } from "@/lib/catalog";
 import { useEnquiry, useHydrated } from "@/lib/enquiry-store";
 import { buildEnquiryMessage } from "@/lib/contacts";
-import { ChevronLeft, Minus, Plus, ShoppingBag, Check, Sparkles } from "lucide-react";
+import { lookupProductImage } from "@/lib/product-images.functions";
+import { ChevronLeft, Minus, Plus, ShoppingBag, Check, Sparkles, Wand2, Loader2 } from "lucide-react";
 import { useState } from "react";
 import type { Product } from "@/data/products";
 
@@ -59,7 +62,8 @@ function ProductPage() {
       <section className="mx-auto max-w-7xl px-6 py-8 sm:py-12">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <ProductImage name={product.name} brand={product.brand} className="aspect-square w-full" rounded="rounded-3xl" />
+            <ProductImage productId={product.id} name={product.name} brand={product.brand} className="aspect-square w-full" rounded="rounded-3xl" />
+            <AiImageLookup product={product} />
           </div>
           <div>
             <Link to="/brand/$brand" params={{ brand: product.brand }} className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground hover:text-foreground">
@@ -189,7 +193,7 @@ function AlternativeColumn({ title, items }: { title: string; items: Product[] }
               params={{ id: p.id }}
               className="flex items-center gap-3 rounded-2xl bg-card p-3 shadow-soft hover:bg-secondary"
             >
-              <ProductImage name={p.name} brand={p.brand} className="h-14 w-14 shrink-0" rounded="rounded-xl" />
+              <ProductImage productId={p.id} name={p.name} brand={p.brand} className="h-14 w-14 shrink-0" rounded="rounded-xl" />
               <div className="min-w-0 flex-1">
                 <div className="truncate text-[11px] uppercase tracking-wider text-muted-foreground">{p.brand}</div>
                 <div className="line-clamp-1 text-sm text-foreground">{p.name}</div>

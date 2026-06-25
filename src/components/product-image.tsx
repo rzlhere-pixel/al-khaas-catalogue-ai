@@ -1,14 +1,73 @@
+import { useQuery } from "@tanstack/react-query";
 import { brandPalette } from "@/lib/catalog";
+import { supabase } from "@/integrations/supabase/client";
+import { useState } from "react";
 
 interface Props {
   name: string;
   brand: string;
+  productId?: string;
   className?: string;
   rounded?: string;
+  /** Minimum confidence (0-1) required to show the real image. Default 0.7. */
+  threshold?: number;
 }
 
-// Renders a polished branded "product tile" SVG when a real image is absent.
-export function ProductImage({ name, brand, className = "aspect-square w-full", rounded = "rounded-2xl" }: Props) {
+type Row = {
+  image_url: string | null;
+  confidence: number;
+  status: string;
+};
+
+export function useProductImage(productId?: string) {
+  return useQuery({
+    enabled: !!productId,
+    queryKey: ["product-image", productId],
+    queryFn: async (): Promise<Row | null> => {
+      const { data, error } = await supabase
+        .from("product_images")
+        .select("image_url, confidence, status")
+        .eq("product_id", productId!)
+        .maybeSingle();
+      if (error) throw error;
+      return data;
+    },
+    staleTime: 5 * 60 * 1000,
+  });
+}
+
+// Renders a polished branded "product tile" SVG when a real image is absent
+// or the AI lookup confidence is below the threshold.
+export function ProductImage({
+  name,
+  brand,
+  productId,
+  className = "aspect-square w-full",
+  rounded = "rounded-2xl",
+  threshold = 0.7,
+}: Props) {
+  const { data } = useProductImage(productId);
+  const [imgFailed, setImgFailed] = useState(false);
+  const showReal =
+    !!data?.image_url && data.confidence >= threshold && data.status === "found" && !imgFailed;
+
+  return (
+    <div className={`${className} ${rounded} relative overflow-hidden`}>
+      <Placeholder name={name} brand={brand} />
+      {showReal && (
+        <img
+          src={data!.image_url!}
+          alt={name}
+          loading="lazy"
+          onError={() => setImgFailed(true)}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      )}
+    </div>
+  );
+}
+
+function Placeholder({ name, brand }: { name: string; brand: string }) {
   const p = brandPalette(brand);
   const initials = brand
     .split(" ")
@@ -16,9 +75,9 @@ export function ProductImage({ name, brand, className = "aspect-square w-full", 
     .join("")
     .slice(0, 3)
     .toUpperCase();
-  const variant = name.length % 3; // small visual variety per product
+  const variant = name.length % 3;
   return (
-    <div className={`${className} ${rounded} relative overflow-hidden`}>
+    <>
       <svg
         viewBox="0 0 400 400"
         className="absolute inset-0 h-full w-full"
@@ -37,7 +96,6 @@ export function ProductImage({ name, brand, className = "aspect-square w-full", 
         </defs>
         <rect width="400" height="400" fill={`url(#g-${brand}-${variant})`} />
         <rect width="400" height="400" fill={`url(#r-${brand}-${variant})`} />
-        {/* subtle confectionery shapes */}
         {variant === 0 && (
           <>
             <circle cx="300" cy="320" r="70" fill="rgba(255,255,255,0.06)" />
@@ -71,6 +129,6 @@ export function ProductImage({ name, brand, className = "aspect-square w-full", 
           {initials}
         </div>
       </div>
-    </div>
+    </>
   );
 }
