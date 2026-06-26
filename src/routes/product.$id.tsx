@@ -62,15 +62,16 @@ function ProductPage() {
       <section className="mx-auto max-w-7xl px-6 py-8 sm:py-12">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <ProductImage productId={product.id} name={product.name} brand={product.brand} className="aspect-square w-full" rounded="rounded-3xl" />
+            <ProductImage productId={product.id} name={product.displayName} brand={product.brand} className="aspect-square w-full" rounded="rounded-3xl" />
             <AiImageLookup product={product} />
           </div>
           <div>
             <Link to="/brand/$brand" params={{ brand: product.brand }} className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground hover:text-foreground">
               {product.brand}
             </Link>
-            <h1 className="mt-2 font-display text-3xl text-foreground sm:text-4xl">{product.name}</h1>
-            <div className="mt-2 flex flex-wrap gap-2 text-xs">
+            <h1 className="mt-2 font-display text-3xl text-foreground sm:text-4xl">{product.displayName}</h1>
+            {product.subtitle && <div className="mt-1 text-sm text-muted-foreground">{product.subtitle}</div>}
+            <div className="mt-3 flex flex-wrap gap-2 text-xs">
               {product.itemCode && <span className="brand-chip">Code · {product.itemCode}</span>}
               {product.barcode && <span className="brand-chip">Barcode · {product.barcode}</span>}
               <Link to="/category/$cat" params={{ cat: product.category }} className="brand-chip hover:bg-accent">
