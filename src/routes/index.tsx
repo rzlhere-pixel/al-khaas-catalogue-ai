@@ -73,8 +73,8 @@ function Home() {
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-cream/85 sm:text-lg">
               Browse 280+ premium confectionery and FMCG products from Ferrero, Kinder, Cadbury,
-              Mars, Nestlé, Lindt and more. Send your enquiry to our nearest sales team on
-              WhatsApp in seconds.
+              Mars, Nestlé, Lindt and more — distributed across the UAE through wholesale, retail,
+              and B2B e-commerce. Send your enquiry to our nearest sales team on WhatsApp in seconds.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link

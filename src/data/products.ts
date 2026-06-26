@@ -11,23 +11,10 @@ export interface Product {
   brand: string;
   category: string;
   packaging: string;
+  is_promo?: boolean;
 }
 
-export const PRODUCTS: Product[] = [
-  {
-    "id": "NA0",
-    "itemCode": "",
-    "name": "UROVO K419 BLUETOOTH PRINTER",
-    "barcode": "",
-    "casePrice": 220.95,
-    "outerPrice": 27.62,
-    "piecePrice": null,
-    "brand": "Other",
-    "category": "Accessories",
-    "packaging": "",
-    "displayName": "Urovo K419 Bluetooth Printer",
-    "subtitle": ""
-  },
+export const PRODUCTS: Product[] = [,
   {
     "id": "AKG4000",
     "itemCode": "AKG4000",
@@ -37,7 +24,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 38.75,
     "brand": "Ferrero Rocher",
-    "category": "Other",
+    "category": "Chocolates",
     "packaging": "24X4 · 269.4 GR",
     "displayName": "Ferrero Collection Tray",
     "subtitle": "24×4 · 269g"
@@ -149,7 +136,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 17.5,
     "brand": "Kinder",
-    "category": "Other",
+    "category": "Chocolates",
     "packaging": "2X10",
     "displayName": "Kinder Cards Tray",
     "subtitle": "2×10"
@@ -163,7 +150,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 56.25,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Other",
+    "category": "Chocolates",
     "packaging": "30X4 · 25.6 GR",
     "displayName": "Kinder Cards Tray",
     "subtitle": "30×4 · 26g"
@@ -177,7 +164,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 8.85,
     "brand": "Kinder",
-    "category": "Other",
+    "category": "Chocolates",
     "packaging": "2X5 · 128GR",
     "displayName": "Kinder Cards Tray",
     "subtitle": "2×5 · 128g"
@@ -597,7 +584,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 15.12,
     "brand": "Nutella",
-    "category": "Other",
+    "category": "Chocolates",
     "packaging": "10X16 · 220 GR",
     "displayName": "Nutella B-Ready",
     "subtitle": "10×16 · 220g"
@@ -611,7 +598,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 9.38,
     "brand": "Nutella",
-    "category": "Other",
+    "category": "Chocolates",
     "packaging": "6X16 · 132 GR",
     "displayName": "Nutella B-Ready",
     "subtitle": "6×16 · 132g"
@@ -625,7 +612,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 4.54,
     "brand": "Nutella",
-    "category": "Other",
+    "category": "Chocolates",
     "packaging": "1X24 · 52 GR",
     "displayName": "Nutella Nut & Go",
     "subtitle": "1×24 · 52g"
@@ -824,7 +811,8 @@ export const PRODUCTS: Product[] = [
     "category": "Chocolates",
     "packaging": "400 GRM",
     "displayName": "Nutella Offer",
-    "subtitle": "15 · 400g"
+    "subtitle": "15 · 400g",
+    "is_promo": true
   },
   {
     "id": "AKG4057",
@@ -922,7 +910,8 @@ export const PRODUCTS: Product[] = [
     "category": "Chocolates",
     "packaging": "18X6",
     "displayName": "Ferrero Rocher Lantern Ramadan",
-    "subtitle": "18×6"
+    "subtitle": "18×6",
+    "is_promo": true
   },
   {
     "id": "AKG4064",
@@ -1426,7 +1415,8 @@ export const PRODUCTS: Product[] = [
     "category": "Chocolates",
     "packaging": "1X8 · 22.G",
     "displayName": "Galaxy Flutes Offer",
-    "subtitle": "8×36 · 23g"
+    "subtitle": "8×36 · 23g",
+    "is_promo": true
   },
   {
     "id": "AKG4210",
@@ -1440,7 +1430,8 @@ export const PRODUCTS: Product[] = [
     "category": "Chocolates",
     "packaging": "1X8X42",
     "displayName": "Galaxy Flutes Offer",
-    "subtitle": "8×42"
+    "subtitle": "8×42",
+    "is_promo": true
   },
   {
     "id": "AKG4211",
@@ -1664,7 +1655,8 @@ export const PRODUCTS: Product[] = [
     "category": "Chocolates",
     "packaging": "6X28 · 37 GR",
     "displayName": "Maltesers Offer Tray",
-    "subtitle": "6×28 · 37g"
+    "subtitle": "6×28 · 37g",
+    "is_promo": true
   },
   {
     "id": "AKG4227",
@@ -1678,7 +1670,8 @@ export const PRODUCTS: Product[] = [
     "category": "Chocolates",
     "packaging": "225GRM",
     "displayName": "Mars 5 Pack Offer",
-    "subtitle": "Pack of 15 · 225g"
+    "subtitle": "Pack of 15 · 225g",
+    "is_promo": true
   },
   {
     "id": "AKG4228",
@@ -2227,20 +2220,6 @@ export const PRODUCTS: Product[] = [
     "subtitle": "6×24×30 · 30g"
   },
   {
-    "id": "AKG4268",
-    "itemCode": "AKG4268",
-    "name": "NEW PRODUCT",
-    "barcode": "NEWPRODQTY10",
-    "casePrice": 500.0,
-    "outerPrice": null,
-    "piecePrice": 1.0,
-    "brand": "Other",
-    "category": "Other",
-    "packaging": "",
-    "displayName": "New Product",
-    "subtitle": ""
-  },
-  {
     "id": "AKG4400",
     "itemCode": "AKG4400",
     "name": "CADBURY BUBBLY 1X12X12 26 GR",
@@ -2756,7 +2735,8 @@ export const PRODUCTS: Product[] = [
     "category": "Chocolates",
     "packaging": "8X30 · 40 GRM",
     "displayName": "Nestle Kit Kat Chunky Offer",
-    "subtitle": "8×30 · 40g"
+    "subtitle": "8×30 · 40g",
+    "is_promo": true
   },
   {
     "id": "AKG4606",
@@ -2837,7 +2817,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 26.5,
     "brand": "Nestle",
-    "category": "Other",
+    "category": "Chocolates",
     "packaging": "6X410 · 410GM",
     "displayName": "Nestle Quality Street",
     "subtitle": "6×410g"
@@ -2851,7 +2831,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 27.5,
     "brand": "Nestle",
-    "category": "Other",
+    "category": "Chocolates",
     "packaging": "8X550 · 550GM",
     "displayName": "Nestle Quality Street",
     "subtitle": "8×550g"
@@ -3050,7 +3030,8 @@ export const PRODUCTS: Product[] = [
     "category": "Wafers",
     "packaging": "18X10X45 · 45 GRM",
     "displayName": "Loacker Blue 8+2 Offer",
-    "subtitle": "18×10×45 · 45g"
+    "subtitle": "18×10×45 · 45g",
+    "is_promo": true
   },
   {
     "id": "AKG4907",
@@ -3064,7 +3045,8 @@ export const PRODUCTS: Product[] = [
     "category": "Wafers",
     "packaging": "18X10X45 · 45 GR",
     "displayName": "Loacker Red 8+2 Offer",
-    "subtitle": "18×10×45 · 45g"
+    "subtitle": "18×10×45 · 45g",
+    "is_promo": true
   },
   {
     "id": "AKG4908",
@@ -3106,7 +3088,8 @@ export const PRODUCTS: Product[] = [
     "category": "Chocolates",
     "packaging": "24X6X42 · 42 GR",
     "displayName": "Reese's Peanut Butter Cup Offer",
-    "subtitle": "24×6×42 · 42g"
+    "subtitle": "24×6×42 · 42g",
+    "is_promo": true
   },
   {
     "id": "AKG4911",
@@ -3117,7 +3100,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 16.96,
     "piecePrice": null,
     "brand": "Safari",
-    "category": "Other",
+    "category": "Candy & Gummies",
     "packaging": "12X24X22 · 22 GRM",
     "displayName": "Safari Chocolate",
     "subtitle": "12×24×22 · 22g"
@@ -3201,7 +3184,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 65.0,
     "piecePrice": null,
     "brand": "Ulker",
-    "category": "Other",
+    "category": "Chocolates",
     "packaging": "6X24X40 · 40GM",
     "displayName": "Ulker Cokorem Tube",
     "subtitle": "6×24×40 · 40g"
@@ -3816,7 +3799,7 @@ export const PRODUCTS: Product[] = [
     "casePrice": 110.0,
     "outerPrice": null,
     "piecePrice": 7.5,
-    "brand": "Other",
+    "brand": "Private Label",
     "category": "Candy & Gummies",
     "packaging": "20X30X8 · 8GM",
     "displayName": "Gummy Candy Eyeball",
@@ -3830,7 +3813,7 @@ export const PRODUCTS: Product[] = [
     "casePrice": 110.0,
     "outerPrice": null,
     "piecePrice": 7.5,
-    "brand": "Other",
+    "brand": "Private Label",
     "category": "Candy & Gummies",
     "packaging": "20X30X8 · 8GM",
     "displayName": "Gummy Candy 3D Eyeball",
@@ -3844,7 +3827,7 @@ export const PRODUCTS: Product[] = [
     "casePrice": 110.0,
     "outerPrice": null,
     "piecePrice": 7.5,
-    "brand": "Other",
+    "brand": "Private Label",
     "category": "Candy & Gummies",
     "packaging": "20X30X8 · 8GM",
     "displayName": "Gummy Candy Earth",
@@ -3859,7 +3842,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 10.75,
     "piecePrice": null,
     "brand": "Safari",
-    "category": "Other",
+    "category": "Candy & Gummies",
     "packaging": "24X12X32 · 32GM",
     "displayName": "Safari Caramel Crunch",
     "subtitle": "24×12×32 · 32g"
@@ -3886,7 +3869,7 @@ export const PRODUCTS: Product[] = [
     "casePrice": 110.0,
     "outerPrice": null,
     "piecePrice": 7.5,
-    "brand": "Other",
+    "brand": "Private Label",
     "category": "Candy & Gummies",
     "packaging": "20X30X8 · 8GM",
     "displayName": "Gummy Candy Mango",
@@ -3900,7 +3883,7 @@ export const PRODUCTS: Product[] = [
     "casePrice": 110.0,
     "outerPrice": null,
     "piecePrice": 7.5,
-    "brand": "Other",
+    "brand": "Private Label",
     "category": "Candy & Gummies",
     "packaging": "20X30X8 · 8GM",
     "displayName": "Gummy Candy Watermelon",
@@ -3914,7 +3897,7 @@ export const PRODUCTS: Product[] = [
     "casePrice": 110.0,
     "outerPrice": null,
     "piecePrice": 7.5,
-    "brand": "Other",
+    "brand": "Private Label",
     "category": "Candy & Gummies",
     "packaging": "20X30X8 · 8GM",
     "displayName": "Gummy Candy Spiderman",
@@ -3928,7 +3911,7 @@ export const PRODUCTS: Product[] = [
     "casePrice": 110.0,
     "outerPrice": null,
     "piecePrice": 7.5,
-    "brand": "Other",
+    "brand": "Private Label",
     "category": "Candy & Gummies",
     "packaging": "20X30X8 · 8GM",
     "displayName": "Gummy Candy Honey Peach",
@@ -3942,7 +3925,7 @@ export const PRODUCTS: Product[] = [
     "casePrice": 110.0,
     "outerPrice": null,
     "piecePrice": 7.5,
-    "brand": "Other",
+    "brand": "Private Label",
     "category": "Candy & Gummies",
     "packaging": "20X30X8 · 8GM",
     "displayName": "Gummy Candy Pineapple",
@@ -3956,7 +3939,7 @@ export const PRODUCTS: Product[] = [
     "casePrice": 110.0,
     "outerPrice": null,
     "piecePrice": 7.5,
-    "brand": "Other",
+    "brand": "Private Label",
     "category": "Candy & Gummies",
     "packaging": "20X30X8 · 8GM",
     "displayName": "Gummy Candy Pumpkin",
@@ -3970,7 +3953,7 @@ export const PRODUCTS: Product[] = [
     "casePrice": 110.0,
     "outerPrice": null,
     "piecePrice": 7.5,
-    "brand": "Other",
+    "brand": "Private Label",
     "category": "Candy & Gummies",
     "packaging": "20X30X8 · 8 GM",
     "displayName": "Gummy Candy Angry Birds",
@@ -3984,7 +3967,7 @@ export const PRODUCTS: Product[] = [
     "casePrice": 110.0,
     "outerPrice": null,
     "piecePrice": 7.5,
-    "brand": "Other",
+    "brand": "Private Label",
     "category": "Candy & Gummies",
     "packaging": "20X30X8 · 8GM",
     "displayName": "Gummy Candy Gummi Sour",
@@ -4003,20 +3986,6 @@ export const PRODUCTS: Product[] = [
     "packaging": "12X20X32 · 32.4GM",
     "displayName": "Alpenliebe Milk Chew Rich & Creamy",
     "subtitle": "12×20×32 · 32g"
-  },
-  {
-    "id": "P001",
-    "itemCode": "P001",
-    "name": "UROVO K419 BLUETOOTH PRINTER",
-    "barcode": "",
-    "casePrice": 225.0,
-    "outerPrice": 18.75,
-    "piecePrice": null,
-    "brand": "Other",
-    "category": "Accessories",
-    "packaging": "",
-    "displayName": "Urovo K419 Bluetooth Printer",
-    "subtitle": ""
   },
   {
     "id": "ZIA4037",

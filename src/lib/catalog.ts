@@ -27,6 +27,7 @@ export const BRAND_COLORS: Record<string, { from: string; to: string; ink: strin
   Barni: { from: "#7a4520", to: "#b8682c", ink: "#fff" },
   Alpenliebe: { from: "#c8302e", to: "#f59a0e", ink: "#fff" },
   "Chips Ahoy": { from: "#1a5fbf", to: "#3a8ce0", ink: "#fff" },
+  "Private Label": { from: "#4a4a6a", to: "#6a6a9a", ink: "#fff" },
   Other: { from: "#2c1810", to: "#5a3520", ink: "#f5e3b8" },
 };
 
@@ -48,8 +49,13 @@ export function searchProducts(q: string, limit = 50): Product[] {
   }).slice(0, limit);
 }
 
+// Exclude Accessories and Beverages from public-facing category lists
+const HIDDEN_CATEGORIES = new Set(["Accessories", "Beverages"]);
+
 export const ALL_BRANDS = Array.from(new Set(PRODUCTS.map((p) => p.brand))).sort();
-export const ALL_CATEGORIES = Array.from(new Set(PRODUCTS.map((p) => p.category))).sort();
+export const ALL_CATEGORIES = Array.from(
+  new Set(PRODUCTS.filter((p) => !HIDDEN_CATEGORIES.has(p.category)).map((p) => p.category))
+).sort();
 
 export function productsByCategory(cat: string) {
   return PRODUCTS.filter((p) => p.category === cat);
@@ -75,17 +81,28 @@ export function alternatives(p: Product, limit = 6): { premium: Product[]; budge
   return { premium, budget };
 }
 
-export function bestSellers(limit = 12) {
-  // Heuristic: known popular brands first
-  const order = ["Ferrero Rocher", "Kinder", "Nutella", "Cadbury", "Mars", "Nestle"];
-  return [...PRODUCTS]
-    .sort((a, b) => order.indexOf(a.brand) - order.indexOf(b.brand))
-    .filter((p) => order.includes(p.brand))
-    .slice(0, limit);
+export function bestSellers(limit = 12): Product[] {
+  // Cross-brand best sellers — max 2 per brand, priority order
+  const order = ["Ferrero Rocher", "Kinder", "Cadbury", "Mars", "Nestle", "Nutella", "Lindt", "Haribo", "Lotus", "Tic Tac"];
+  const result: Product[] = [];
+  const brandCount: Record<string, number> = {};
+
+  const sorted = [...PRODUCTS].sort(
+    (a, b) => order.indexOf(a.brand) - order.indexOf(b.brand)
+  );
+
+  for (const p of sorted) {
+    if (!order.includes(p.brand)) continue;
+    brandCount[p.brand] = (brandCount[p.brand] || 0);
+    if (brandCount[p.brand] >= 2) continue;
+    result.push(p);
+    brandCount[p.brand]++;
+    if (result.length >= limit) break;
+  }
+  return result;
 }
 
 export function newArrivals(limit = 8) {
-  // last products by item code (highest AKG numbers)
   return [...PRODUCTS]
     .filter((p) => p.itemCode.startsWith("AKG"))
     .sort((a, b) => b.itemCode.localeCompare(a.itemCode))
@@ -93,7 +110,7 @@ export function newArrivals(limit = 8) {
 }
 
 export function promos(limit = 8) {
-  return PRODUCTS.filter((p) => /OFFER|PROMO|RAMADAN/i.test(p.name)).slice(0, limit);
+  return PRODUCTS.filter((p) => p.is_promo === true).slice(0, limit);
 }
 
 export function formatPrice(v: number | null) {

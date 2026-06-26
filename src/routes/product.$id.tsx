@@ -14,7 +14,7 @@ import {
 import { useEnquiry, useHydrated } from "@/lib/enquiry-store";
 import { buildEnquiryMessage } from "@/lib/contacts";
 import { lookupProductImage } from "@/lib/product-images.functions";
-import { ChevronLeft, Minus, Plus, ShoppingBag, Check, Sparkles, Wand2, Loader2 } from "lucide-react";
+import { ChevronLeft, Minus, Plus, ShoppingBag, Check, Sparkles, Wand2, Loader2, AlertCircle } from "lucide-react";
 import { useState } from "react";
 import type { Product } from "@/data/products";
 
@@ -78,14 +78,25 @@ function ProductPage() {
                 {product.category}
               </Link>
               {product.packaging && <span className="brand-chip">{product.packaging}</span>}
+              {product.is_promo && (
+                <span className="brand-chip bg-gold/20 text-gold-foreground border-gold/40">🏷 Promotional Pack</span>
+              )}
             </div>
 
             <div className="gold-divider my-6" />
 
+            {/* Pricing disclaimer ABOVE the add button */}
+            <div className="mb-5 flex items-start gap-2 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs text-amber-800">
+              <AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" />
+              <span>
+                <strong>Pricing is indicative.</strong> Confirm availability and final price with your Al Khaas sales contact before placing an order.
+              </span>
+            </div>
+
             <div className="grid grid-cols-3 gap-3">
               <PriceTile label="Case price" value={product.casePrice} highlight />
-              <PriceTile label="Outer price" value={product.outerPrice} />
-              <PriceTile label="Piece price" value={product.piecePrice} />
+              {product.outerPrice != null && <PriceTile label="Outer price" value={product.outerPrice} />}
+              {product.piecePrice != null && <PriceTile label="Piece price" value={product.piecePrice} />}
             </div>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -118,10 +129,10 @@ function ProductPage() {
               </button>
             </div>
 
-            <div className="mt-8 rounded-2xl border border-border bg-secondary/40 p-4 text-sm text-muted-foreground">
-              <div className="font-medium text-foreground">Trade enquiry only</div>
-              Pricing shown is indicative. Confirm latest availability and stock with your Al Khaas
-              sales contact before placing an order.
+            {/* Stock badge */}
+            <div className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary/60 px-3 py-1.5 text-xs text-muted-foreground">
+              <span className="h-2 w-2 rounded-full bg-muted-foreground/60" />
+              Check Availability
             </div>
           </div>
         </div>
@@ -163,6 +174,7 @@ function ProductPage() {
 }
 
 function PriceTile({ label, value, highlight = false }: { label: string; value: number | null; highlight?: boolean }) {
+  if (value == null) return null;
   return (
     <div
       className={`rounded-2xl border p-4 ${
@@ -245,7 +257,7 @@ function AiImageLookup({ product }: { product: Product }) {
             ? "Lookup failed · placeholder shown"
             : status === "searching"
               ? "Searching…"
-              : "No image cached yet";
+              : "Image coming soon";
 
   return (
     <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-2xl border border-border bg-card/60 px-3 py-2 text-xs">
