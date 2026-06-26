@@ -43,7 +43,7 @@ export function searchProducts(q: string, limit = 50): Product[] {
   if (!term) return [];
   const tokens = term.split(/\s+/);
   return PRODUCTS.filter((p) => {
-    const hay = `${p.name} ${p.itemCode} ${p.barcode} ${p.brand} ${p.category}`.toLowerCase();
+    const hay = `${p.displayName} ${p.name} ${p.itemCode} ${p.barcode} ${p.brand} ${p.category}`.toLowerCase();
     return tokens.every((t) => hay.includes(t));
   }).slice(0, limit);
 }
