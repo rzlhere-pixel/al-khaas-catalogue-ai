@@ -39,7 +39,7 @@ function Categories() {
                 </div>
                 <ul className="mt-5 space-y-1.5 text-sm text-muted-foreground">
                   {items.map((p) => (
-                    <li key={p.id} className="line-clamp-1">• {p.name}</li>
+                    <li key={p.id} className="line-clamp-1">• {p.displayName}</li>
                   ))}
                 </ul>
               </Link>
