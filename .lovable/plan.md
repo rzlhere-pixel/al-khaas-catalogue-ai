@@ -1,59 +1,62 @@
-
 ## Goal
 
-Keep Al Khaas as the company identity (name + logo) but adopt the visual system from the 3SixtyDeals e-com brand book (colors, typography, white backgrounds). The current "chocolate/gold confectionery-luxe" look gets retired.
+Replace warehouse shorthand (e.g. `F COLLEC T24X4 - 269.4 Gr`) with readable two-line titles across the catalogue:
 
-## What changes
+- **Display name**: `Ferrero Collection Box`
+- **Subtitle**: `24×4 · 269g`
 
-### 1. Logo
-- Upload the Al Khaas mark (extracted from `AL KHASS FINAL- PDF.pdf`) as a CDN asset and import it.
-- Replace the circular "AK" monogram in the header (`src/components/app-shell.tsx`) and footer with the real logo image (lockup with "Al Khaas General Trading" text where space allows; mark-only on small screens).
-- Use the same image for the favicon and OG image in `src/routes/__root.tsx`.
+Original `name` and `packaging` stay on the record (search still matches the raw SKU text); UI reads new fields.
 
-### 2. Brand color system (`src/styles.css`)
-Pulled directly from the brand book:
+## Changes
 
-```text
-Primary    Orange   #fe7e34   (was: gold)
-Primary    Maroon   #99135f   (was: cocoa accents)
-Primary    Purple   #71239e   (accent)
-Secondary  Cobalt   #114759   (deep ink / footer)
-Secondary  Sky      #6693bc
-Secondary  Violet   #8867b7
-Surface    White    #ffffff   (was: cream)
+### 1. Data model — `src/data/products.ts`
+
+Extend the `Product` interface:
+
+```ts
+export interface Product {
+  // ...existing
+  displayName: string;   // cleaned, human-readable
+  subtitle: string;      // pack size + weight, e.g. "24×4 · 269g"
+}
 ```
 
-Strategy: keep the existing token names (`--cocoa`, `--gold`, `--cream`) but remap their values so the new palette flows everywhere without rewriting every component:
-- `--cream` → white
-- `--cocoa` → cobalt `#114759` (used for dark hero/footer surfaces — still readable with white text)
-- `--gold` → orange `#fe7e34` (primary CTA color, accents, dividers)
-- Add new tokens `--brand-maroon`, `--brand-purple` for hero gradients and section highlights.
-- Background goes from warm cream to clean white; foreground to near-black.
-- Re-tune `--primary`, `--accent`, `--ring`, `--shadow-gold` to match.
+### 2. One-off cleanup script — `scripts/clean-product-names.ts`
 
-### 3. Typography
-- Swap Fraunces (display serif) and Inter for **Montserrat** (the brand book's web fallback for Proxima Nova) across both `--font-display` and `--font-sans`, with different weights for headings (700/800) vs body (400/500).
-- Update the Google Fonts `<link>` in `__root.tsx`.
+Run locally via `bun run scripts/clean-product-names.ts`. For each of the ~287 products it:
 
-### 4. Hero & key surfaces
-- Replace the brown chocolate gradient on the hero with a brand gradient (cobalt → maroon → orange glow) layered over the existing hero image. Tagline pill switches from gold-on-cocoa to orange-on-cobalt.
-- "Promotional packs" and "Trade & retail" panels move from cocoa-brown to cobalt with orange accents.
-- Brand chips and "gold-divider" become orange.
+1. Sends the raw `name`, `brand`, `category`, `packaging` to the Lovable AI Gateway (Gemini 3 Flash, JSON mode) with a strict prompt:
+   - Expand brand abbreviations (`F` → `Ferrero`, `T` → tray, `COLLEC` → Collection, `KSURP` → Kinder Surprise, etc.).
+   - Title case, keep flavour/variant words.
+   - Return `{ displayName, subtitle }` where `subtitle` is `"24×4 · 269g"` style (× not X, grams rounded sensibly, no SKU codes).
+2. Falls back to a deterministic rule set (regex brand-prefix map + packaging string normaliser) if the AI call fails or returns malformed JSON.
+3. Rewrites `src/data/products.ts` in place with the two new fields populated, preserving every other field exactly.
 
-### 5. Meta
-- Update `theme-color` meta and any hardcoded brand hex in `__root.tsx` to the new palette.
+Batches ~10 products per request to keep token use low; caches results in a temp JSON so reruns are cheap.
 
-## Files touched
+### 3. UI render updates
 
-- `src/styles.css` — full token remap + font stack
-- `src/routes/__root.tsx` — fonts link, favicon, theme-color
-- `src/components/app-shell.tsx` — logo image in header & footer
-- `src/routes/index.tsx` — hero gradient adjustments only where the brown tone needs to read as cobalt/maroon
-- `src/assets/alkhaas-logo.png.asset.json` — new CDN pointer
+Swap `{p.name}` for `{p.displayName}` with `{p.subtitle}` underneath in:
 
-No data, routing, server-function, or business-logic changes. The WhatsApp enquiry flow, product data, AI image lookup, and all routes stay exactly as they are.
+- `src/components/product-card.tsx` — name line + small muted subtitle
+- `src/routes/product.$id.tsx` — H1 = displayName, subtitle below
+- `src/routes/enquiry.tsx` — line items
+- `src/components/app-shell.tsx` — search dropdown rows
+- Any list/grid showing `p.name` (brand, category, search, promos, new arrivals on `index.tsx`)
 
-## Out of scope (ask if you want these next)
-- Reworking product card layouts to a denser e-com grid like 3sixtydeals.com
-- Arabic/RTL typography
-- Adding the 3SixtyDeals "palm-tree" pattern as a decorative motif
+### 4. Search keeps working
+
+`searchProducts` in `src/lib/catalog.ts` already concatenates name + itemCode + barcode + brand + category. Add `displayName` to the haystack so users can search either the old SKU shorthand or the clean name.
+
+## Out of scope
+
+- No DB writes — products are static seed data.
+- No retroactive edits to the AI image lookup table.
+- No design changes beyond the new subtitle line.
+
+## Acceptance
+
+- Every product has a non-empty `displayName` with no all-caps shorthand and no weights jammed in.
+- Subtitle shows pack × count and weight in grams/kg using `·` separator.
+- Card, detail, enquiry, search, and home grids all show the two-line title.
+- Searching `F COLLEC` still finds the Ferrero Collection product.

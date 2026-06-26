@@ -32,7 +32,7 @@ function EnquiryPage() {
   const indicativeTotal = items.reduce((s, r) => s + (r.p.casePrice ?? r.p.piecePrice ?? 0) * r.line.qty, 0);
 
   const msg = buildEnquiryMessage(
-    items.map((r) => ({ name: r.p.name, itemCode: r.p.itemCode, qty: r.line.qty })),
+    items.map((r) => ({ name: r.p.displayName, itemCode: r.p.itemCode, qty: r.line.qty })),
   );
 
   return (
@@ -62,12 +62,13 @@ function EnquiryPage() {
               {items.map(({ line, p }) => (
                 <div key={p.id} className="flex items-center gap-3 rounded-2xl border border-border bg-card p-3 shadow-soft sm:gap-4 sm:p-4">
                   <Link to="/product/$id" params={{ id: p.id }}>
-                    <ProductImage productId={p.id} name={p.name} brand={p.brand} className="h-16 w-16 sm:h-20 sm:w-20 shrink-0" rounded="rounded-xl" />
+                    <ProductImage productId={p.id} name={p.displayName} brand={p.brand} className="h-16 w-16 sm:h-20 sm:w-20 shrink-0" rounded="rounded-xl" />
                   </Link>
                   <div className="min-w-0 flex-1">
                     <Link to="/product/$id" params={{ id: p.id }}>
                       <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">{p.brand}</div>
-                      <div className="line-clamp-2 text-sm font-medium text-foreground sm:text-base">{p.name}</div>
+                      <div className="line-clamp-2 text-sm font-medium text-foreground sm:text-base">{p.displayName}</div>
+                      {p.subtitle && <div className="text-xs text-muted-foreground line-clamp-1">{p.subtitle}</div>}
                     </Link>
                     <div className="mt-1 text-xs text-muted-foreground">
                       {p.itemCode || "—"} · {formatPrice(p.casePrice ?? p.piecePrice)}

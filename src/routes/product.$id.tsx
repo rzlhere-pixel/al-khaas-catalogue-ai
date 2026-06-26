@@ -62,15 +62,16 @@ function ProductPage() {
       <section className="mx-auto max-w-7xl px-6 py-8 sm:py-12">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <ProductImage productId={product.id} name={product.name} brand={product.brand} className="aspect-square w-full" rounded="rounded-3xl" />
+            <ProductImage productId={product.id} name={product.displayName} brand={product.brand} className="aspect-square w-full" rounded="rounded-3xl" />
             <AiImageLookup product={product} />
           </div>
           <div>
             <Link to="/brand/$brand" params={{ brand: product.brand }} className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground hover:text-foreground">
               {product.brand}
             </Link>
-            <h1 className="mt-2 font-display text-3xl text-foreground sm:text-4xl">{product.name}</h1>
-            <div className="mt-2 flex flex-wrap gap-2 text-xs">
+            <h1 className="mt-2 font-display text-3xl text-foreground sm:text-4xl">{product.displayName}</h1>
+            {product.subtitle && <div className="mt-1 text-sm text-muted-foreground">{product.subtitle}</div>}
+            <div className="mt-3 flex flex-wrap gap-2 text-xs">
               {product.itemCode && <span className="brand-chip">Code · {product.itemCode}</span>}
               {product.barcode && <span className="brand-chip">Barcode · {product.barcode}</span>}
               <Link to="/category/$cat" params={{ cat: product.category }} className="brand-chip hover:bg-accent">
@@ -155,7 +156,7 @@ function ProductPage() {
       <ContactPicker
         open={picker}
         onClose={() => setPicker(false)}
-        message={buildEnquiryMessage([{ name: product.name, itemCode: product.itemCode, qty }])}
+        message={buildEnquiryMessage([{ name: product.displayName, itemCode: product.itemCode, qty }])}
       />
     </AppShell>
   );
@@ -193,10 +194,10 @@ function AlternativeColumn({ title, items }: { title: string; items: Product[] }
               params={{ id: p.id }}
               className="flex items-center gap-3 rounded-2xl bg-card p-3 shadow-soft hover:bg-secondary"
             >
-              <ProductImage productId={p.id} name={p.name} brand={p.brand} className="h-14 w-14 shrink-0" rounded="rounded-xl" />
+              <ProductImage productId={p.id} name={p.displayName} brand={p.brand} className="h-14 w-14 shrink-0" rounded="rounded-xl" />
               <div className="min-w-0 flex-1">
                 <div className="truncate text-[11px] uppercase tracking-wider text-muted-foreground">{p.brand}</div>
-                <div className="line-clamp-1 text-sm text-foreground">{p.name}</div>
+                <div className="line-clamp-1 text-sm text-foreground">{p.displayName}</div>
               </div>
               <div className="text-sm font-medium text-foreground">{formatPrice(p.casePrice ?? p.piecePrice)}</div>
             </Link>
