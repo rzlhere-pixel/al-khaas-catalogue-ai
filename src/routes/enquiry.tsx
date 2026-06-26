@@ -32,7 +32,7 @@ function EnquiryPage() {
   const indicativeTotal = items.reduce((s, r) => s + (r.p.casePrice ?? r.p.piecePrice ?? 0) * r.line.qty, 0);
 
   const msg = buildEnquiryMessage(
-    items.map((r) => ({ name: r.p.name, itemCode: r.p.itemCode, qty: r.line.qty })),
+    items.map((r) => ({ name: r.p.displayName, itemCode: r.p.itemCode, qty: r.line.qty })),
   );
 
   return (
