@@ -2,6 +2,8 @@ export interface Product {
   id: string;
   itemCode: string;
   name: string;
+  displayName: string;
+  subtitle: string;
   barcode: string;
   casePrice: number | null;
   outerPrice: number | null;
