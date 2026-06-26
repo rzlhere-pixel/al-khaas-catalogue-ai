@@ -22,7 +22,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Other",
     "category": "Accessories",
-    "packaging": ""
+    "packaging": "",
+    "displayName": "Urovo K419 Bluetooth Printer",
+    "subtitle": ""
   },
   {
     "id": "AKG4000",
@@ -34,7 +36,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 38.75,
     "brand": "Ferrero Rocher",
     "category": "Other",
-    "packaging": "24X4 \u00b7 269.4 GR"
+    "packaging": "24X4 · 269.4 GR",
+    "displayName": "Ferrero Collection Tray",
+    "subtitle": "24×4 · 269g"
   },
   {
     "id": "AKG4001",
@@ -46,7 +50,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 21.48,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "16X5X4 \u00b7 200 GR"
+    "packaging": "16X5X4 · 200 GR",
+    "displayName": "Ferrero Rocher Tray",
+    "subtitle": "16×5×4 · 200g"
   },
   {
     "id": "AKG4002",
@@ -58,7 +64,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 34.5,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "24X4 \u00b7 300 GR"
+    "packaging": "24X4 · 300 GR",
+    "displayName": "Ferrero Rocher Tray",
+    "subtitle": "24×4 · 300g"
   },
   {
     "id": "AKG4003",
@@ -70,7 +78,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "3X16X6 \u00b7 37.5 GR"
+    "packaging": "3X16X6 · 37.5 GR",
+    "displayName": "Ferrero Rocher Tray",
+    "subtitle": "3×16×6 · 38g"
   },
   {
     "id": "AKG4004",
@@ -82,7 +92,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 12.62,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "10X21 \u00b7 105 GR"
+    "packaging": "10X21 · 105 GR",
+    "displayName": "Ferrero Collection Eggs Hazelnut Tray",
+    "subtitle": "10×21 · 105g"
   },
   {
     "id": "AKG4005",
@@ -94,7 +106,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 12.19,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "2X5 \u00b7 215 GR"
+    "packaging": "2X5 · 215 GR",
+    "displayName": "Kinder Bueno Tray",
+    "subtitle": "2×5 · 215g"
   },
   {
     "id": "AKG4006",
@@ -106,7 +120,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "2X30X4 \u00b7 43 GR"
+    "packaging": "2X30X4 · 43 GR",
+    "displayName": "Kinder Bueno Tray",
+    "subtitle": "2×30×4 · 43g"
   },
   {
     "id": "AKG4007",
@@ -118,7 +134,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "2X30X4 \u00b7 39 GR"
+    "packaging": "2X30X4 · 39 GR",
+    "displayName": "Kinder Bueno White Tray",
+    "subtitle": "2×30×4 · 39g"
   },
   {
     "id": "AKG4008",
@@ -130,7 +148,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 17.5,
     "brand": "Kinder",
     "category": "Other",
-    "packaging": "2X10"
+    "packaging": "2X10",
+    "displayName": "Kinder Cards Tray",
+    "subtitle": "2×10"
   },
   {
     "id": "AKG4009",
@@ -142,7 +162,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Other",
-    "packaging": "30X4 \u00b7 25.6 GR"
+    "packaging": "30X4 · 25.6 GR",
+    "displayName": "Kinder Cards Tray",
+    "subtitle": "30×4 · 26g"
   },
   {
     "id": "AKG4010",
@@ -154,7 +176,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 8.85,
     "brand": "Kinder",
     "category": "Other",
-    "packaging": "2X5 \u00b7 128GR"
+    "packaging": "2X5 · 128GR",
+    "displayName": "Kinder Cards Tray",
+    "subtitle": "2×5 · 128g"
   },
   {
     "id": "AKG4011",
@@ -166,7 +190,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "10X8 \u00b7 100 GR"
+    "packaging": "10X8 · 100 GR",
+    "displayName": "Kinder Chocolate Tray",
+    "subtitle": "10×8 · 100g"
   },
   {
     "id": "AKG4012",
@@ -178,7 +204,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "1X40X6"
+    "packaging": "1X40X6",
+    "displayName": "Kinder Country Tray",
+    "subtitle": "1×40×6"
   },
   {
     "id": "AKG4013",
@@ -190,7 +218,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "756 GR"
+    "packaging": "756 GR",
+    "displayName": "Kinder Maxi",
+    "subtitle": "756g"
   },
   {
     "id": "AKG4014",
@@ -202,7 +232,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 11.34,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "11X28X2 \u00b7 231 GR"
+    "packaging": "11X28X2 · 231 GR",
+    "displayName": "Kinder Maxi",
+    "subtitle": "11×28×2 · 231g"
   },
   {
     "id": "AKG4015",
@@ -214,7 +246,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "1X36X8 \u00b7 21 GR"
+    "packaging": "1X36X8 · 21 GR",
+    "displayName": "Kinder Maxi",
+    "subtitle": "1×36×8 · 21g"
   },
   {
     "id": "AKG4016",
@@ -226,7 +260,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 11.75,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "5X16 \u00b7 170GR"
+    "packaging": "5X16 · 170GR",
+    "displayName": "Kinder Crispy",
+    "subtitle": "5×16 · 170g"
   },
   {
     "id": "AKG4017",
@@ -238,7 +274,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.67,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "20X12X2 \u00b7 108GR"
+    "packaging": "20X12X2 · 108GR",
+    "displayName": "Kinder Bueno Mini",
+    "subtitle": "20×12×2 · 108g"
   },
   {
     "id": "AKG4018",
@@ -250,7 +288,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 22.0,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "430 GR"
+    "packaging": "430 GR",
+    "displayName": "Kinder Bueno",
+    "subtitle": "430g"
   },
   {
     "id": "AKG4019",
@@ -262,7 +302,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.9,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "20X12X4 \u00b7 120 GR"
+    "packaging": "20X12X4 · 120 GR",
+    "displayName": "Kinder Chocolate Mini",
+    "subtitle": "20×12×4 · 120g"
   },
   {
     "id": "AKG4020",
@@ -274,7 +316,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "20X8 \u00b7 50 GR"
+    "packaging": "20X8 · 50 GR",
+    "displayName": "Kinder Chocolate",
+    "subtitle": "20×8 · 50g"
   },
   {
     "id": "AKG4021",
@@ -286,7 +330,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "24GR"
+    "packaging": "24GR",
+    "displayName": "Kinder Country",
+    "subtitle": "24g"
   },
   {
     "id": "AKG4022",
@@ -298,7 +344,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "1X6X24 \u00b7 19 GR"
+    "packaging": "1X6X24 · 19 GR",
+    "displayName": "Kinder Creamy",
+    "subtitle": "1×6×24 · 19g"
   },
   {
     "id": "AKG4023",
@@ -310,7 +358,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "5X20 \u00b7 95 GR"
+    "packaging": "5X20 · 95 GR",
+    "displayName": "Kinder Creamy",
+    "subtitle": "5×20 · 95g"
   },
   {
     "id": "AKG4024",
@@ -322,7 +372,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "10X14 \u00b7 390 GR"
+    "packaging": "10X14 · 390 GR",
+    "displayName": "Kinder Delice",
+    "subtitle": "10×14 · 390g"
   },
   {
     "id": "AKG4025",
@@ -334,7 +386,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 4.05,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "1X20X2 \u00b7 39GR"
+    "packaging": "1X20X2 · 39GR",
+    "displayName": "Kinder Delice",
+    "subtitle": "1×20×2 · 39g"
   },
   {
     "id": "AKG4026",
@@ -346,7 +400,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 8.25,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "105 GR"
+    "packaging": "105 GR",
+    "displayName": "Kinder Happy Hippo",
+    "subtitle": "105g"
   },
   {
     "id": "AKG4027",
@@ -358,7 +414,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "1X48X2 \u00b7 20 GR"
+    "packaging": "1X48X2 · 20 GR",
+    "displayName": "Kinder Joy Boy",
+    "subtitle": "1×48×2 · 20g"
   },
   {
     "id": "AKG4028",
@@ -370,7 +428,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "1X48X2 \u00b7 20 GR"
+    "packaging": "1X48X2 · 20 GR",
+    "displayName": "Kinder Joy Girl",
+    "subtitle": "1×48×2 · 20g"
   },
   {
     "id": "AKG4029",
@@ -382,7 +442,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 8.9,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "3X32 \u00b7 60 GR"
+    "packaging": "3X32 · 60 GR",
+    "displayName": "Kinder Joy Boy",
+    "subtitle": "3×32 · 60g"
   },
   {
     "id": "AKG4030",
@@ -394,7 +456,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 8.9,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "3X32 \u00b7 60 GR"
+    "packaging": "3X32 · 60 GR",
+    "displayName": "Kinder Joy Girl",
+    "subtitle": "3×32 · 60g"
   },
   {
     "id": "AKG4031",
@@ -406,7 +470,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "48X2"
+    "packaging": "48X2",
+    "displayName": "Kinder Joy Unisex",
+    "subtitle": "48×2"
   },
   {
     "id": "AKG4032",
@@ -418,7 +484,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 11.71,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "182X24 \u00b7 180GR"
+    "packaging": "182X24 · 180GR",
+    "displayName": "Kinder Mini Eggs",
+    "subtitle": "182×24 · 180g"
   },
   {
     "id": "AKG4033",
@@ -430,7 +498,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 35.28,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "236X7 \u00b7 7 GRM"
+    "packaging": "236X7 · 7 GRM",
+    "displayName": "Kinder Mix Big Calendar",
+    "subtitle": "236×7 · 7g"
   },
   {
     "id": "AKG4034",
@@ -442,7 +512,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.5,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "25X16X5 \u00b7 125 GRM"
+    "packaging": "25X16X5 · 125 GRM",
+    "displayName": "Kinder Schokobons Milky",
+    "subtitle": "25×16×5 · 125g"
   },
   {
     "id": "AKG4035",
@@ -454,7 +526,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 3.33,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "1X72 \u00b7 20GR"
+    "packaging": "1X72 · 20GR",
+    "displayName": "Kinder Surprise",
+    "subtitle": "1×72 · 20g"
   },
   {
     "id": "AKG4036",
@@ -466,7 +540,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "1X48X8 \u00b7 18GR"
+    "packaging": "1X48X8 · 18GR",
+    "displayName": "Kinder Tronky",
+    "subtitle": "1×48×8 · 18g"
   },
   {
     "id": "AKG4037",
@@ -478,7 +554,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 6.21,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "5X20"
+    "packaging": "5X20",
+    "displayName": "Kinder Tronky",
+    "subtitle": "5×20"
   },
   {
     "id": "AKG4038",
@@ -490,7 +568,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 16.5,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "5X12"
+    "packaging": "5X12",
+    "displayName": "Kinder Uovo Maxi",
+    "subtitle": "5×12"
   },
   {
     "id": "AKG4039",
@@ -502,7 +582,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 13.0,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "20X10 \u00b7 250 GR"
+    "packaging": "20X10 · 250 GR",
+    "displayName": "Kinderini",
+    "subtitle": "20×10 · 250g"
   },
   {
     "id": "AKG4040",
@@ -514,7 +596,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 15.12,
     "brand": "Nutella",
     "category": "Other",
-    "packaging": "10X16 \u00b7 220 GR"
+    "packaging": "10X16 · 220 GR",
+    "displayName": "Nutella B-Ready",
+    "subtitle": "10×16 · 220g"
   },
   {
     "id": "AKG4041",
@@ -526,7 +610,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.38,
     "brand": "Nutella",
     "category": "Other",
-    "packaging": "6X16 \u00b7 132 GR"
+    "packaging": "6X16 · 132 GR",
+    "displayName": "Nutella B-Ready",
+    "subtitle": "6×16 · 132g"
   },
   {
     "id": "AKG4042",
@@ -538,7 +624,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 4.54,
     "brand": "Nutella",
     "category": "Other",
-    "packaging": "1X24 \u00b7 52 GR"
+    "packaging": "1X24 · 52 GR",
+    "displayName": "Nutella Nut & Go",
+    "subtitle": "1×24 · 52g"
   },
   {
     "id": "AKG4043",
@@ -550,7 +638,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 0.86,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "15X120 \u00b7 15 GR"
+    "packaging": "15X120 · 15 GR",
+    "displayName": "Nutella",
+    "subtitle": "15×120 · 15g"
   },
   {
     "id": "AKG4044",
@@ -562,7 +652,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 86.0,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "3 KG"
+    "packaging": "3 KG",
+    "displayName": "Nutella",
+    "subtitle": "2 · 3kg"
   },
   {
     "id": "AKG4045",
@@ -574,7 +666,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 11.86,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "350X15 \u00b7 350GR"
+    "packaging": "350X15 · 350GR",
+    "displayName": "Nutella",
+    "subtitle": "15 · 350g"
   },
   {
     "id": "AKG4046",
@@ -586,7 +680,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 24.25,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": ""
+    "packaging": "",
+    "displayName": "Nutella",
+    "subtitle": "12 · 825g"
   },
   {
     "id": "AKG4047",
@@ -598,7 +694,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 14.58,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "22X12 \u00b7 304 GR"
+    "packaging": "22X12 · 304 GR",
+    "displayName": "Nutella Biscuits Tray",
+    "subtitle": "12 · 304g"
   },
   {
     "id": "AKG4048",
@@ -610,7 +708,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "3X28X4 \u00b7 41.4GR"
+    "packaging": "3X28X4 · 41.4GR",
+    "displayName": "Nutella Biscuits Tray",
+    "subtitle": "3×28×4 · 41g"
   },
   {
     "id": "AKG4049",
@@ -622,7 +722,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.38,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "12X20X2 \u00b7 166 GR"
+    "packaging": "12X20X2 · 166 GR",
+    "displayName": "Nutella Biscuits Tray Tub",
+    "subtitle": "12×20×2 · 166g"
   },
   {
     "id": "AKG4050",
@@ -634,7 +736,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "1X8 \u00b7 220 GR"
+    "packaging": "1X8 · 220 GR",
+    "displayName": "Nutella B-Ready",
+    "subtitle": "16 · 220g"
   },
   {
     "id": "AKG4051",
@@ -646,7 +750,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "1X36X4 \u00b7 22.65 GR"
+    "packaging": "1X36X4 · 22.65 GR",
+    "displayName": "Nutella B-Ready Tray",
+    "subtitle": "1×36×4 · 23g"
   },
   {
     "id": "AKG4052",
@@ -658,7 +764,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 15.25,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "440GR"
+    "packaging": "440GR",
+    "displayName": "Nutella",
+    "subtitle": "15 · 440g"
   },
   {
     "id": "AKG4053",
@@ -670,7 +778,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 28.67,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "1000X6 \u00b7 1000GR"
+    "packaging": "1000X6 · 1000GR",
+    "displayName": "Nutella",
+    "subtitle": "6 · 1000g"
   },
   {
     "id": "AKG4054",
@@ -682,7 +792,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 10.13,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "200X15 \u00b7 200 GR"
+    "packaging": "200X15 · 200 GR",
+    "displayName": "Nutella",
+    "subtitle": "15 · 200g"
   },
   {
     "id": "AKG4055",
@@ -694,7 +806,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 20.83,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "750X12 \u00b7 750 GR"
+    "packaging": "750X12 · 750 GR",
+    "displayName": "Nutella",
+    "subtitle": "12 · 750g"
   },
   {
     "id": "AKG4056",
@@ -706,7 +820,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 14.67,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "400 GRM"
+    "packaging": "400 GRM",
+    "displayName": "Nutella Offer",
+    "subtitle": "15 · 400g"
   },
   {
     "id": "AKG4057",
@@ -718,7 +834,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 21.38,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "260 GR"
+    "packaging": "260 GR",
+    "displayName": "Raffaello Tray",
+    "subtitle": "8 · 260g"
   },
   {
     "id": "AKG4058",
@@ -730,7 +848,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 14.17,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "150 GR"
+    "packaging": "150 GR",
+    "displayName": "Raffaello Tray",
+    "subtitle": "6 · 150g"
   },
   {
     "id": "AKG4059",
@@ -742,7 +862,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "16X4 \u00b7 30 GR"
+    "packaging": "16X4 · 30 GR",
+    "displayName": "Raffaello",
+    "subtitle": "16×4 · 30g"
   },
   {
     "id": "AKG4060",
@@ -754,7 +876,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 17.67,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "14X9 \u00b7 140 GR"
+    "packaging": "14X9 · 140 GR",
+    "displayName": "Raffaello Heart",
+    "subtitle": "14×9 · 140g"
   },
   {
     "id": "AKG4061",
@@ -766,7 +890,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 21.0,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "23X8 \u00b7 230 GR"
+    "packaging": "23X8 · 230 GR",
+    "displayName": "Raffaello",
+    "subtitle": "23×8 · 230g"
   },
   {
     "id": "AKG4062",
@@ -778,7 +904,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "1X14 \u00b7 34GRM"
+    "packaging": "1X14 · 34GRM",
+    "displayName": "Kinder Crispy",
+    "subtitle": "1×14 · 34g"
   },
   {
     "id": "AKG4063",
@@ -790,7 +918,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 34.17,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "18X6"
+    "packaging": "18X6",
+    "displayName": "Ferrero Rocher Lantern Ramadan",
+    "subtitle": "18×6"
   },
   {
     "id": "AKG4064",
@@ -802,7 +932,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 38.33,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "30X3X4 \u00b7 375 GRM"
+    "packaging": "30X3X4 · 375 GRM",
+    "displayName": "Ferrero Rocher",
+    "subtitle": "30×3×4 · 375g"
   },
   {
     "id": "AKG4065",
@@ -814,7 +946,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.1,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "90X8X2"
+    "packaging": "90X8X2",
+    "displayName": "Ferrero Rocher Tablets Dark",
+    "subtitle": "90×8×2"
   },
   {
     "id": "AKG4066",
@@ -826,7 +960,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.38,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "90X8X2 \u00b7 90 GR"
+    "packaging": "90X8X2 · 90 GR",
+    "displayName": "Ferrero Rocher Tablets Hazelnut And Almond",
+    "subtitle": "90×8×2 · 90g"
   },
   {
     "id": "AKG4067",
@@ -838,7 +974,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.1,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "90X8X2 \u00b7 90GR"
+    "packaging": "90X8X2 · 90GR",
+    "displayName": "Ferrero Rocher Tablets Hazelnut And Macadamia",
+    "subtitle": "90×8×2 · 90g"
   },
   {
     "id": "AKG4068",
@@ -850,7 +988,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.0,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "3X32 \u00b7 60 GR"
+    "packaging": "3X32 · 60 GR",
+    "displayName": "Kinder Joy Boy Fairy",
+    "subtitle": "3×32 · 60g"
   },
   {
     "id": "AKG4069",
@@ -862,7 +1002,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.0,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "3X32 \u00b7 60 GR"
+    "packaging": "3X32 · 60 GR",
+    "displayName": "Kinder Joy Girl Fairy",
+    "subtitle": "3×32 · 60g"
   },
   {
     "id": "AKG4070",
@@ -874,7 +1016,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 10.32,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "16X11X2 \u00b7 89 GR"
+    "packaging": "16X11X2 · 89 GR",
+    "displayName": "Kinder Schoko Bons Crispy",
+    "subtitle": "16×11×2 · 89g"
   },
   {
     "id": "AKG4071",
@@ -886,7 +1030,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 8.42,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "8X12 \u00b7 80 GM"
+    "packaging": "8X12 · 80 GM",
+    "displayName": "Kinder Bueno Eggs",
+    "subtitle": "8×12 · 80g"
   },
   {
     "id": "AKG4072",
@@ -898,7 +1044,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "9X18 \u00b7 211.5 GRM"
+    "packaging": "9X18 · 211.5 GRM",
+    "displayName": "Kinder Country",
+    "subtitle": "9×18 · 212g"
   },
   {
     "id": "AKG4073",
@@ -910,7 +1058,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "1X28X6 \u00b7 21 GR"
+    "packaging": "1X28X6 · 21 GR",
+    "displayName": "Kinder Happy Hippo",
+    "subtitle": "1×28×6 · 21g"
   },
   {
     "id": "AKG4074",
@@ -922,7 +1072,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "3X32 \u00b7 60 GR"
+    "packaging": "3X32 · 60 GR",
+    "displayName": "Kinder Joy Unisex",
+    "subtitle": "3×32 · 60g"
   },
   {
     "id": "AKG4075",
@@ -934,7 +1086,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.9,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "8X10X80 \u00b7 80GM"
+    "packaging": "8X10X80 · 80GM",
+    "displayName": "Raffaello",
+    "subtitle": "8×10 · 80g"
   },
   {
     "id": "AKG4076",
@@ -946,7 +1100,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 21.67,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "24X6 \u00b7 245GR"
+    "packaging": "24X6 · 245GR",
+    "displayName": "Raffaello Tray",
+    "subtitle": "24×6 · 245g"
   },
   {
     "id": "AKG4077",
@@ -958,7 +1114,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 3.2,
     "brand": "Nutella",
     "category": "Chocolates",
-    "packaging": "30X64"
+    "packaging": "30X64",
+    "displayName": "Nutella Glass",
+    "subtitle": "30×64"
   },
   {
     "id": "AKG4078",
@@ -970,7 +1128,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 24.0,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": ""
+    "packaging": "",
+    "displayName": "Kinder Minis Mix",
+    "subtitle": "10 · 259g"
   },
   {
     "id": "AKG4079",
@@ -982,7 +1142,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 15.0,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": ""
+    "packaging": "",
+    "displayName": "Kinder Minis Mix",
+    "subtitle": "15 · 150g"
   },
   {
     "id": "AKG4080",
@@ -994,7 +1156,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Tic Tac",
     "category": "Candy & Gummies",
-    "packaging": "37X12X24 \u00b7 18GR"
+    "packaging": "37X12X24 · 18GR",
+    "displayName": "Tic Tac Mint",
+    "subtitle": "37×12×24 · 18g"
   },
   {
     "id": "AKG4081",
@@ -1006,7 +1170,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Tic Tac",
     "category": "Candy & Gummies",
-    "packaging": "37X24X12 \u00b7 18GR"
+    "packaging": "37X24X12 · 18GR",
+    "displayName": "Tic Tac Spearmint",
+    "subtitle": "37×24×12 · 18g"
   },
   {
     "id": "AKG4082",
@@ -1018,7 +1184,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Tic Tac",
     "category": "Candy & Gummies",
-    "packaging": "37X24X12 \u00b7 18GR"
+    "packaging": "37X24X12 · 18GR",
+    "displayName": "Tic Tac Orange",
+    "subtitle": "37×24×12 · 18g"
   },
   {
     "id": "AKG4083",
@@ -1030,7 +1198,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Tic Tac",
     "category": "Candy & Gummies",
-    "packaging": "37X24X12 \u00b7 18GR"
+    "packaging": "37X24X12 · 18GR",
+    "displayName": "Tic Tac Strawberry",
+    "subtitle": "37×24×12 · 18g"
   },
   {
     "id": "AKG4084",
@@ -1042,7 +1212,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 8.3,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "95GM"
+    "packaging": "95GM",
+    "displayName": "Kinder Creamy Tray",
+    "subtitle": "5×20 · 95g"
   },
   {
     "id": "AKG4085",
@@ -1054,7 +1226,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": ""
+    "packaging": "",
+    "displayName": "Kinder Maxi Tray",
+    "subtitle": "36×8"
   },
   {
     "id": "AKG4086",
@@ -1066,7 +1240,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.1,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "90X8X2"
+    "packaging": "90X8X2",
+    "displayName": "Ferrero Rocher Tablets Original Tray",
+    "subtitle": "90×8×2"
   },
   {
     "id": "AKG4087",
@@ -1078,7 +1254,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.1,
     "brand": "Ferrero Rocher",
     "category": "Chocolates",
-    "packaging": "90X8X2"
+    "packaging": "90X8X2",
+    "displayName": "Raffaello Tablets Tray",
+    "subtitle": "90×8×2"
   },
   {
     "id": "AKG4088",
@@ -1090,7 +1268,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 13.0,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "12X12 \u00b7 150GR"
+    "packaging": "12X12 · 150GR",
+    "displayName": "Kinder Duo Tray",
+    "subtitle": "12×12 · 150g"
   },
   {
     "id": "AKG4090",
@@ -1102,7 +1282,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 17.5,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "225X18 \u00b7 225GM"
+    "packaging": "225X18 · 225GM",
+    "displayName": "Kinder Schokobons Milky",
+    "subtitle": "18×225 · 225g"
   },
   {
     "id": "AKG4200",
@@ -1114,7 +1296,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "12X24X57 \u00b7 57GRM"
+    "packaging": "12X24X57 · 57GRM",
+    "displayName": "Bounty Arabic",
+    "subtitle": "12×24 · 57g"
   },
   {
     "id": "AKG4201",
@@ -1126,7 +1310,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "24X5X55 \u00b7 55 GRM"
+    "packaging": "24X5X55 · 55 GRM",
+    "displayName": "Bounty 5 Pack",
+    "subtitle": "24×5 · 55g"
   },
   {
     "id": "AKG4202",
@@ -1138,7 +1324,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "12X285 \u00b7 285 GM"
+    "packaging": "12X285 · 285 GM",
+    "displayName": "Bounty Minis",
+    "subtitle": "12 · 285g"
   },
   {
     "id": "AKG4203",
@@ -1150,7 +1338,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X12X24 \u00b7 57 GRM"
+    "packaging": "1X12X24 · 57 GRM",
+    "displayName": "Bounty",
+    "subtitle": "12×24 · 57g"
   },
   {
     "id": "AKG4204",
@@ -1162,7 +1352,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "6X24 \u00b7 40 GRM"
+    "packaging": "6X24 · 40 GRM",
+    "displayName": "Galaxy Caramel",
+    "subtitle": "6×24 · 40g"
   },
   {
     "id": "AKG4205",
@@ -1174,7 +1366,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "6X24 \u00b7 36 GRM"
+    "packaging": "6X24 · 36 GRM",
+    "displayName": "Galaxy Coconut Brittle",
+    "subtitle": "6×24 · 36g"
   },
   {
     "id": "AKG4206",
@@ -1186,7 +1380,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "6X24 \u00b7 36 GRM"
+    "packaging": "6X24 · 36 GRM",
+    "displayName": "Galaxy Crispy",
+    "subtitle": "6×24 · 36g"
   },
   {
     "id": "AKG4207",
@@ -1198,7 +1394,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X6X24 \u00b7 40 GRM"
+    "packaging": "1X6X24 · 40 GRM",
+    "displayName": "Galaxy Dark",
+    "subtitle": "6×24 · 40g"
   },
   {
     "id": "AKG4208",
@@ -1210,7 +1408,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "12X24X22 \u00b7 22.5 GR"
+    "packaging": "12X24X22 · 22.5 GR",
+    "displayName": "Galaxy Flute",
+    "subtitle": "12×24 · 23g"
   },
   {
     "id": "AKG4209",
@@ -1222,7 +1422,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X8 \u00b7 22.G"
+    "packaging": "1X8 · 22.G",
+    "displayName": "Galaxy Flutes Offer",
+    "subtitle": "8×36 · 23g"
   },
   {
     "id": "AKG4210",
@@ -1234,7 +1436,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X8X42"
+    "packaging": "1X8X42",
+    "displayName": "Galaxy Flutes Offer",
+    "subtitle": "8×42"
   },
   {
     "id": "AKG4211",
@@ -1246,7 +1450,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "6X24 \u00b7 36GRM"
+    "packaging": "6X24 · 36GRM",
+    "displayName": "Galaxy Fruit & Nut",
+    "subtitle": "6×24 · 36g"
   },
   {
     "id": "AKG4212",
@@ -1258,7 +1464,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X6X24X36 \u00b7 36 GRM"
+    "packaging": "1X6X24X36 · 36 GRM",
+    "displayName": "Galaxy Hazelnut",
+    "subtitle": "6×24 · 36g"
   },
   {
     "id": "AKG4213",
@@ -1270,7 +1478,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "36 GRM"
+    "packaging": "36 GRM",
+    "displayName": "Galaxy Milk Gulf Offer",
+    "subtitle": "10×12 · 36g"
   },
   {
     "id": "AKG4214",
@@ -1282,7 +1492,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "12X137 \u00b7 137.5 GR"
+    "packaging": "12X137 · 137.5 GR",
+    "displayName": "Galaxy Mini",
+    "subtitle": "12×137 · 138g"
   },
   {
     "id": "AKG4215",
@@ -1294,7 +1506,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 3.6,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "40X42 \u00b7 42 GRM"
+    "packaging": "40X42 · 42 GRM",
+    "displayName": "Galaxy Minstrels",
+    "subtitle": "40×42 · 42g"
   },
   {
     "id": "AKG4216",
@@ -1306,7 +1520,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X36X33 \u00b7 33 GRM"
+    "packaging": "1X36X33 · 33 GRM",
+    "displayName": "Galaxy Ripple",
+    "subtitle": "36×33 · 33g"
   },
   {
     "id": "AKG4217",
@@ -1318,7 +1534,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X6X24 \u00b7 36GRM"
+    "packaging": "1X6X24 · 36GRM",
+    "displayName": "Galaxy Smooth",
+    "subtitle": "6×24 · 36g"
   },
   {
     "id": "AKG4218",
@@ -1330,7 +1548,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "6X24 \u00b7 36GRM"
+    "packaging": "6X24 · 36GRM",
+    "displayName": "Galaxy Strawberry",
+    "subtitle": "6×24 · 36g"
   },
   {
     "id": "AKG4219",
@@ -1342,7 +1562,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X6X24 \u00b7 38 GRM"
+    "packaging": "1X6X24 · 38 GRM",
+    "displayName": "Galaxy White",
+    "subtitle": "6×24 · 38g"
   },
   {
     "id": "AKG4220",
@@ -1354,7 +1576,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 2.2,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "24X45 \u00b7 45 GR"
+    "packaging": "24X45 · 45 GR",
+    "displayName": "M&M Chocolate",
+    "subtitle": "24×45 · 45g"
   },
   {
     "id": "AKG4221",
@@ -1366,7 +1590,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 2.06,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X24X45 \u00b7 45 GRM"
+    "packaging": "1X24X45 · 45 GRM",
+    "displayName": "M&M Peanut",
+    "subtitle": "24×45 · 45g"
   },
   {
     "id": "AKG4222",
@@ -1378,7 +1604,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "24X45 \u00b7 45 GM"
+    "packaging": "24X45 · 45 GM",
+    "displayName": "M&M Peanut Arabic",
+    "subtitle": "24×45 · 45g"
   },
   {
     "id": "AKG4223",
@@ -1390,7 +1618,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X12X24X30 \u00b7 6GRM"
+    "packaging": "1X12X24X30 · 6GRM",
+    "displayName": "M&M Tube",
+    "subtitle": "12×24×30 · 6g"
   },
   {
     "id": "AKG4224",
@@ -1402,7 +1632,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 11.81,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "27X250 \u00b7 250 GR"
+    "packaging": "27X250 · 250 GR",
+    "displayName": "M&Ms Chocolate",
+    "subtitle": "27×250 · 250g"
   },
   {
     "id": "AKG4225",
@@ -1414,7 +1646,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 3.0,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "25X37 \u00b7 37 GRM"
+    "packaging": "25X37 · 37 GRM",
+    "displayName": "Maltesers",
+    "subtitle": "25×37 · 37g"
   },
   {
     "id": "AKG4226",
@@ -1426,7 +1660,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "6X28 \u00b7 37 GR"
+    "packaging": "6X28 · 37 GR",
+    "displayName": "Maltesers Offer Tray",
+    "subtitle": "6×28 · 37g"
   },
   {
     "id": "AKG4227",
@@ -1438,7 +1674,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "225GRM"
+    "packaging": "225GRM",
+    "displayName": "Mars 5 Pack Offer",
+    "subtitle": "Pack of 15 · 225g"
   },
   {
     "id": "AKG4228",
@@ -1450,7 +1688,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X12X24 \u00b7 51 GRM"
+    "packaging": "1X12X24 · 51 GRM",
+    "displayName": "Mars",
+    "subtitle": "12×24 · 51g"
   },
   {
     "id": "AKG4229",
@@ -1462,7 +1702,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "12X20X45 \u00b7 45GM"
+    "packaging": "12X20X45 · 45GM",
+    "displayName": "Snickers Chocolate",
+    "subtitle": "12×20×45 · 45g"
   },
   {
     "id": "AKG4230",
@@ -1474,7 +1716,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "12X24 \u00b7 50 GRM"
+    "packaging": "12X24 · 50 GRM",
+    "displayName": "Snickers Chocolate Arabic",
+    "subtitle": "12×24 · 50g"
   },
   {
     "id": "AKG4231",
@@ -1486,7 +1730,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 8.5,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "30X5X45 \u00b7 45 GRM"
+    "packaging": "30X5X45 · 45 GRM",
+    "displayName": "Snickers Chocolate 5 Pack",
+    "subtitle": "30×5×45 · 45g"
   },
   {
     "id": "AKG4232",
@@ -1498,7 +1744,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 11.46,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "12X180 \u00b7 180G"
+    "packaging": "12X180 · 180G",
+    "displayName": "Snickers Minis",
+    "subtitle": "12×180 · 180g"
   },
   {
     "id": "AKG4233",
@@ -1510,7 +1758,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X12X20 \u00b7 30GRM"
+    "packaging": "1X12X20 · 30GRM",
+    "displayName": "Snickers Small",
+    "subtitle": "1×12×20 · 30g"
   },
   {
     "id": "AKG4234",
@@ -1522,7 +1772,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X12X24 \u00b7 50 GRM"
+    "packaging": "1X12X24 · 50 GRM",
+    "displayName": "Snickers Chocolate Tray",
+    "subtitle": "1×12×24 · 50g"
   },
   {
     "id": "AKG4235",
@@ -1534,7 +1786,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "25G"
+    "packaging": "25G",
+    "displayName": "Twix Single Finger",
+    "subtitle": "Pack of 40 · 25g"
   },
   {
     "id": "AKG4236",
@@ -1546,7 +1800,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "18X5X50 \u00b7 50GRM"
+    "packaging": "18X5X50 · 50GRM",
+    "displayName": "Twix Twin Chocolate Gulf",
+    "subtitle": "18×5×50 · 50g"
   },
   {
     "id": "AKG4237",
@@ -1558,7 +1814,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "6X12X80 \u00b7 80GM"
+    "packaging": "6X12X80 · 80GM",
+    "displayName": "Galaxy Smooth Milk",
+    "subtitle": "6×12×80 · 80g"
   },
   {
     "id": "AKG4238",
@@ -1570,7 +1828,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 12.0,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X12X200 \u00b7 200 GM"
+    "packaging": "1X12X200 · 200 GM",
+    "displayName": "Twix Mini",
+    "subtitle": "1×12×200 · 200g"
   },
   {
     "id": "AKG4239",
@@ -1582,7 +1842,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 3.44,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "1X24X70 \u00b7 70GM"
+    "packaging": "1X24X70 · 70GM",
+    "displayName": "Snickers Chocolate Tray",
+    "subtitle": "1×24×70 · 70g"
   },
   {
     "id": "AKG4240",
@@ -1594,7 +1856,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Barni",
     "category": "Chocolates",
-    "packaging": "12X12X30 \u00b7 30GR"
+    "packaging": "12X12X30 · 30GR",
+    "displayName": "Barni Chocolate",
+    "subtitle": "12×12×30 · 30g"
   },
   {
     "id": "AKG4241",
@@ -1606,7 +1870,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "12X24X25 \u00b7 25GR"
+    "packaging": "12X24X25 · 25GR",
+    "displayName": "Bounty Chocolate",
+    "subtitle": "12×24×25 · 25g"
   },
   {
     "id": "AKG4242",
@@ -1618,7 +1884,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X12X30 \u00b7 30GR"
+    "packaging": "12X12X30 · 30GR",
+    "displayName": "Cadbury Dairy Milk",
+    "subtitle": "12×12×30 · 30g"
   },
   {
     "id": "AKG4243",
@@ -1630,7 +1898,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X12X30 \u00b7 30GR"
+    "packaging": "12X12X30 · 30GR",
+    "displayName": "Cadbury Dairy Milk Hazelnut",
+    "subtitle": "12×12×30 · 30g"
   },
   {
     "id": "AKG4244",
@@ -1642,7 +1912,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 21.0,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "24X500 \u00b7 500GR"
+    "packaging": "24X500 · 500GR",
+    "displayName": "Mars Minis",
+    "subtitle": "24×500 · 500g"
   },
   {
     "id": "AKG4245",
@@ -1654,7 +1926,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 10.65,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "30X5X40 \u00b7 40GR"
+    "packaging": "30X5X40 · 40GR",
+    "displayName": "Mars",
+    "subtitle": "30×5×40 · 40g"
   },
   {
     "id": "AKG4246",
@@ -1666,7 +1940,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "10X14X45 \u00b7 45 GR"
+    "packaging": "10X14X45 · 45 GR",
+    "displayName": "M&M Chocolate Arabic",
+    "subtitle": "10×14×45 · 45g"
   },
   {
     "id": "AKG4247",
@@ -1678,7 +1954,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 11.0,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "30X5X50 \u00b7 50 GR"
+    "packaging": "30X5X50 · 50 GR",
+    "displayName": "Bounty 5 Pack",
+    "subtitle": "30×5×50 · 50g"
   },
   {
     "id": "AKG4248",
@@ -1690,7 +1968,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 10.5,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "30X5X40 \u00b7 40 GR"
+    "packaging": "30X5X40 · 40 GR",
+    "displayName": "Snickers 5 Pack",
+    "subtitle": "30×5×40 · 40g"
   },
   {
     "id": "AKG4249",
@@ -1702,7 +1982,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X12X32 \u00b7 32 GR"
+    "packaging": "12X12X32 · 32 GR",
+    "displayName": "Dairy Milk",
+    "subtitle": "12×12×32 · 32g"
   },
   {
     "id": "AKG4250",
@@ -1714,7 +1996,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X12X30 \u00b7 30 GR"
+    "packaging": "12X12X30 · 30 GR",
+    "displayName": "Dairy Milk Fruit & Nut",
+    "subtitle": "12×12×30 · 30g"
   },
   {
     "id": "AKG4251",
@@ -1726,7 +2010,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "6X24X36 \u00b7 36 GR"
+    "packaging": "6X24X36 · 36 GR",
+    "displayName": "Galaxy Cookie Crumble",
+    "subtitle": "6×24×36 · 36g"
   },
   {
     "id": "AKG4252",
@@ -1738,7 +2024,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.5,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "36X4X37 \u00b7 37GR"
+    "packaging": "36X4X37 · 37GR",
+    "displayName": "Maltesers",
+    "subtitle": "36×4×37 · 37g"
   },
   {
     "id": "AKG4253",
@@ -1750,7 +2038,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 6.5,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "67X5X23 \u00b7 23GR"
+    "packaging": "67X5X23 · 23GR",
+    "displayName": "Snicker Small",
+    "subtitle": "67×5×23 · 23g"
   },
   {
     "id": "AKG4254",
@@ -1762,7 +2052,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.0,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "22X4X30 \u00b7 30GR"
+    "packaging": "22X4X30 · 30GR",
+    "displayName": "Galaxy Ripple",
+    "subtitle": "22×4×30 · 30g"
   },
   {
     "id": "AKG4255",
@@ -1774,7 +2066,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "12X24X40 \u00b7 40 GR"
+    "packaging": "12X24X40 · 40 GR",
+    "displayName": "Snicker",
+    "subtitle": "12×24×40 · 40g"
   },
   {
     "id": "AKG4256",
@@ -1786,7 +2080,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.0,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "36X4X45 \u00b7 45GM"
+    "packaging": "36X4X45 · 45GM",
+    "displayName": "M&M Peanut",
+    "subtitle": "36×4×45 · 45g"
   },
   {
     "id": "AKG4257",
@@ -1798,7 +2094,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "8X24X50 \u00b7 50GM"
+    "packaging": "8X24X50 · 50GM",
+    "displayName": "Bounty Chocolate",
+    "subtitle": "8×24×50 · 50g"
   },
   {
     "id": "AKG4258",
@@ -1810,7 +2108,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "12X24X40 \u00b7 40GM"
+    "packaging": "12X24X40 · 40GM",
+    "displayName": "Mars Chocolate",
+    "subtitle": "12×24×40 · 40g"
   },
   {
     "id": "AKG4259",
@@ -1822,7 +2122,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "12X28X23 \u00b7 23GM"
+    "packaging": "12X28X23 · 23GM",
+    "displayName": "Snickers",
+    "subtitle": "12×28×23 · 23g"
   },
   {
     "id": "AKG4260",
@@ -1834,7 +2136,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.0,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "36X4X45 \u00b7 45GM"
+    "packaging": "36X4X45 · 45GM",
+    "displayName": "M&M Chocolate",
+    "subtitle": "36×4×45 · 45g"
   },
   {
     "id": "AKG4261",
@@ -1846,7 +2150,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "10X24X50 \u00b7 50GM"
+    "packaging": "10X24X50 · 50GM",
+    "displayName": "Twix Chocolate",
+    "subtitle": "10×24×50 · 50g"
   },
   {
     "id": "AKG4262",
@@ -1858,7 +2164,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 15.25,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "2X28 \u00b7 45GM"
+    "packaging": "2X28 · 45GM",
+    "displayName": "M&M Peanut",
+    "subtitle": "2×28 · 45g"
   },
   {
     "id": "AKG4263",
@@ -1870,7 +2178,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 15.25,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "2X28 \u00b7 45GM"
+    "packaging": "2X28 · 45GM",
+    "displayName": "M&M Chocolate",
+    "subtitle": "2×28 · 45g"
   },
   {
     "id": "AKG4264",
@@ -1882,7 +2192,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "12X24X18 \u00b7 18GM"
+    "packaging": "12X24X18 · 18GM",
+    "displayName": "Galaxy Smooth Milk",
+    "subtitle": "12×24×18 · 18g"
   },
   {
     "id": "AKG4265",
@@ -1894,7 +2206,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "36X30 \u00b7 30GM"
+    "packaging": "36X30 · 30GM",
+    "displayName": "Galaxy Ripple",
+    "subtitle": "36×30g"
   },
   {
     "id": "AKG4267",
@@ -1906,7 +2220,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "6X24X30 \u00b7 30GM"
+    "packaging": "6X24X30 · 30GM",
+    "displayName": "Galaxy Hazelnut",
+    "subtitle": "6×24×30 · 30g"
   },
   {
     "id": "AKG4268",
@@ -1918,7 +2234,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 1.0,
     "brand": "Other",
     "category": "Other",
-    "packaging": ""
+    "packaging": "",
+    "displayName": "New Product",
+    "subtitle": ""
   },
   {
     "id": "AKG4400",
@@ -1930,7 +2248,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "1X12X12 \u00b7 26 GR"
+    "packaging": "1X12X12 · 26 GR",
+    "displayName": "Cadbury Bubbly",
+    "subtitle": "1×12×12 · 26g"
   },
   {
     "id": "AKG4401",
@@ -1942,7 +2262,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 4.1,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "1X6X12 \u00b7 87 GRM"
+    "packaging": "1X6X12 · 87 GRM",
+    "displayName": "Cadbury Bubbly",
+    "subtitle": "1×6×12 · 87g"
   },
   {
     "id": "AKG4403",
@@ -1954,7 +2276,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X12X35 \u00b7 35G"
+    "packaging": "12X12X35 · 35G",
+    "displayName": "Dairy Milk",
+    "subtitle": "12×12×35 · 35g"
   },
   {
     "id": "AKG4404",
@@ -1966,7 +2290,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X12 \u00b7 28GRM"
+    "packaging": "12X12 · 28GRM",
+    "displayName": "Cadbury Flake",
+    "subtitle": "12×12 · 28g"
   },
   {
     "id": "AKG4405",
@@ -1978,7 +2304,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 10.63,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X159 \u00b7 159.5GM"
+    "packaging": "12X159 · 159.5GM",
+    "displayName": "Cadbury Flakes Minis",
+    "subtitle": "12×160g"
   },
   {
     "id": "AKG4406",
@@ -1990,7 +2318,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "4X36X15 \u00b7 15GRM"
+    "packaging": "4X36X15 · 15GRM",
+    "displayName": "Cadbury Flakes",
+    "subtitle": "4×36×15 · 15g"
   },
   {
     "id": "AKG4407",
@@ -2002,7 +2332,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "6X12X90 \u00b7 90 GRM"
+    "packaging": "6X12X90 · 90 GRM",
+    "displayName": "Cadbury Dairy Milk Fruit & Nut",
+    "subtitle": "6×12×90 · 90g"
   },
   {
     "id": "AKG4408",
@@ -2014,7 +2346,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "1X12X12 \u00b7 35 GR"
+    "packaging": "1X12X12 · 35 GR",
+    "displayName": "Cadbury Dairy Milk Fruit & Nut",
+    "subtitle": "1×12×12 · 35g"
   },
   {
     "id": "AKG4409",
@@ -2026,7 +2360,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "1X12X12 \u00b7 35 GR"
+    "packaging": "1X12X12 · 35 GR",
+    "displayName": "Cadbury Dairy Milk Hazelnut",
+    "subtitle": "1×12×12 · 35g"
   },
   {
     "id": "AKG4410",
@@ -2038,7 +2374,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X12X20 \u00b7 20.8 GRM"
+    "packaging": "12X12X20 · 20.8 GRM",
+    "displayName": "Cadbury Time Out",
+    "subtitle": "12×12×20 · 21g"
   },
   {
     "id": "AKG4411",
@@ -2050,7 +2388,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X5X35 \u00b7 35G"
+    "packaging": "12X5X35 · 35G",
+    "displayName": "Cadbury Dairy Milk",
+    "subtitle": "12×5×35 · 35g"
   },
   {
     "id": "AKG4412",
@@ -2062,7 +2402,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "1X6X12 \u00b7 90 GRM"
+    "packaging": "1X6X12 · 90 GRM",
+    "displayName": "Cadbury Dairy Milk",
+    "subtitle": "1×6×12 · 90g"
   },
   {
     "id": "AKG4413",
@@ -2074,7 +2416,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "6X12X90 \u00b7 90 GM"
+    "packaging": "6X12X90 · 90 GM",
+    "displayName": "Cadbury Dairy Milk Hazelnut",
+    "subtitle": "6×12×90 · 90g"
   },
   {
     "id": "AKG4414",
@@ -2086,7 +2430,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X12X35 \u00b7 35 G"
+    "packaging": "12X12X35 · 35 G",
+    "displayName": "Cadbury Dairy Milk Caramel",
+    "subtitle": "12×12×35 · 35g"
   },
   {
     "id": "AKG4415",
@@ -2098,7 +2444,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X5X35 \u00b7 35G"
+    "packaging": "12X5X35 · 35G",
+    "displayName": "Cadbury Dairy Milk Fruit & Nut",
+    "subtitle": "12×5×35 · 35g"
   },
   {
     "id": "AKG4416",
@@ -2110,7 +2458,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X5X35 \u00b7 35G"
+    "packaging": "12X5X35 · 35G",
+    "displayName": "Cadbury Dairy Milk Hazelnut",
+    "subtitle": "12×5×35 · 35g"
   },
   {
     "id": "AKG4417",
@@ -2122,7 +2472,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 3.97,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "6X12X90 \u00b7 90G"
+    "packaging": "6X12X90 · 90G",
+    "displayName": "Cadbury Dairy Milk Hazelnut",
+    "subtitle": "6×12×90 · 90g"
   },
   {
     "id": "AKG4418",
@@ -2134,7 +2486,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X168 \u00b7 168 GRM"
+    "packaging": "12X168 · 168 GRM",
+    "displayName": "Cadbury Dairy Milk Mini",
+    "subtitle": "12×168 · 168g"
   },
   {
     "id": "AKG4419",
@@ -2146,7 +2500,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 11.18,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X168 \u00b7 168 GRM"
+    "packaging": "12X168 · 168 GRM",
+    "displayName": "Cadbury Dairy Milk Mini Hazelnut",
+    "subtitle": "12×168 · 168g"
   },
   {
     "id": "AKG4420",
@@ -2158,7 +2514,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 11.17,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X159 \u00b7 159.5 GRM"
+    "packaging": "12X159 · 159.5 GRM",
+    "displayName": "Cadbury Dairy Milk Mini Oreo",
+    "subtitle": "12×159 · 160g"
   },
   {
     "id": "AKG4421",
@@ -2170,7 +2528,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X12X35 \u00b7 35G"
+    "packaging": "12X12X35 · 35G",
+    "displayName": "Cadbury Dairy Milk Oreo",
+    "subtitle": "12×12×35 · 35g"
   },
   {
     "id": "AKG4422",
@@ -2182,7 +2542,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "12X24X9 \u00b7 9GM"
+    "packaging": "12X24X9 · 9GM",
+    "displayName": "Cadbury Dairy Milk Small Lupe",
+    "subtitle": "12×24×9 · 9g"
   },
   {
     "id": "AKG4423",
@@ -2194,7 +2556,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Biscuits & Cookies",
-    "packaging": "12X12 \u00b7 36.8 GRM"
+    "packaging": "12X12 · 36.8 GRM",
+    "displayName": "Oreo Biscuits Original",
+    "subtitle": "12×12 · 37g"
   },
   {
     "id": "AKG4424",
@@ -2206,7 +2570,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "1X8X24 \u00b7 35 GRM"
+    "packaging": "1X8X24 · 35 GRM",
+    "displayName": "Toblerone Chocolate",
+    "subtitle": "1×8×24 · 35g"
   },
   {
     "id": "AKG4425",
@@ -2218,7 +2584,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "1X4X20X100 \u00b7 100 GRM"
+    "packaging": "1X4X20X100 · 100 GRM",
+    "displayName": "Toblerone Milk Chocolate",
+    "subtitle": "1×4×20×100 · 100g"
   },
   {
     "id": "AKG4426",
@@ -2230,7 +2598,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 4.1,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "6X12X95 \u00b7 95GM"
+    "packaging": "6X12X95 · 95GM",
+    "displayName": "Cadbury Dairy Milk Oreo",
+    "subtitle": "6×12×95 · 95g"
   },
   {
     "id": "AKG4427",
@@ -2242,7 +2612,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Biscuits & Cookies",
-    "packaging": "6X24X36 \u00b7 36.8G"
+    "packaging": "6X24X36 · 36.8G",
+    "displayName": "Oreo Biscuits",
+    "subtitle": "6×24×36 · 37g"
   },
   {
     "id": "AKG4428",
@@ -2254,7 +2626,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.22,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "6X12 \u00b7 230 GRM"
+    "packaging": "6X12 · 230 GRM",
+    "displayName": "Cadbury Dairy Milk Fruit & Nut",
+    "subtitle": "6×12 · 230g"
   },
   {
     "id": "AKG4429",
@@ -2266,7 +2640,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.22,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "6X12 \u00b7 230 GRM"
+    "packaging": "6X12 · 230 GRM",
+    "displayName": "Cadbury Dairy Milk Hazelnut",
+    "subtitle": "6×12 · 230g"
   },
   {
     "id": "AKG4430",
@@ -2278,7 +2654,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "6X12 \u00b7 230 GRM"
+    "packaging": "6X12 · 230 GRM",
+    "displayName": "Cadbury Dairy Milk Plain",
+    "subtitle": "6×12 · 230g"
   },
   {
     "id": "AKG4431",
@@ -2290,7 +2668,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Cadbury",
     "category": "Chocolates",
-    "packaging": "32 GRM"
+    "packaging": "32 GRM",
+    "displayName": "Cadbury Flake",
+    "subtitle": "Pack of 4×36 · 32g"
   },
   {
     "id": "AKG4600",
@@ -2302,7 +2682,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Nestle",
     "category": "Chocolates",
-    "packaging": "12X24X36 \u00b7 36.5 GM"
+    "packaging": "12X24X36 · 36.5 GM",
+    "displayName": "Kit Kat 4 Finger Arabic",
+    "subtitle": "12×24×36 · 37g"
   },
   {
     "id": "AKG4601",
@@ -2314,7 +2696,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Nestle",
     "category": "Chocolates",
-    "packaging": "1X20X12X38 \u00b7 38 GRM"
+    "packaging": "1X20X12X38 · 38 GRM",
+    "displayName": "Kit Kat Chunky English",
+    "subtitle": "1×20×12×38 · 38g"
   },
   {
     "id": "AKG4602",
@@ -2326,7 +2710,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.5,
     "brand": "Nestle",
     "category": "Chocolates",
-    "packaging": "36X4X36 \u00b7 36.5GM"
+    "packaging": "36X4X36 · 36.5GM",
+    "displayName": "Kit Kat Value Pack",
+    "subtitle": "36×4×36 · 37g"
   },
   {
     "id": "AKG4603",
@@ -2338,7 +2724,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Nestle",
     "category": "Chocolates",
-    "packaging": "1X8X24 \u00b7 40GRM"
+    "packaging": "1X8X24 · 40GRM",
+    "displayName": "Kit Kat Chunky",
+    "subtitle": "1×8×24 · 40g"
   },
   {
     "id": "AKG4604",
@@ -2350,7 +2738,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Nestle",
     "category": "Chocolates",
-    "packaging": "8X24X42 \u00b7 42G"
+    "packaging": "8X24X42 · 42G",
+    "displayName": "Kit Kat Chunky Lotus Arabic",
+    "subtitle": "8×24×42 · 42g"
   },
   {
     "id": "AKG4605",
@@ -2362,7 +2752,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Nestle",
     "category": "Chocolates",
-    "packaging": "8X30 \u00b7 40 GRM"
+    "packaging": "8X30 · 40 GRM",
+    "displayName": "Nestle Kit Kat Chunky Offer",
+    "subtitle": "8×30 · 40g"
   },
   {
     "id": "AKG4606",
@@ -2374,7 +2766,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Nestle",
     "category": "Chocolates",
-    "packaging": "32X18X17 \u00b7 7GRM"
+    "packaging": "32X18X17 · 7GRM",
+    "displayName": "Nestle Kit Kat Small",
+    "subtitle": "32×18×17 · 7g"
   },
   {
     "id": "AKG4607",
@@ -2386,7 +2780,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Nestle",
     "category": "Chocolates",
-    "packaging": "1X16X36 \u00b7 20.5 GR"
+    "packaging": "1X16X36 · 20.5 GR",
+    "displayName": "Nestle Kit Kat Tray Arabic",
+    "subtitle": "1×16×36 · 21g"
   },
   {
     "id": "AKG4608",
@@ -2398,7 +2794,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Nestle",
     "category": "Chocolates",
-    "packaging": "10X54X12 \u00b7 12G"
+    "packaging": "10X54X12 · 12G",
+    "displayName": "Nestle Milky Bar",
+    "subtitle": "10×54 · 12g"
   },
   {
     "id": "AKG4609",
@@ -2410,7 +2808,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Nestle",
     "category": "Chocolates",
-    "packaging": "18X36X20 \u00b7 20.5 GRM"
+    "packaging": "18X36X20 · 20.5 GRM",
+    "displayName": "Nestle Kit Kat 2 Finger",
+    "subtitle": "18×36×20 · 21g"
   },
   {
     "id": "AKG4610",
@@ -2422,7 +2822,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Nestle",
     "category": "Chocolates",
-    "packaging": "4X12X36 \u00b7 36.5 GRM"
+    "packaging": "4X12X36 · 36.5 GRM",
+    "displayName": "Nestle Kit Kat 4 Finger",
+    "subtitle": "4×12×36 · 37g"
   },
   {
     "id": "AKG4611",
@@ -2434,7 +2836,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 26.5,
     "brand": "Nestle",
     "category": "Other",
-    "packaging": "6X410 \u00b7 410GM"
+    "packaging": "6X410 · 410GM",
+    "displayName": "Nestle Quality Street",
+    "subtitle": "6×410g"
   },
   {
     "id": "AKG4612",
@@ -2446,7 +2850,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 27.5,
     "brand": "Nestle",
     "category": "Other",
-    "packaging": "8X550 \u00b7 550GM"
+    "packaging": "8X550 · 550GM",
+    "displayName": "Nestle Quality Street",
+    "subtitle": "8×550g"
   },
   {
     "id": "AKG4800",
@@ -2458,7 +2864,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.6,
     "brand": "Tiffany",
     "category": "Biscuits & Cookies",
-    "packaging": "1X10X344 \u00b7 344 GRM"
+    "packaging": "1X10X344 · 344 GRM",
+    "displayName": "Tiffany Quanta Mini Square",
+    "subtitle": "1×10×344g"
   },
   {
     "id": "AKG4801",
@@ -2470,7 +2878,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Tiffany",
     "category": "Biscuits & Cookies",
-    "packaging": "24X24 \u00b7 12.5 GRM"
+    "packaging": "24X24 · 12.5 GRM",
+    "displayName": "Tiffany Break 2 Finger",
+    "subtitle": "24×24 · 13g"
   },
   {
     "id": "AKG4802",
@@ -2482,7 +2892,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Tiffany",
     "category": "Biscuits & Cookies",
-    "packaging": "24X12 \u00b7 25 GRM"
+    "packaging": "24X12 · 25 GRM",
+    "displayName": "Tiffany Break 4 Finger",
+    "subtitle": "24×12 · 25g"
   },
   {
     "id": "AKG4803",
@@ -2494,7 +2906,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Tiffany",
     "category": "Biscuits & Cookies",
-    "packaging": "12X24 \u00b7 13 GRM"
+    "packaging": "12X24 · 13 GRM",
+    "displayName": "Tiffany Break Time",
+    "subtitle": "12×24 · 13g"
   },
   {
     "id": "AKG4804",
@@ -2506,7 +2920,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Tiffany",
     "category": "Biscuits & Cookies",
-    "packaging": "12X24 \u00b7 13 GRM"
+    "packaging": "12X24 · 13 GRM",
+    "displayName": "Tiffany Breaksta",
+    "subtitle": "12×24 · 13g"
   },
   {
     "id": "AKG4805",
@@ -2518,7 +2934,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.04,
     "brand": "Tiffany",
     "category": "Biscuits & Cookies",
-    "packaging": "10X550 \u00b7 550G"
+    "packaging": "10X550 · 550G",
+    "displayName": "Tiffany Eclairs Assorted",
+    "subtitle": "10×550g"
   },
   {
     "id": "AKG4806",
@@ -2530,7 +2948,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.4,
     "brand": "Tiffany",
     "category": "Biscuits & Cookies",
-    "packaging": "10X314 \u00b7 314 GRM"
+    "packaging": "10X314 · 314 GRM",
+    "displayName": "Tiffany Quanta",
+    "subtitle": "10×314g"
   },
   {
     "id": "AKG4900",
@@ -2542,7 +2962,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Choki Choki",
     "category": "Chocolates",
-    "packaging": "6X24X3X12 \u00b7 12GM"
+    "packaging": "6X24X3X12 · 12GM",
+    "displayName": "Choki Choki Chocolate Stick",
+    "subtitle": "6×24×3 · 12g"
   },
   {
     "id": "AKG4901",
@@ -2554,7 +2976,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 44.0,
     "brand": "Chupa Chups",
     "category": "Candy & Gummies",
-    "packaging": "1X1"
+    "packaging": "1X1",
+    "displayName": "Chupa Chups Lollipop",
+    "subtitle": "Pack of 100"
   },
   {
     "id": "AKG4902",
@@ -2566,7 +2990,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Hershey",
     "category": "Chocolates",
-    "packaging": "1X12X24 \u00b7 40GRM"
+    "packaging": "1X12X24 · 40GRM",
+    "displayName": "Hershey's Chocolate Bar",
+    "subtitle": "1×12×24 · 40g"
   },
   {
     "id": "AKG4903",
@@ -2578,7 +3004,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Hershey",
     "category": "Chocolates",
-    "packaging": "12X24"
+    "packaging": "12X24",
+    "displayName": "Hershey's Cookies & Cream",
+    "subtitle": "12×24"
   },
   {
     "id": "AKG4904",
@@ -2590,7 +3018,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 36.44,
     "brand": "Hershey",
     "category": "Chocolates",
-    "packaging": "16X100 \u00b7 100G"
+    "packaging": "16X100 · 100G",
+    "displayName": "Hershey's Kisses Cookies",
+    "subtitle": "16×100 · 100g"
   },
   {
     "id": "AKG4905",
@@ -2602,7 +3032,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Loacker",
     "category": "Wafers",
-    "packaging": "6X25X25 \u00b7 25 GR"
+    "packaging": "6X25X25 · 25 GR",
+    "displayName": "Loacker Napolitaner",
+    "subtitle": "6×25×25 · 25g"
   },
   {
     "id": "AKG4906",
@@ -2614,7 +3046,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Loacker",
     "category": "Wafers",
-    "packaging": "18X10X45 \u00b7 45 GRM"
+    "packaging": "18X10X45 · 45 GRM",
+    "displayName": "Loacker Blue 8+2 Offer",
+    "subtitle": "18×10×45 · 45g"
   },
   {
     "id": "AKG4907",
@@ -2626,7 +3060,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 21.11,
     "brand": "Loacker",
     "category": "Wafers",
-    "packaging": "18X10X45 \u00b7 45 GR"
+    "packaging": "18X10X45 · 45 GR",
+    "displayName": "Loacker Red 8+2 Offer",
+    "subtitle": "18×10×45 · 45g"
   },
   {
     "id": "AKG4908",
@@ -2638,7 +3074,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 3.75,
     "brand": "Red Bull",
     "category": "Beverages",
-    "packaging": "24X250 \u00b7 250 ML"
+    "packaging": "24X250 · 250 ML",
+    "displayName": "Red Bull Energy Drink",
+    "subtitle": "24×250ml"
   },
   {
     "id": "AKG4909",
@@ -2650,7 +3088,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Hershey",
     "category": "Chocolates",
-    "packaging": "16X18X47 \u00b7 47 GR"
+    "packaging": "16X18X47 · 47 GR",
+    "displayName": "Reese's Nut Bar",
+    "subtitle": "16×18×47 · 47g"
   },
   {
     "id": "AKG4910",
@@ -2662,7 +3102,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Hershey",
     "category": "Chocolates",
-    "packaging": "24X6X42 \u00b7 42 GR"
+    "packaging": "24X6X42 · 42 GR",
+    "displayName": "Reese's Peanut Butter Cup Offer",
+    "subtitle": "24×6×42 · 42g"
   },
   {
     "id": "AKG4911",
@@ -2674,7 +3116,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Safari",
     "category": "Other",
-    "packaging": "12X24X22 \u00b7 22 GRM"
+    "packaging": "12X24X22 · 22 GRM",
+    "displayName": "Safari Chocolate",
+    "subtitle": "12×24×22 · 22g"
   },
   {
     "id": "AKG4913",
@@ -2686,7 +3130,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Astor",
     "category": "Wafers",
-    "packaging": "8X12X40 \u00b7 40 GM"
+    "packaging": "8X12X40 · 40 GM",
+    "displayName": "Astor Wafer Stick",
+    "subtitle": "8×12×40 · 40g"
   },
   {
     "id": "AKG4914",
@@ -2698,7 +3144,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 8.95,
     "brand": "Lindt",
     "category": "Chocolates",
-    "packaging": "21X100 \u00b7 100G"
+    "packaging": "21X100 · 100G",
+    "displayName": "Lindt Classic Milk Chocolate",
+    "subtitle": "21×100 · 100g"
   },
   {
     "id": "AKG4915",
@@ -2710,7 +3158,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.43,
     "brand": "Lindt",
     "category": "Chocolates",
-    "packaging": "20X100 \u00b7 100G"
+    "packaging": "20X100 · 100G",
+    "displayName": "Lindt Lindor Caramel",
+    "subtitle": "20×100 · 100g"
   },
   {
     "id": "AKG4916",
@@ -2722,7 +3172,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 9.72,
     "brand": "Lindt",
     "category": "Chocolates",
-    "packaging": "18X100 \u00b7 100G"
+    "packaging": "18X100 · 100G",
+    "displayName": "Lindt Lindor Salted Caramel",
+    "subtitle": "18×100 · 100g"
   },
   {
     "id": "AKG4917",
@@ -2734,7 +3186,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 6.46,
     "brand": "Lotus",
     "category": "Biscuits & Cookies",
-    "packaging": "8X2X250 \u00b7 250GM"
+    "packaging": "8X2X250 · 250GM",
+    "displayName": "Lotus Biscuit Biscoff",
+    "subtitle": "8×2×250 · 250g"
   },
   {
     "id": "AKG4918",
@@ -2746,7 +3200,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Ulker",
     "category": "Other",
-    "packaging": "6X24X40 \u00b7 40GM"
+    "packaging": "6X24X40 · 40GM",
+    "displayName": "Ulker Cokorem Tube",
+    "subtitle": "6×24×40 · 40g"
   },
   {
     "id": "AKG4919",
@@ -2758,7 +3214,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Ulker",
     "category": "Wafers",
-    "packaging": "12X10X25 \u00b7 25GM"
+    "packaging": "12X10X25 · 25GM",
+    "displayName": "Hello Panda",
+    "subtitle": "12×10×25 · 25g"
   },
   {
     "id": "AKG4920",
@@ -2770,7 +3228,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Wrigley Extra",
     "category": "Gum & Mints",
-    "packaging": "20X30X14 \u00b7 14 GR"
+    "packaging": "20X30X14 · 14 GR",
+    "displayName": "Extra Peppermint",
+    "subtitle": "20×30×14 · 14g"
   },
   {
     "id": "AKG4921",
@@ -2782,7 +3242,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Sour Punk",
     "category": "Candy & Gummies",
-    "packaging": "8X24 \u00b7 40GR"
+    "packaging": "8X24 · 40GR",
+    "displayName": "Sour Punk Cola",
+    "subtitle": "8×24 · 40g"
   },
   {
     "id": "AKG4922",
@@ -2794,7 +3256,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Sour Punk",
     "category": "Candy & Gummies",
-    "packaging": "8X24 \u00b7 40GR"
+    "packaging": "8X24 · 40GR",
+    "displayName": "Sour Punk Blueberry",
+    "subtitle": "8×24 · 40g"
   },
   {
     "id": "AKG4923",
@@ -2806,7 +3270,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Sour Punk",
     "category": "Candy & Gummies",
-    "packaging": "8X24 \u00b7 40GR"
+    "packaging": "8X24 · 40GR",
+    "displayName": "Sour Punk Strawberry",
+    "subtitle": "8×24 · 40g"
   },
   {
     "id": "AKG4924",
@@ -2818,7 +3284,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Sour Punk",
     "category": "Candy & Gummies",
-    "packaging": "8X24 \u00b7 40GR"
+    "packaging": "8X24 · 40GR",
+    "displayName": "Sour Punk Apple",
+    "subtitle": "8×24 · 40g"
   },
   {
     "id": "AKG4925",
@@ -2830,7 +3298,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 6.5,
     "brand": "Lotus",
     "category": "Biscuits & Cookies",
-    "packaging": "10X250 \u00b7 250GR"
+    "packaging": "10X250 · 250GR",
+    "displayName": "Lotus Biscoff",
+    "subtitle": "10×250 · 250g"
   },
   {
     "id": "AKG4926",
@@ -2842,7 +3312,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Wrigley Extra",
     "category": "Gum & Mints",
-    "packaging": "20X30X14 \u00b7 14GR"
+    "packaging": "20X30X14 · 14GR",
+    "displayName": "Extra Spearmint",
+    "subtitle": "20×30×14 · 14g"
   },
   {
     "id": "AKG4927",
@@ -2854,7 +3326,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Wrigley Extra",
     "category": "Gum & Mints",
-    "packaging": "20X30X14 \u00b7 14GR"
+    "packaging": "20X30X14 · 14GR",
+    "displayName": "Extra Bubblemint",
+    "subtitle": "20×30×14 · 14g"
   },
   {
     "id": "AKG4928",
@@ -2866,7 +3340,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Sando",
     "category": "Chocolates",
-    "packaging": "12X24X32 \u00b7 32GR"
+    "packaging": "12X24X32 · 32GR",
+    "displayName": "Sando Chocolate Wafer",
+    "subtitle": "12×24×32 · 32g"
   },
   {
     "id": "AKG4929",
@@ -2878,7 +3354,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 6.0,
     "brand": "Haribo",
     "category": "Candy & Gummies",
-    "packaging": "30X160 \u00b7 160GR"
+    "packaging": "30X160 · 160GR",
+    "displayName": "Haribo Worms",
+    "subtitle": "30×160 · 160g"
   },
   {
     "id": "AKG4930",
@@ -2890,7 +3368,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 6.0,
     "brand": "Haribo",
     "category": "Candy & Gummies",
-    "packaging": "30X160 \u00b7 160GR"
+    "packaging": "30X160 · 160GR",
+    "displayName": "Haribo Happy Cherries",
+    "subtitle": "30×160 · 160g"
   },
   {
     "id": "AKG4931",
@@ -2902,7 +3382,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 6.0,
     "brand": "Haribo",
     "category": "Candy & Gummies",
-    "packaging": "30X160 \u00b7 160GR"
+    "packaging": "30X160 · 160GR",
+    "displayName": "Haribo Fizz Happy Cola",
+    "subtitle": "30×160g"
   },
   {
     "id": "AKG4932",
@@ -2914,7 +3396,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 6.0,
     "brand": "Haribo",
     "category": "Candy & Gummies",
-    "packaging": "30X160 \u00b7 160GR"
+    "packaging": "30X160 · 160GR",
+    "displayName": "Haribo Starmix",
+    "subtitle": "30×160g"
   },
   {
     "id": "AKG4933",
@@ -2926,7 +3410,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 6.0,
     "brand": "Haribo",
     "category": "Candy & Gummies",
-    "packaging": "30X160 \u00b7 160GR"
+    "packaging": "30X160 · 160GR",
+    "displayName": "Haribo Fizz Worms",
+    "subtitle": "30×160g"
   },
   {
     "id": "AKG4934",
@@ -2938,7 +3424,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 6.0,
     "brand": "Haribo",
     "category": "Candy & Gummies",
-    "packaging": "30X160 \u00b7 160GR"
+    "packaging": "30X160 · 160GR",
+    "displayName": "Haribo Goldbears",
+    "subtitle": "30×160g"
   },
   {
     "id": "AKG4935",
@@ -2950,7 +3438,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 6.0,
     "brand": "Haribo",
     "category": "Candy & Gummies",
-    "packaging": "30X160 \u00b7 160GR"
+    "packaging": "30X160 · 160GR",
+    "displayName": "Haribo Happy Cola",
+    "subtitle": "30×160g"
   },
   {
     "id": "AKG4936",
@@ -2962,7 +3452,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Wrigley Extra",
     "category": "Gum & Mints",
-    "packaging": "20X30X14 \u00b7 14GR"
+    "packaging": "20X30X14 · 14GR",
+    "displayName": "Extra Watermelon",
+    "subtitle": "20×30 · 14g"
   },
   {
     "id": "AKG4937",
@@ -2974,7 +3466,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Wrigley Extra",
     "category": "Gum & Mints",
-    "packaging": "20X30X14 \u00b7 14 GR"
+    "packaging": "20X30X14 · 14 GR",
+    "displayName": "Extra Strawberry",
+    "subtitle": "20×30 · 14g"
   },
   {
     "id": "AKG4938",
@@ -2986,7 +3480,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Wrigley Extra",
     "category": "Gum & Mints",
-    "packaging": "20X30X14 \u00b7 14GR"
+    "packaging": "20X30X14 · 14GR",
+    "displayName": "Extra White Sweetmint",
+    "subtitle": "20×30 · 14g"
   },
   {
     "id": "AKG4940",
@@ -2998,7 +3494,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Chupa Chups",
     "category": "Candy & Gummies",
-    "packaging": "10X20X24 \u00b7 24.2GR"
+    "packaging": "10X20X24 · 24.2GR",
+    "displayName": "Chupa Chups Bites",
+    "subtitle": "10×20 · 24g"
   },
   {
     "id": "AKG4941",
@@ -3010,7 +3508,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Chupa Chups",
     "category": "Candy & Gummies",
-    "packaging": "16X48X10 \u00b7 10GR"
+    "packaging": "16X48X10 · 10GR",
+    "displayName": "Chupa Chups Belts",
+    "subtitle": "16×48 · 10g"
   },
   {
     "id": "AKG4942",
@@ -3022,7 +3522,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Chupa Chups",
     "category": "Candy & Gummies",
-    "packaging": "10X20X24 \u00b7 24.2 GR"
+    "packaging": "10X20X24 · 24.2 GR",
+    "displayName": "Chupa Chups Tubes",
+    "subtitle": "10×20 · 24g"
   },
   {
     "id": "AKG4943",
@@ -3034,7 +3536,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Chupa Chups",
     "category": "Candy & Gummies",
-    "packaging": "8X12X57 \u00b7 57GR"
+    "packaging": "8X12X57 · 57GR",
+    "displayName": "Chupa Chups Belt Mixed Fruit",
+    "subtitle": "8×12 · 57g"
   },
   {
     "id": "AKG4944",
@@ -3046,7 +3550,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 11.5,
     "brand": "Loacker",
     "category": "Wafers",
-    "packaging": "18X4 \u00b7 45GM"
+    "packaging": "18X4 · 45GM",
+    "displayName": "Loacker Cremkakao",
+    "subtitle": "18×4 · 45g"
   },
   {
     "id": "AKG4945",
@@ -3058,7 +3564,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 16.5,
     "brand": "Mars",
     "category": "Chocolates",
-    "packaging": "12X400 \u00b7 400GR"
+    "packaging": "12X400 · 400GR",
+    "displayName": "Galaxy Mix Minis",
+    "subtitle": "12×400g"
   },
   {
     "id": "AKG4946",
@@ -3070,7 +3578,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Chupa Chups",
     "category": "Candy & Gummies",
-    "packaging": "16X48X10 \u00b7 10 GR"
+    "packaging": "16X48X10 · 10 GR",
+    "displayName": "Chupa Chups Belt Mixed Fruit",
+    "subtitle": "16×48 · 10g"
   },
   {
     "id": "AKG4947",
@@ -3082,7 +3592,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 3.75,
     "brand": "Chips Ahoy",
     "category": "Biscuits & Cookies",
-    "packaging": "12X128 \u00b7 128 GR"
+    "packaging": "12X128 · 128 GR",
+    "displayName": "Chips Ahoy Biscuit",
+    "subtitle": "12×128 · 128g"
   },
   {
     "id": "AKG4948",
@@ -3094,7 +3606,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 1.19,
     "brand": "Casabite",
     "category": "Biscuits & Cookies",
-    "packaging": "48X20 \u00b7 20GM"
+    "packaging": "48X20 · 20GM",
+    "displayName": "Casabite Pistachio Kunafa",
+    "subtitle": "48×20 · 20g"
   },
   {
     "id": "AKG4949",
@@ -3106,7 +3620,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 1.19,
     "brand": "Casabite",
     "category": "Biscuits & Cookies",
-    "packaging": "48X20 \u00b7 20GM"
+    "packaging": "48X20 · 20GM",
+    "displayName": "Casabite Mango Passion",
+    "subtitle": "48×20 · 20g"
   },
   {
     "id": "AKG4950",
@@ -3118,7 +3634,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 1.19,
     "brand": "Casabite",
     "category": "Biscuits & Cookies",
-    "packaging": "48X20 \u00b7 20GM"
+    "packaging": "48X20 · 20GM",
+    "displayName": "Casabite Almond Crunch",
+    "subtitle": "48×20 · 20g"
   },
   {
     "id": "AKG4951",
@@ -3130,7 +3648,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 1.19,
     "brand": "Casabite",
     "category": "Biscuits & Cookies",
-    "packaging": "48X20 \u00b7 20GM"
+    "packaging": "48X20 · 20GM",
+    "displayName": "Casabite Hazelnut Kunafa",
+    "subtitle": "48×20 · 20g"
   },
   {
     "id": "AKG4952",
@@ -3142,7 +3662,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 5.5,
     "brand": "Casabite",
     "category": "Biscuits & Cookies",
-    "packaging": "10X80 \u00b7 80GM"
+    "packaging": "10X80 · 80GM",
+    "displayName": "Casabite Pistachio Kunafa",
+    "subtitle": "10×80 · 80g"
   },
   {
     "id": "AKG4953",
@@ -3154,7 +3676,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 5.5,
     "brand": "Casabite",
     "category": "Chocolates",
-    "packaging": "10X80 \u00b7 80GM"
+    "packaging": "10X80 · 80GM",
+    "displayName": "Casabite Chocolate Hazelnut Kunafa",
+    "subtitle": "10×80 · 80g"
   },
   {
     "id": "AKG4954",
@@ -3166,7 +3690,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 5.5,
     "brand": "Casabite",
     "category": "Biscuits & Cookies",
-    "packaging": "10X80 \u00b7 80GM"
+    "packaging": "10X80 · 80GM",
+    "displayName": "Casabite Mango Passion",
+    "subtitle": "10×80 · 80g"
   },
   {
     "id": "AKG4955",
@@ -3178,7 +3704,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 1.19,
     "brand": "Casabite",
     "category": "Chocolates",
-    "packaging": "48X20 \u00b7 20GM"
+    "packaging": "48X20 · 20GM",
+    "displayName": "Casabite Chocolate Hazelnut Kunafa",
+    "subtitle": "48×20 · 20g"
   },
   {
     "id": "AKG4956",
@@ -3190,7 +3718,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Sour Punk",
     "category": "Candy & Gummies",
-    "packaging": "12X24X50 \u00b7 50GM"
+    "packaging": "12X24X50 · 50GM",
+    "displayName": "Sour Punk Blueberry",
+    "subtitle": "12×24×50 · 50g"
   },
   {
     "id": "AKG4957",
@@ -3202,7 +3732,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 10.0,
     "brand": "Wrigley Extra",
     "category": "Gum & Mints",
-    "packaging": "6X6X84 \u00b7 84GM"
+    "packaging": "6X6X84 · 84GM",
+    "displayName": "Extra Peppermint",
+    "subtitle": "6×6×84 · 84g"
   },
   {
     "id": "AKG4958",
@@ -3214,7 +3746,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 10.0,
     "brand": "Wrigley Extra",
     "category": "Gum & Mints",
-    "packaging": "6X6X84 \u00b7 84 GM"
+    "packaging": "6X6X84 · 84 GM",
+    "displayName": "Extra Strawberry",
+    "subtitle": "6×6×84 · 84g"
   },
   {
     "id": "AKG4959",
@@ -3226,7 +3760,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 10.0,
     "brand": "Wrigley Extra",
     "category": "Gum & Mints",
-    "packaging": "6X6X84 \u00b7 84 GM"
+    "packaging": "6X6X84 · 84 GM",
+    "displayName": "Extra Blueberry",
+    "subtitle": "6×6×84 · 84g"
   },
   {
     "id": "AKG4960",
@@ -3238,7 +3774,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 10.0,
     "brand": "Wrigley Extra",
     "category": "Gum & Mints",
-    "packaging": "6X6X84 \u00b7 84 GM"
+    "packaging": "6X6X84 · 84 GM",
+    "displayName": "Extra Spearmint",
+    "subtitle": "6×6×84 · 84g"
   },
   {
     "id": "AKG4961",
@@ -3250,7 +3788,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 10.0,
     "brand": "Wrigley Extra",
     "category": "Gum & Mints",
-    "packaging": "6X6X84 \u00b7 84 GM"
+    "packaging": "6X6X84 · 84 GM",
+    "displayName": "Extra Bubblemint",
+    "subtitle": "6×6×84 · 84g"
   },
   {
     "id": "AKG4962",
@@ -3262,7 +3802,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 2.8,
     "brand": "Hershey",
     "category": "Chocolates",
-    "packaging": "12X36X42 \u00b7 42GM"
+    "packaging": "12X36X42 · 42GM",
+    "displayName": "Reeses Cup",
+    "subtitle": "12×36×42 · 42g"
   },
   {
     "id": "AKG4963",
@@ -3274,7 +3816,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.5,
     "brand": "Other",
     "category": "Candy & Gummies",
-    "packaging": "20X30X8 \u00b7 8GM"
+    "packaging": "20X30X8 · 8GM",
+    "displayName": "Gummy Candy Eyeball",
+    "subtitle": "20×30×8 · 8g"
   },
   {
     "id": "AKG4964",
@@ -3286,7 +3830,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.5,
     "brand": "Other",
     "category": "Candy & Gummies",
-    "packaging": "20X30X8 \u00b7 8GM"
+    "packaging": "20X30X8 · 8GM",
+    "displayName": "Gummy Candy 3D Eyeball",
+    "subtitle": "20×30×8 · 8g"
   },
   {
     "id": "AKG4965",
@@ -3298,7 +3844,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.5,
     "brand": "Other",
     "category": "Candy & Gummies",
-    "packaging": "20X30X8 \u00b7 8GM"
+    "packaging": "20X30X8 · 8GM",
+    "displayName": "Gummy Candy Earth",
+    "subtitle": "20×30×8 · 8g"
   },
   {
     "id": "AKG4967",
@@ -3310,7 +3858,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Safari",
     "category": "Other",
-    "packaging": "24X12X32 \u00b7 32GM"
+    "packaging": "24X12X32 · 32GM",
+    "displayName": "Safari Caramel Crunch",
+    "subtitle": "24×12×32 · 32g"
   },
   {
     "id": "AKG4970",
@@ -3322,7 +3872,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 13.0,
     "brand": "Loacker",
     "category": "Wafers",
-    "packaging": "18X5X44 \u00b7 44GM"
+    "packaging": "18X5X44 · 44GM",
+    "displayName": "Loacker Classic Alpine Milk",
+    "subtitle": "18×5×44 · 44g"
   },
   {
     "id": "AKG4971",
@@ -3334,7 +3886,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.5,
     "brand": "Other",
     "category": "Candy & Gummies",
-    "packaging": "20X30X8 \u00b7 8GM"
+    "packaging": "20X30X8 · 8GM",
+    "displayName": "Gummy Candy Mango",
+    "subtitle": "20×30×8 · 8g"
   },
   {
     "id": "AKG4972",
@@ -3346,7 +3900,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.5,
     "brand": "Other",
     "category": "Candy & Gummies",
-    "packaging": "20X30X8 \u00b7 8GM"
+    "packaging": "20X30X8 · 8GM",
+    "displayName": "Gummy Candy Watermelon",
+    "subtitle": "20×30×8 · 8g"
   },
   {
     "id": "AKG4973",
@@ -3358,7 +3914,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.5,
     "brand": "Other",
     "category": "Candy & Gummies",
-    "packaging": "20X30X8 \u00b7 8GM"
+    "packaging": "20X30X8 · 8GM",
+    "displayName": "Gummy Candy Spiderman",
+    "subtitle": "20×30×8 · 8g"
   },
   {
     "id": "AKG4974",
@@ -3370,7 +3928,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.5,
     "brand": "Other",
     "category": "Candy & Gummies",
-    "packaging": "20X30X8 \u00b7 8GM"
+    "packaging": "20X30X8 · 8GM",
+    "displayName": "Gummy Candy Honey Peach",
+    "subtitle": "20×30×8 · 8g"
   },
   {
     "id": "AKG4975",
@@ -3382,7 +3942,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.5,
     "brand": "Other",
     "category": "Candy & Gummies",
-    "packaging": "20X30X8 \u00b7 8GM"
+    "packaging": "20X30X8 · 8GM",
+    "displayName": "Gummy Candy Pineapple",
+    "subtitle": "20×30×8 · 8g"
   },
   {
     "id": "AKG4976",
@@ -3394,7 +3956,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.5,
     "brand": "Other",
     "category": "Candy & Gummies",
-    "packaging": "20X30X8 \u00b7 8GM"
+    "packaging": "20X30X8 · 8GM",
+    "displayName": "Gummy Candy Pumpkin",
+    "subtitle": "20×30×8 · 8g"
   },
   {
     "id": "AKG4977",
@@ -3406,7 +3970,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.5,
     "brand": "Other",
     "category": "Candy & Gummies",
-    "packaging": "20X30X8 \u00b7 8 GM"
+    "packaging": "20X30X8 · 8 GM",
+    "displayName": "Gummy Candy Angry Birds",
+    "subtitle": "20×30×8 · 8g"
   },
   {
     "id": "AKG4978",
@@ -3418,7 +3984,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 7.5,
     "brand": "Other",
     "category": "Candy & Gummies",
-    "packaging": "20X30X8 \u00b7 8GM"
+    "packaging": "20X30X8 · 8GM",
+    "displayName": "Gummy Candy Gummi Sour",
+    "subtitle": "20×30×8 · 8g"
   },
   {
     "id": "AKG4979",
@@ -3430,7 +3998,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Alpenliebe",
     "category": "Chocolates",
-    "packaging": "12X20X32 \u00b7 32.4GM"
+    "packaging": "12X20X32 · 32.4GM",
+    "displayName": "Alpenliebe Milk Chew Rich & Creamy",
+    "subtitle": "12×20×32 · 32g"
   },
   {
     "id": "P001",
@@ -3442,7 +4012,9 @@ export const PRODUCTS: Product[] = [
     "piecePrice": null,
     "brand": "Other",
     "category": "Accessories",
-    "packaging": ""
+    "packaging": "",
+    "displayName": "Urovo K419 Bluetooth Printer",
+    "subtitle": ""
   },
   {
     "id": "ZIA4037",
@@ -3454,6 +4026,8 @@ export const PRODUCTS: Product[] = [
     "piecePrice": 6.21,
     "brand": "Kinder",
     "category": "Chocolates",
-    "packaging": "5X20"
+    "packaging": "5X20",
+    "displayName": "Kinder Tronky",
+    "subtitle": "5×20"
   }
 ];
