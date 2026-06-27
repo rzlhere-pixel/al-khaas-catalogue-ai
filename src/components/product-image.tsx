@@ -47,21 +47,23 @@ export function ProductImage({
   rounded = "rounded-2xl",
   threshold = 0.7,
 }: Props) {
-  const { data } = useProductImage(productId);
+  const embedded = getProductImage(productId);
+  const { data } = useProductImage(embedded ? undefined : productId);
   const [imgFailed, setImgFailed] = useState(false);
-  const showReal =
-    !!data?.image_url && data.confidence >= threshold && data.status === "found" && !imgFailed;
+  const realUrl = embedded
+    ?? (data?.image_url && data.confidence >= threshold && data.status === "found" ? data.image_url : null);
+  const showReal = !!realUrl && !imgFailed;
 
   return (
-    <div className={`${className} ${rounded} relative overflow-hidden`}>
+    <div className={`${className} ${rounded} relative overflow-hidden bg-secondary/40`}>
       <Placeholder name={name} brand={brand} />
       {showReal && (
         <img
-          src={data!.image_url!}
+          src={realUrl!}
           alt={name}
           loading="lazy"
           onError={() => setImgFailed(true)}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-contain p-2"
         />
       )}
     </div>
