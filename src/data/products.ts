@@ -14,7 +14,7 @@ export interface Product {
   is_promo?: boolean;
 }
 
-export const PRODUCTS: Product[] = [,
+export const PRODUCTS: Product[] = [
   {
     "id": "AKG4000",
     "itemCode": "AKG4000",
