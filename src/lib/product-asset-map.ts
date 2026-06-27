@@ -1,6 +1,6 @@
 // Build-time map of itemCode -> CDN image URL for product photos
 // extracted from the Product Slab Report XLSX.
-const modules = import.meta.glob<{ default: { url: string } }>(
+const modules = import.meta.glob<{ url: string }>(
   "@/assets/products/*.png.asset.json",
   { eager: true, import: "default" },
 );
