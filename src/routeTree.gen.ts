@@ -19,6 +19,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProductIdRouteImport } from './routes/product.$id'
 import { Route as CategoryCatRouteImport } from './routes/category.$cat'
 import { Route as BrandBrandRouteImport } from './routes/brand.$brand'
+import { Route as AdminImagesRouteImport } from './routes/admin.images'
 
 const VisitRoute = VisitRouteImport.update({
   id: '/visit',
@@ -70,6 +71,11 @@ const BrandBrandRoute = BrandBrandRouteImport.update({
   path: '/brand/$brand',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminImagesRoute = AdminImagesRouteImport.update({
+  id: '/admin/images',
+  path: '/admin/images',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
+  '/admin/images': typeof AdminImagesRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
   '/product/$id': typeof ProductIdRoute
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
+  '/admin/images': typeof AdminImagesRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
   '/product/$id': typeof ProductIdRoute
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
+  '/admin/images': typeof AdminImagesRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
   '/product/$id': typeof ProductIdRoute
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/search'
     | '/sitemap.xml'
     | '/visit'
+    | '/admin/images'
     | '/brand/$brand'
     | '/category/$cat'
     | '/product/$id'
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/search'
     | '/sitemap.xml'
     | '/visit'
+    | '/admin/images'
     | '/brand/$brand'
     | '/category/$cat'
     | '/product/$id'
@@ -142,6 +153,7 @@ export interface FileRouteTypes {
     | '/search'
     | '/sitemap.xml'
     | '/visit'
+    | '/admin/images'
     | '/brand/$brand'
     | '/category/$cat'
     | '/product/$id'
@@ -155,6 +167,7 @@ export interface RootRouteChildren {
   SearchRoute: typeof SearchRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   VisitRoute: typeof VisitRoute
+  AdminImagesRoute: typeof AdminImagesRoute
   BrandBrandRoute: typeof BrandBrandRoute
   CategoryCatRoute: typeof CategoryCatRoute
   ProductIdRoute: typeof ProductIdRoute
@@ -232,6 +245,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BrandBrandRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/images': {
+      id: '/admin/images'
+      path: '/admin/images'
+      fullPath: '/admin/images'
+      preLoaderRoute: typeof AdminImagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -243,6 +263,7 @@ const rootRouteChildren: RootRouteChildren = {
   SearchRoute: SearchRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   VisitRoute: VisitRoute,
+  AdminImagesRoute: AdminImagesRoute,
   BrandBrandRoute: BrandBrandRoute,
   CategoryCatRoute: CategoryCatRoute,
   ProductIdRoute: ProductIdRoute,
