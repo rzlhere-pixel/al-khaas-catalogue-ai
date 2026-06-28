@@ -6,9 +6,9 @@ export interface Contact {
 }
 
 export const CONTACTS: Contact[] = [
-  { id: "van1", label: "Dubai · Van 1", sublabel: "Mobile sales", phone: "971569939447" },
-  { id: "van2", label: "Dubai · Van 2", sublabel: "Mobile sales", phone: "971505124626" },
-  { id: "alain", label: "Al Ain · Van 3", sublabel: "Mobile sales", phone: "971504386784" },
+  { id: "van1", label: "Van 1 · New Dubai", sublabel: "Barsha · Jumeirah · Silicon Oasis", phone: "971569939447" },
+  { id: "van2", label: "Van 2 · Old Dubai", sublabel: "Karama · Deira · Abu Hail", phone: "971505124626" },
+  { id: "alain", label: "Van 3 · Al Ain", sublabel: "Al Ain region", phone: "971504386784" },
   { id: "wholesale", label: "Wholesale", sublabel: "Trade orders", phone: "971565205567" },
   { id: "presales", label: "Pre-Sales", sublabel: "Quotes & info", phone: "971504385546" },
 ];
