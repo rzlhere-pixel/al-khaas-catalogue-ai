@@ -48,10 +48,14 @@ export function ProductImage({
   threshold = 0.7,
 }: Props) {
   const embedded = getProductImage(productId);
-  const { data } = useProductImage(embedded ? undefined : productId);
+  const { data } = useProductImage(productId);
   const [imgFailed, setImgFailed] = useState(false);
-  const realUrl = embedded
-    ?? (data?.image_url && data.confidence >= threshold && data.status === "found" ? data.image_url : null);
+  // Prefer a verified hi-res AI image over the low-res embedded thumbnail.
+  const aiUrl =
+    data?.image_url && data.confidence >= threshold && data.status === "found"
+      ? data.image_url
+      : null;
+  const realUrl = aiUrl ?? embedded ?? null;
   const showReal = !!realUrl && !imgFailed;
 
   return (
