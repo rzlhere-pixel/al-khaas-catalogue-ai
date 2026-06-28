@@ -55,15 +55,17 @@ export function ProductImage({
   const showReal = !!realUrl && !imgFailed;
 
   return (
-    <div className={`${className} ${rounded} relative overflow-hidden bg-secondary/40`}>
-      <Placeholder name={name} brand={brand} />
+    <div className={`${className} ${rounded} relative overflow-hidden ${showReal ? "bg-white" : "bg-secondary/40"}`}>
+      {!showReal && <Placeholder name={name} brand={brand} />}
       {showReal && (
         <img
           src={realUrl!}
           alt={name}
           loading="lazy"
+          decoding="async"
           onError={() => setImgFailed(true)}
-          className="absolute inset-0 h-full w-full object-contain p-2"
+          style={{ imageRendering: "auto" as const }}
+          className="absolute inset-0 h-full w-full object-contain p-3"
         />
       )}
     </div>
