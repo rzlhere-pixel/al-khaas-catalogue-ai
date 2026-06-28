@@ -157,13 +157,13 @@ function Footer() {
     <footer className="mt-20 border-t border-border bg-cocoa text-cream">
       <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2">
-            <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-cream p-1.5 shadow-soft">
+          <div className="flex items-center gap-3">
+            <span className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white p-2 shadow-soft">
               <img src={alkhaasLogo.url} alt="Al Khaas" className="h-full w-full object-contain" />
             </span>
             <div>
-              <div className="font-display text-lg font-bold">Al Khaas</div>
-              <div className="text-[10px] uppercase tracking-[0.22em] opacity-70">General Trading LLC</div>
+              <div className="font-display text-xl font-bold">Al Khaas</div>
+              <div className="text-[10px] uppercase tracking-[0.22em] opacity-70 mt-1">General Trading LLC</div>
             </div>
 
           </div>
