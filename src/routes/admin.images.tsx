@@ -170,7 +170,9 @@ function AdminImagesPage() {
                 Stop
               </button>
             )}
+            <LockButton />
           </div>
+
         </div>
 
         {/* Controls */}
