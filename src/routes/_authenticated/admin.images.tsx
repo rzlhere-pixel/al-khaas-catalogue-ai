@@ -9,7 +9,7 @@ import { useMemo, useRef, useState } from "react";
 import { Loader2, Play, Square, RefreshCw, CheckCircle2, AlertTriangle, XCircle, LogOut } from "lucide-react";
 import { checkAdminUnlocked, lockAdmin } from "@/lib/admin-gate.functions";
 
-export const Route = createFileRoute("/admin/images")({
+export const Route = createFileRoute("/_authenticated/admin/images")({
   head: () => ({
     meta: [
       { title: "Admin · Bulk image lookup" },
