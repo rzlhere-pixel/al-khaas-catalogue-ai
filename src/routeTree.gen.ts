@@ -19,6 +19,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProductIdRouteImport } from './routes/product.$id'
 import { Route as CategoryCatRouteImport } from './routes/category.$cat'
 import { Route as BrandBrandRouteImport } from './routes/brand.$brand'
+import { Route as AdminUnlockRouteImport } from './routes/admin.unlock'
 import { Route as AdminImagesRouteImport } from './routes/admin.images'
 
 const VisitRoute = VisitRouteImport.update({
@@ -71,6 +72,11 @@ const BrandBrandRoute = BrandBrandRouteImport.update({
   path: '/brand/$brand',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminUnlockRoute = AdminUnlockRouteImport.update({
+  id: '/admin/unlock',
+  path: '/admin/unlock',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminImagesRoute = AdminImagesRouteImport.update({
   id: '/admin/images',
   path: '/admin/images',
@@ -86,6 +92,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/admin/images': typeof AdminImagesRoute
+  '/admin/unlock': typeof AdminUnlockRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
   '/product/$id': typeof ProductIdRoute
@@ -99,6 +106,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/admin/images': typeof AdminImagesRoute
+  '/admin/unlock': typeof AdminUnlockRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
   '/product/$id': typeof ProductIdRoute
@@ -113,6 +121,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
   '/admin/images': typeof AdminImagesRoute
+  '/admin/unlock': typeof AdminUnlockRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
   '/product/$id': typeof ProductIdRoute
@@ -128,6 +137,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/visit'
     | '/admin/images'
+    | '/admin/unlock'
     | '/brand/$brand'
     | '/category/$cat'
     | '/product/$id'
@@ -141,6 +151,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/visit'
     | '/admin/images'
+    | '/admin/unlock'
     | '/brand/$brand'
     | '/category/$cat'
     | '/product/$id'
@@ -154,6 +165,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/visit'
     | '/admin/images'
+    | '/admin/unlock'
     | '/brand/$brand'
     | '/category/$cat'
     | '/product/$id'
@@ -168,6 +180,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   VisitRoute: typeof VisitRoute
   AdminImagesRoute: typeof AdminImagesRoute
+  AdminUnlockRoute: typeof AdminUnlockRoute
   BrandBrandRoute: typeof BrandBrandRoute
   CategoryCatRoute: typeof CategoryCatRoute
   ProductIdRoute: typeof ProductIdRoute
@@ -245,6 +258,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BrandBrandRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/unlock': {
+      id: '/admin/unlock'
+      path: '/admin/unlock'
+      fullPath: '/admin/unlock'
+      preLoaderRoute: typeof AdminUnlockRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/images': {
       id: '/admin/images'
       path: '/admin/images'
@@ -264,6 +284,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   VisitRoute: VisitRoute,
   AdminImagesRoute: AdminImagesRoute,
+  AdminUnlockRoute: AdminUnlockRoute,
   BrandBrandRoute: BrandBrandRoute,
   CategoryCatRoute: CategoryCatRoute,
   ProductIdRoute: ProductIdRoute,
@@ -271,13 +292,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

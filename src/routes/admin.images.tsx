@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import { AppShell } from "@/components/app-shell";
 import { ProductImage } from "@/components/product-image";
 import { PRODUCTS, type Product } from "@/data/products";
@@ -6,7 +6,8 @@ import { lookupProductImage } from "@/lib/product-images.functions";
 import { supabase } from "@/integrations/supabase/client";
 import { useServerFn } from "@tanstack/react-start";
 import { useMemo, useRef, useState } from "react";
-import { Loader2, Play, Square, RefreshCw, CheckCircle2, AlertTriangle, XCircle } from "lucide-react";
+import { Loader2, Play, Square, RefreshCw, CheckCircle2, AlertTriangle, XCircle, LogOut } from "lucide-react";
+import { checkAdminUnlocked, lockAdmin } from "@/lib/admin-gate.functions";
 
 export const Route = createFileRoute("/admin/images")({
   head: () => ({
@@ -15,8 +16,18 @@ export const Route = createFileRoute("/admin/images")({
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
+  beforeLoad: async ({ location }) => {
+    const { unlocked } = await checkAdminUnlocked();
+    if (!unlocked) {
+      throw redirect({
+        to: "/admin/unlock",
+        search: { redirect: location.href },
+      });
+    }
+  },
   component: AdminImagesPage,
 });
+
 
 type StatusRow = {
   product_id: string;
