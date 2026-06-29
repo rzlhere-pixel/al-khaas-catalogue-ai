@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 import { AppShell } from "@/components/app-shell";
 import { ProductImage } from "@/components/product-image";
 import { PRODUCTS, type Product } from "@/data/products";
@@ -6,7 +6,8 @@ import { lookupProductImage } from "@/lib/product-images.functions";
 import { supabase } from "@/integrations/supabase/client";
 import { useServerFn } from "@tanstack/react-start";
 import { useMemo, useRef, useState } from "react";
-import { Loader2, Play, Square, RefreshCw, CheckCircle2, AlertTriangle, XCircle } from "lucide-react";
+import { Loader2, Play, Square, RefreshCw, CheckCircle2, AlertTriangle, XCircle, LogOut } from "lucide-react";
+import { checkAdminUnlocked, lockAdmin } from "@/lib/admin-gate.functions";
 
 export const Route = createFileRoute("/admin/images")({
   head: () => ({
@@ -15,8 +16,18 @@ export const Route = createFileRoute("/admin/images")({
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
+  beforeLoad: async ({ location }) => {
+    const { unlocked } = await checkAdminUnlocked();
+    if (!unlocked) {
+      throw redirect({
+        to: "/admin/unlock",
+        search: { redirect: location.href },
+      });
+    }
+  },
   component: AdminImagesPage,
 });
+
 
 type StatusRow = {
   product_id: string;
@@ -159,7 +170,9 @@ function AdminImagesPage() {
                 Stop
               </button>
             )}
+            <LockButton />
           </div>
+
         </div>
 
         {/* Controls */}
@@ -245,6 +258,30 @@ function AdminImagesPage() {
     </AppShell>
   );
 }
+
+function LockButton() {
+  const lock = useServerFn(lockAdmin);
+  const [busy, setBusy] = useState(false);
+  return (
+    <button
+      onClick={async () => {
+        setBusy(true);
+        try {
+          await lock();
+        } finally {
+          window.location.href = "/admin/unlock";
+        }
+      }}
+      disabled={busy}
+      className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2.5 text-sm font-medium text-foreground hover:bg-secondary disabled:opacity-50"
+      title="Lock admin"
+    >
+      <LogOut className="h-4 w-4" />
+      Lock
+    </button>
+  );
+}
+
 
 function Pill({ label, value, tone }: { label: string; value: number; tone: "ok" | "warn" | "bad" | "muted" }) {
   const cls =
