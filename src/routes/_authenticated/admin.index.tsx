@@ -57,7 +57,7 @@ function AdminLanding() {
               <div className="text-sm">You're signed in as an admin.</div>
             </div>
             <Link
-              to="/_authenticated/admin/images"
+              to="/admin/images"
               className="inline-flex items-center gap-2 rounded-full bg-cocoa px-5 py-2.5 text-sm font-semibold text-cream shadow-soft hover:opacity-95"
             >
               Bulk product image lookup
