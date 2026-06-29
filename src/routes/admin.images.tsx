@@ -259,6 +259,30 @@ function AdminImagesPage() {
   );
 }
 
+function LockButton() {
+  const lock = useServerFn(lockAdmin);
+  const [busy, setBusy] = useState(false);
+  return (
+    <button
+      onClick={async () => {
+        setBusy(true);
+        try {
+          await lock();
+        } finally {
+          window.location.href = "/admin/unlock";
+        }
+      }}
+      disabled={busy}
+      className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2.5 text-sm font-medium text-foreground hover:bg-secondary disabled:opacity-50"
+      title="Lock admin"
+    >
+      <LogOut className="h-4 w-4" />
+      Lock
+    </button>
+  );
+}
+
+
 function Pill({ label, value, tone }: { label: string; value: number; tone: "ok" | "warn" | "bad" | "muted" }) {
   const cls =
     tone === "ok"
