@@ -7,7 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useServerFn } from "@tanstack/react-start";
 import { useMemo, useRef, useState } from "react";
 import { Loader2, Play, Square, RefreshCw, CheckCircle2, AlertTriangle, XCircle, LogOut } from "lucide-react";
-import { checkAdminUnlocked, lockAdmin } from "@/lib/admin-gate.functions";
+import { isCurrentUserAdmin } from "@/lib/admin.functions";
 
 export const Route = createFileRoute("/_authenticated/admin/images")({
   head: () => ({
@@ -16,17 +16,15 @@ export const Route = createFileRoute("/_authenticated/admin/images")({
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
-  beforeLoad: async ({ location }) => {
-    const { unlocked } = await checkAdminUnlocked();
-    if (!unlocked) {
-      throw redirect({
-        to: "/admin/unlock",
-        search: { redirect: location.href },
-      });
+  beforeLoad: async () => {
+    const { isAdmin } = await isCurrentUserAdmin();
+    if (!isAdmin) {
+      throw redirect({ to: "/admin" });
     }
   },
   component: AdminImagesPage,
 });
+
 
 
 type StatusRow = {
@@ -260,27 +258,27 @@ function AdminImagesPage() {
 }
 
 function LockButton() {
-  const lock = useServerFn(lockAdmin);
   const [busy, setBusy] = useState(false);
   return (
     <button
       onClick={async () => {
         setBusy(true);
         try {
-          await lock();
+          await supabase.auth.signOut();
         } finally {
-          window.location.href = "/admin/unlock";
+          window.location.href = "/auth";
         }
       }}
       disabled={busy}
       className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2.5 text-sm font-medium text-foreground hover:bg-secondary disabled:opacity-50"
-      title="Lock admin"
+      title="Sign out"
     >
       <LogOut className="h-4 w-4" />
-      Lock
+      Sign out
     </button>
   );
 }
+
 
 
 function Pill({ label, value, tone }: { label: string; value: number; tone: "ok" | "warn" | "bad" | "muted" }) {
