@@ -15,12 +15,14 @@ import { Route as SearchRouteImport } from './routes/search'
 import { Route as EnquiryRouteImport } from './routes/enquiry'
 import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as BrandsRouteImport } from './routes/brands'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProductIdRouteImport } from './routes/product.$id'
 import { Route as CategoryCatRouteImport } from './routes/category.$cat'
 import { Route as BrandBrandRouteImport } from './routes/brand.$brand'
-import { Route as AdminUnlockRouteImport } from './routes/admin.unlock'
-import { Route as AdminImagesRouteImport } from './routes/admin.images'
+import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin.index'
+import { Route as AuthenticatedAdminImagesRouteImport } from './routes/_authenticated/admin.images'
 
 const VisitRoute = VisitRouteImport.update({
   id: '/visit',
@@ -52,6 +54,15 @@ const BrandsRoute = BrandsRouteImport.update({
   path: '/brands',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -72,115 +83,124 @@ const BrandBrandRoute = BrandBrandRouteImport.update({
   path: '/brand/$brand',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AdminUnlockRoute = AdminUnlockRouteImport.update({
-  id: '/admin/unlock',
-  path: '/admin/unlock',
-  getParentRoute: () => rootRouteImport,
+const AuthenticatedAdminIndexRoute = AuthenticatedAdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
-const AdminImagesRoute = AdminImagesRouteImport.update({
-  id: '/admin/images',
-  path: '/admin/images',
-  getParentRoute: () => rootRouteImport,
-} as any)
+const AuthenticatedAdminImagesRoute =
+  AuthenticatedAdminImagesRouteImport.update({
+    id: '/admin/images',
+    path: '/admin/images',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
   '/brands': typeof BrandsRoute
   '/categories': typeof CategoriesRoute
   '/enquiry': typeof EnquiryRoute
   '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
-  '/admin/images': typeof AdminImagesRoute
-  '/admin/unlock': typeof AdminUnlockRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
   '/product/$id': typeof ProductIdRoute
+  '/admin/images': typeof AuthenticatedAdminImagesRoute
+  '/admin/': typeof AuthenticatedAdminIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/auth': typeof AuthRoute
   '/brands': typeof BrandsRoute
   '/categories': typeof CategoriesRoute
   '/enquiry': typeof EnquiryRoute
   '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
-  '/admin/images': typeof AdminImagesRoute
-  '/admin/unlock': typeof AdminUnlockRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
   '/product/$id': typeof ProductIdRoute
+  '/admin/images': typeof AuthenticatedAdminImagesRoute
+  '/admin': typeof AuthenticatedAdminIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/auth': typeof AuthRoute
   '/brands': typeof BrandsRoute
   '/categories': typeof CategoriesRoute
   '/enquiry': typeof EnquiryRoute
   '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/visit': typeof VisitRoute
-  '/admin/images': typeof AdminImagesRoute
-  '/admin/unlock': typeof AdminUnlockRoute
   '/brand/$brand': typeof BrandBrandRoute
   '/category/$cat': typeof CategoryCatRoute
   '/product/$id': typeof ProductIdRoute
+  '/_authenticated/admin/images': typeof AuthenticatedAdminImagesRoute
+  '/_authenticated/admin/': typeof AuthenticatedAdminIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/auth'
     | '/brands'
     | '/categories'
     | '/enquiry'
     | '/search'
     | '/sitemap.xml'
     | '/visit'
-    | '/admin/images'
-    | '/admin/unlock'
     | '/brand/$brand'
     | '/category/$cat'
     | '/product/$id'
+    | '/admin/images'
+    | '/admin/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/auth'
     | '/brands'
     | '/categories'
     | '/enquiry'
     | '/search'
     | '/sitemap.xml'
     | '/visit'
-    | '/admin/images'
-    | '/admin/unlock'
     | '/brand/$brand'
     | '/category/$cat'
     | '/product/$id'
+    | '/admin/images'
+    | '/admin'
   id:
     | '__root__'
     | '/'
+    | '/_authenticated'
+    | '/auth'
     | '/brands'
     | '/categories'
     | '/enquiry'
     | '/search'
     | '/sitemap.xml'
     | '/visit'
-    | '/admin/images'
-    | '/admin/unlock'
     | '/brand/$brand'
     | '/category/$cat'
     | '/product/$id'
+    | '/_authenticated/admin/images'
+    | '/_authenticated/admin/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AuthRoute: typeof AuthRoute
   BrandsRoute: typeof BrandsRoute
   CategoriesRoute: typeof CategoriesRoute
   EnquiryRoute: typeof EnquiryRoute
   SearchRoute: typeof SearchRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   VisitRoute: typeof VisitRoute
-  AdminImagesRoute: typeof AdminImagesRoute
-  AdminUnlockRoute: typeof AdminUnlockRoute
   BrandBrandRoute: typeof BrandBrandRoute
   CategoryCatRoute: typeof CategoryCatRoute
   ProductIdRoute: typeof ProductIdRoute
@@ -230,6 +250,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BrandsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -258,33 +292,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BrandBrandRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/admin/unlock': {
-      id: '/admin/unlock'
-      path: '/admin/unlock'
-      fullPath: '/admin/unlock'
-      preLoaderRoute: typeof AdminUnlockRouteImport
-      parentRoute: typeof rootRouteImport
+    '/_authenticated/admin/': {
+      id: '/_authenticated/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AuthenticatedAdminIndexRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
     }
-    '/admin/images': {
-      id: '/admin/images'
+    '/_authenticated/admin/images': {
+      id: '/_authenticated/admin/images'
       path: '/admin/images'
       fullPath: '/admin/images'
-      preLoaderRoute: typeof AdminImagesRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof AuthenticatedAdminImagesRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
     }
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAdminImagesRoute: typeof AuthenticatedAdminImagesRoute
+  AuthenticatedAdminIndexRoute: typeof AuthenticatedAdminIndexRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAdminImagesRoute: AuthenticatedAdminImagesRoute,
+  AuthenticatedAdminIndexRoute: AuthenticatedAdminIndexRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AuthRoute: AuthRoute,
   BrandsRoute: BrandsRoute,
   CategoriesRoute: CategoriesRoute,
   EnquiryRoute: EnquiryRoute,
   SearchRoute: SearchRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   VisitRoute: VisitRoute,
-  AdminImagesRoute: AdminImagesRoute,
-  AdminUnlockRoute: AdminUnlockRoute,
   BrandBrandRoute: BrandBrandRoute,
   CategoryCatRoute: CategoryCatRoute,
   ProductIdRoute: ProductIdRoute,
@@ -292,13 +339,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
