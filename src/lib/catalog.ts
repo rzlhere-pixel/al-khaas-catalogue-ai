@@ -35,18 +35,53 @@ export function brandPalette(brand: string) {
   return BRAND_COLORS[brand] ?? BRAND_COLORS.Other;
 }
 
+// --- Precomputed indexes to avoid repeated O(N) scans ---
+const PRODUCT_BY_ID: Map<string, Product> = new Map();
+const BRAND_INDEX: Map<string, Product[]> = new Map();
+const CATEGORY_INDEX: Map<string, Product[]> = new Map();
+const SEARCH_TEXT: Map<string, string> = new Map();
+
+for (const p of PRODUCTS) {
+  PRODUCT_BY_ID.set(p.id, p);
+  if (!BRAND_INDEX.has(p.brand)) BRAND_INDEX.set(p.brand, []);
+  BRAND_INDEX.get(p.brand)!.push(p);
+  if (!CATEGORY_INDEX.has(p.category)) CATEGORY_INDEX.set(p.category, []);
+  CATEGORY_INDEX.get(p.category)!.push(p);
+  // Precompute a normalized searchable string once
+  SEARCH_TEXT.set(
+    p.id,
+    `${p.displayName} ${p.name} ${p.itemCode} ${p.barcode} ${p.brand} ${p.category}`
+      .toLowerCase()
+      .replace(/\s+/g, " ")
+      .trim()
+  );
+}
+
+// Precompute some commonly used derived lists
+const PROMO_LIST: Product[] = PRODUCTS.filter((p) => p.is_promo === true);
+const NEW_ARRIVALS_SORTED: Product[] = PRODUCTS.filter((p) => p.itemCode.startsWith("AKG")).sort((a, b) => b.itemCode.localeCompare(a.itemCode));
+
+// Helper for best sellers ordering
+const BEST_ORDER = ["Ferrero Rocher", "Kinder", "Cadbury", "Mars", "Nestle", "Nutella", "Lindt", "Haribo", "Lotus", "Tic Tac"];
+const BEST_ORDER_MAP = new Map(BEST_ORDER.map((b, i) => [b, i]));
+
 export function getProduct(id: string): Product | undefined {
-  return PRODUCTS.find((p) => p.id === id);
+  return PRODUCT_BY_ID.get(id);
 }
 
 export function searchProducts(q: string, limit = 50): Product[] {
   const term = q.trim().toLowerCase();
   if (!term) return [];
   const tokens = term.split(/\s+/);
-  return PRODUCTS.filter((p) => {
-    const hay = `${p.displayName} ${p.name} ${p.itemCode} ${p.barcode} ${p.brand} ${p.category}`.toLowerCase();
-    return tokens.every((t) => hay.includes(t));
-  }).slice(0, limit);
+  const matches: Product[] = [];
+  for (const [id, hay] of SEARCH_TEXT.entries()) {
+    if (tokens.every((t) => hay.includes(t))) {
+      const p = PRODUCT_BY_ID.get(id)!;
+      matches.push(p);
+      if (matches.length >= limit) break;
+    }
+  }
+  return matches;
 }
 
 // Exclude Accessories and Beverages from public-facing category lists
@@ -58,59 +93,50 @@ export const ALL_CATEGORIES = Array.from(
 ).sort();
 
 export function productsByCategory(cat: string) {
-  return PRODUCTS.filter((p) => p.category === cat);
+  return CATEGORY_INDEX.get(cat) ?? [];
 }
 export function productsByBrand(brand: string) {
-  return PRODUCTS.filter((p) => p.brand === brand);
+  return BRAND_INDEX.get(brand) ?? [];
 }
 
 export function relatedProducts(p: Product, limit = 8): Product[] {
-  const sameBrand = PRODUCTS.filter((x) => x.id !== p.id && x.brand === p.brand);
-  const sameCat = PRODUCTS.filter((x) => x.id !== p.id && x.category === p.category && x.brand !== p.brand);
+  const sameBrand = (BRAND_INDEX.get(p.brand) ?? []).filter((x) => x.id !== p.id);
+  const sameCat = (CATEGORY_INDEX.get(p.category) ?? []).filter((x) => x.id !== p.id && x.brand !== p.brand);
   return [...sameBrand, ...sameCat].slice(0, limit);
 }
 
 export function alternatives(p: Product, limit = 6): { premium: Product[]; budget: Product[] } {
   const ref = p.casePrice ?? p.piecePrice ?? 0;
-  const peers = PRODUCTS.filter((x) => x.id !== p.id && x.category === p.category);
-  const withPrice = peers
-    .map((x) => ({ x, price: x.casePrice ?? x.piecePrice ?? 0 }))
-    .filter((r) => r.price > 0);
-  const premium = [...withPrice].filter((r) => r.price > ref).sort((a, b) => a.price - b.price).slice(0, limit).map((r) => r.x);
-  const budget = [...withPrice].filter((r) => r.price < ref).sort((a, b) => b.price - a.price).slice(0, limit).map((r) => r.x);
+  const peers = (CATEGORY_INDEX.get(p.category) ?? []).filter((x) => x.id !== p.id);
+  const withPrice = peers.map((x) => ({ x, price: x.casePrice ?? x.piecePrice ?? 0 })).filter((r) => r.price > 0);
+  const premium = withPrice.filter((r) => r.price > ref).sort((a, b) => a.price - b.price).slice(0, limit).map((r) => r.x);
+  const budget = withPrice.filter((r) => r.price < ref).sort((a, b) => b.price - a.price).slice(0, limit).map((r) => r.x);
   return { premium, budget };
 }
 
 export function bestSellers(limit = 12): Product[] {
-  // Cross-brand best sellers — max 2 per brand, priority order
-  const order = ["Ferrero Rocher", "Kinder", "Cadbury", "Mars", "Nestle", "Nutella", "Lindt", "Haribo", "Lotus", "Tic Tac"];
+  // Use brand index and order map to avoid repeated indexOf/filters
   const result: Product[] = [];
   const brandCount: Record<string, number> = {};
 
-  const sorted = [...PRODUCTS].sort(
-    (a, b) => order.indexOf(a.brand) - order.indexOf(b.brand)
-  );
-
-  for (const p of sorted) {
-    if (!order.includes(p.brand)) continue;
-    brandCount[p.brand] = (brandCount[p.brand] || 0);
-    if (brandCount[p.brand] >= 2) continue;
-    result.push(p);
-    brandCount[p.brand]++;
-    if (result.length >= limit) break;
+  for (const brand of BEST_ORDER) {
+    const items = BRAND_INDEX.get(brand) ?? [];
+    for (const p of items) {
+      if ((brandCount[brand] || 0) >= 2) break;
+      result.push(p);
+      brandCount[brand] = (brandCount[brand] || 0) + 1;
+      if (result.length >= limit) return result;
+    }
   }
   return result;
 }
 
 export function newArrivals(limit = 8) {
-  return [...PRODUCTS]
-    .filter((p) => p.itemCode.startsWith("AKG"))
-    .sort((a, b) => b.itemCode.localeCompare(a.itemCode))
-    .slice(0, limit);
+  return NEW_ARRIVALS_SORTED.slice(0, limit);
 }
 
 export function promos(limit = 8) {
-  return PRODUCTS.filter((p) => p.is_promo === true).slice(0, limit);
+  return PROMO_LIST.slice(0, limit);
 }
 
 export function formatPrice(v: number | null) {
