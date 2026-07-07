@@ -21,8 +21,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Discover Ferrero, Kinder, Cadbury, Mars, Nestlé, Lindt and more — distributed across the UAE by Al Khaas General Trading.",
+          "Discover 280+ premium confectionery products from Ferrero, Kinder, Cadbury, Mars, Nestlé, Lindt and more. Distributed across the UAE by Al Khaas General Trading. Browse, search & send WhatsApp enquiries instantly.",
       },
+      { name: "keywords", content: "confectionery, chocolate, candy, FMCG, UAE distributor, wholesale, B2B" },
+      { property: "og:title", content: "Al Khaas — Premium Confectionery Catalogue" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Home,
@@ -53,7 +57,7 @@ function Home() {
         <div className="absolute inset-0 -z-10">
           <img
             src={heroImg}
-            alt=""
+            alt="Premium chocolates and confectionery"
             width={1536}
             height={1024}
             className="h-full w-full object-cover"
@@ -141,7 +145,11 @@ function Home() {
       <section className="mx-auto max-w-7xl px-6 py-14 sm:py-20">
         <SectionHeader eyebrow="Customer favourites" title="Best sellers" href="/categories" />
         <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {sellers.map((p) => <ProductCard key={p.id} p={p} />)}
+          {sellers.length > 0 ? (
+            sellers.map((p) => <ProductCard key={p.id} p={p} />)
+          ) : (
+            <div className="col-span-full text-center text-sm text-muted-foreground">No best sellers available at the moment.</div>
+          )}
         </div>
       </section>
 
@@ -183,7 +191,11 @@ function Home() {
       <section className="mx-auto max-w-7xl px-6 py-14 sm:py-20">
         <SectionHeader eyebrow="Fresh listings" title="New arrivals" href="/categories" />
         <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {arrivals.map((p) => <ProductCard key={p.id} p={p} />)}
+          {arrivals.length > 0 ? (
+            arrivals.map((p) => <ProductCard key={p.id} p={p} />)
+          ) : (
+            <div className="col-span-full text-center text-sm text-muted-foreground">No new arrivals at the moment.</div>
+          )}
         </div>
       </section>
 

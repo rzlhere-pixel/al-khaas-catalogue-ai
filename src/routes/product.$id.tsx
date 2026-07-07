@@ -19,11 +19,20 @@ import { useState } from "react";
 import type { Product } from "@/data/products";
 
 export const Route = createFileRoute("/product/$id")({
-  head: ({ params }) => ({
-    meta: [
-      { title: `Product ${params.id} — Al Khaas` },
-    ],
-  }),
+  head: ({ params }) => {
+    const product = getProduct(params.id);
+    return {
+      meta: [
+        { title: product ? `${product.displayName} — Al Khaas Catalogue` : "Product — Al Khaas" },
+        {
+          name: "description",
+          content: product
+            ? `${product.displayName} by ${product.brand}. Browse details, pricing & send WhatsApp enquiry to Al Khaas General Trading.`
+            : "Product not found",
+        },
+      ],
+    };
+  },
   loader: ({ params }) => {
     const p = getProduct(params.id);
     if (!p) throw notFound();
@@ -33,8 +42,9 @@ export const Route = createFileRoute("/product/$id")({
   notFoundComponent: () => (
     <AppShell>
       <div className="mx-auto max-w-3xl px-6 py-20 text-center">
-        <h1 className="font-display text-3xl">Product not found</h1>
-        <Link to="/" className="mt-4 inline-block text-sm text-muted-foreground hover:text-foreground">
+        <h1 className="font-display text-3xl text-foreground">Product not found</h1>
+        <p className="mt-2 text-sm text-muted-foreground">The product you're looking for doesn't exist in our catalogue.</p>
+        <Link to="/" className="mt-4 inline-block text-sm text-gold hover:text-gold/80">
           ← Back to catalogue
         </Link>
       </div>
@@ -56,7 +66,7 @@ function ProductPage() {
     <AppShell>
       <div className="mx-auto max-w-7xl px-6 pt-6">
         <Link to="/" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-          <ChevronLeft className="h-4 w-4" /> Back
+          <ChevronLeft className="h-4 w-4" /> Back to catalogue
         </Link>
       </div>
       <section className="mx-auto max-w-7xl px-6 py-8 sm:py-12">
@@ -101,11 +111,11 @@ function ProductPage() {
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <div className="inline-flex items-center rounded-full border border-border bg-card shadow-soft">
-                <button onClick={() => setQty((q) => Math.max(1, q - 1))} className="p-3 text-muted-foreground hover:text-foreground" aria-label="Decrease">
+                <button onClick={() => setQty((q) => Math.max(1, q - 1))} className="p-3 text-muted-foreground hover:text-foreground" aria-label="Decrease quantity">
                   <Minus className="h-4 w-4" />
                 </button>
                 <span className="min-w-10 text-center text-sm font-medium">{qty}</span>
-                <button onClick={() => setQty((q) => q + 1)} className="p-3 text-muted-foreground hover:text-foreground" aria-label="Increase">
+                <button onClick={() => setQty((q) => q + 1)} className="p-3 text-muted-foreground hover:text-foreground" aria-label="Increase quantity">
                   <Plus className="h-4 w-4" />
                 </button>
               </div>
@@ -132,7 +142,7 @@ function ProductPage() {
             {/* Stock badge */}
             <div className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary/60 px-3 py-1.5 text-xs text-muted-foreground">
               <span className="h-2 w-2 rounded-full bg-muted-foreground/60" />
-              Check Availability
+              Check availability with sales team
             </div>
           </div>
         </div>
@@ -192,7 +202,7 @@ function AlternativeColumn({ title, items }: { title: string; items: Product[] }
     return (
       <div>
         <div className="font-display text-lg text-foreground">{title}</div>
-        <div className="mt-3 text-sm text-muted-foreground">No alternatives found.</div>
+        <div className="mt-3 text-sm text-muted-foreground">No alternatives in this price range.</div>
       </div>
     );
   return (
@@ -241,6 +251,9 @@ function AiImageLookup({ product }: { product: Product }) {
         confidence: row.confidence,
         status: row.status,
       });
+    },
+    onError: (error) => {
+      console.error("Image lookup failed:", error);
     },
   });
 

@@ -2,15 +2,16 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { AppShell } from "@/components/app-shell";
 import { ProductCard } from "@/components/product-card";
 import { searchProducts } from "@/lib/catalog";
-import { Search } from "lucide-react";
+import { Search, AlertCircle } from "lucide-react";
 import { useState } from "react";
 
 export const Route = createFileRoute("/search")({
   validateSearch: (s: Record<string, unknown>) => ({ q: typeof s.q === "string" ? s.q : "" }),
-  head: () => ({
+  head: ({ search }) => ({
     meta: [
-      { title: "Search — Al Khaas Catalogue" },
-      { name: "description", content: "Search the Al Khaas product catalogue." },
+      { title: search.q ? `Search "${search.q}" — Al Khaas Catalogue` : "Search — Al Khaas Catalogue" },
+      { name: "description", content: search.q ? `Search results for "${search.q}" in Al Khaas product catalogue.` : "Search the Al Khaas product catalogue by name, brand, item code, or barcode." },
+      { name: "robots", content: "noindex,follow" },
     ],
   }),
   component: SearchPage,
@@ -32,7 +33,9 @@ function SearchPage() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            navigate({ to: "/search", search: { q: value } });
+            if (value.trim()) {
+              navigate({ to: "/search", search: { q: value } });
+            }
           }}
           className="relative mt-8 max-w-2xl"
         >
@@ -46,22 +49,29 @@ function SearchPage() {
           />
         </form>
 
-        {q ? (
+        {q.trim() ? (
           <>
             <div className="mt-6 text-sm text-muted-foreground">
-              {results.length} {results.length === 1 ? "result" : "results"} for “{q}”
+              {results.length} {results.length === 1 ? "result" : "results"} for <strong>"{q}"</strong>
             </div>
-            <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-              {results.map((p) => <ProductCard key={p.id} p={p} />)}
-            </div>
-            {results.length === 0 && (
-              <div className="mt-12 rounded-2xl border border-border bg-secondary/40 p-8 text-center text-sm text-muted-foreground">
-                No products matched. Try a different keyword, brand, or item code.
+            {results.length > 0 ? (
+              <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+                {results.map((p) => <ProductCard key={p.id} p={p} />)}
+              </div>
+            ) : (
+              <div className="mt-12 rounded-2xl border border-amber-200 bg-amber-50 p-8 text-center">
+                <AlertCircle className="mx-auto h-8 w-8 text-amber-600" />
+                <p className="mt-3 text-sm text-amber-900">
+                  <strong>No products matched.</strong> Try a different keyword, brand, item code, or barcode.
+                </p>
               </div>
             )}
           </>
         ) : (
-          <div className="mt-10 text-sm text-muted-foreground">Start typing to search across 280+ products.</div>
+          <div className="mt-10 rounded-2xl border border-border bg-secondary/40 p-6 text-sm text-muted-foreground">
+            <p>Start typing to search across 280+ products.</p>
+            <p className="mt-2 text-xs opacity-75">Search by product name, brand, item code, barcode, or category.</p>
+          </div>
         )}
       </section>
     </AppShell>
