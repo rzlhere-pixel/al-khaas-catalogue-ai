@@ -7,10 +7,10 @@ import { useState } from "react";
 
 export const Route = createFileRoute("/search")({
   validateSearch: (s: Record<string, unknown>) => ({ q: typeof s.q === "string" ? s.q : "" }),
-  head: ({ search }) => ({
+  head: () => ({
     meta: [
-      { title: search.q ? `Search "${search.q}" — Al Khaas Catalogue` : "Search — Al Khaas Catalogue" },
-      { name: "description", content: search.q ? `Search results for "${search.q}" in Al Khaas product catalogue.` : "Search the Al Khaas product catalogue by name, brand, item code, or barcode." },
+      { title: "Search — Al Khaas Catalogue" },
+      { name: "description", content: "Search the Al Khaas product catalogue by name, brand, item code, or barcode." },
       { name: "robots", content: "noindex,follow" },
     ],
   }),
