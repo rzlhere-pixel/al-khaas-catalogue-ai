@@ -1,6 +1,9 @@
 import { brandPalette } from "@/lib/catalog";
 import { getProductImage } from "@/lib/product-asset-map";
 import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+
 
 interface Props {
   name: string;
