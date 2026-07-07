@@ -48,7 +48,14 @@ export const Route = createFileRoute("/product/$id")({
       <div className="mx-auto max-w-3xl px-6 py-20 text-center">
         <h1 className="font-display text-3xl text-foreground">Product not found</h1>
         <p className="mt-2 text-sm text-muted-foreground">The product you're looking for doesn't exist in our catalogue.</p>
-        <div className="mt-6 flex flex-wrap justify-center gap-3\">\n          <Link to=\"/\" className=\"inline-block text-sm text-gold hover:text-gold/80\">\n            ← Back to catalogue\n          </Link>\n          <Link to=\"/categories\" className=\"inline-block text-sm text-gold hover:text-gold/80\">\n            Browse categories →\n          </Link>\n        </div>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <Link to="/" className="inline-block text-sm text-gold hover:text-gold/80">
+            ← Back to catalogue
+          </Link>
+          <Link to="/categories" className="inline-block text-sm text-gold hover:text-gold/80">
+            Browse categories →
+          </Link>
+        </div>
       </div>
     </AppShell>
   ),
