@@ -33,20 +33,22 @@ export const Route = createFileRoute("/product/$id")({
       ],
     };
   },
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
     const p = getProduct(params.id);
-    if (!p) throw notFound();
+    if (!p) {
+      console.warn(`Product not found with ID: ${params.id}`);
+      throw notFound();
+    }
     return { product: p };
   },
+  preloadStaleTime: 0,
   component: ProductPage,
   notFoundComponent: () => (
     <AppShell>
       <div className="mx-auto max-w-3xl px-6 py-20 text-center">
         <h1 className="font-display text-3xl text-foreground">Product not found</h1>
         <p className="mt-2 text-sm text-muted-foreground">The product you're looking for doesn't exist in our catalogue.</p>
-        <Link to="/" className="mt-4 inline-block text-sm text-gold hover:text-gold/80">
-          ← Back to catalogue
-        </Link>
+        <div className="mt-6 flex flex-wrap justify-center gap-3\">\n          <Link to=\"/\" className=\"inline-block text-sm text-gold hover:text-gold/80\">\n            ← Back to catalogue\n          </Link>\n          <Link to=\"/categories\" className=\"inline-block text-sm text-gold hover:text-gold/80\">\n            Browse categories →\n          </Link>\n        </div>
       </div>
     </AppShell>
   ),
@@ -61,6 +63,16 @@ function ProductPage() {
   const inEnquiry = hydrated && enquiry.has(product.id);
   const related = relatedProducts(product, 8);
   const { premium, budget } = alternatives(product, 4);
+
+  if (!product) {
+    return (
+      <AppShell>
+        <div className="mx-auto max-w-3xl px-6 py-20 text-center">
+          <p className="text-sm text-muted-foreground">Loading product details...</p>
+        </div>
+      </AppShell>
+    );
+  }
 
   return (
     <AppShell>
