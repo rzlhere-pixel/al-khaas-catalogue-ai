@@ -1,6 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
 import { brandPalette } from "@/lib/catalog";
-import { supabase } from "@/integrations/supabase/client";
 import { getProductImage } from "@/lib/product-asset-map";
 import { useState } from "react";
 
@@ -48,14 +46,8 @@ export function ProductImage({
   threshold = 0.7,
 }: Props) {
   const embedded = getProductImage(productId);
-  const { data } = useProductImage(productId);
   const [imgFailed, setImgFailed] = useState(false);
-  // Prefer a verified hi-res AI image over the low-res embedded thumbnail.
-  const aiUrl =
-    data?.image_url && data.confidence >= threshold && data.status === "found"
-      ? data.image_url
-      : null;
-  const realUrl = aiUrl ?? embedded ?? null;
+  const realUrl = embedded ?? null;
   const showReal = !!realUrl && !imgFailed;
 
   return (
