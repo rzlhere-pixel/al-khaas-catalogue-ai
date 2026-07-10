@@ -1,9 +1,9 @@
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { AppShell } from "@/components/app-shell";
 import { ProductCard } from "@/components/product-card";
 import { FilterChips, applyFilters, useCatalogFilters, type CatalogFilters } from "@/components/filter-chips";
-import { ALL_BRANDS, brandPalette, productsByBrand, bestSellers, newArrivals } from "@/lib/catalog";
+import { ALL_BRANDS, brandLogo, brandPalette, productsByBrand, bestSellers, newArrivals } from "@/lib/catalog";
 
 export const Route = createFileRoute("/brand/$brand")({
   validateSearch: (s: Record<string, unknown>): CatalogFilters => ({
@@ -35,12 +35,28 @@ export const Route = createFileRoute("/brand/$brand")({
   ),
 });
 
+function HeroLogo({ brand, logo }: { brand: string; logo: string }) {
+  const [failed, setFailed] = useState(false);
+  if (failed) return null;
+  return (
+    <div className="mt-3 inline-flex h-16 w-28 items-center justify-center rounded-xl bg-white/95 p-3 shadow-sm">
+      <img
+        src={logo}
+        alt={`${brand} logo`}
+        className="max-h-full max-w-full object-contain"
+        onError={() => setFailed(true)}
+      />
+    </div>
+  );
+}
+
 function BrandPage() {
   const { brand } = Route.useLoaderData();
   const search = Route.useSearch();
   const { filters, setFilters } = useCatalogFilters(search);
   const all = productsByBrand(brand);
   const palette = brandPalette(brand);
+  const logo = brandLogo(brand);
   const newIds = useMemo(() => new Set(newArrivals(200).map((p) => p.id)), []);
   const bestIds = useMemo(() => new Set(bestSellers(50).map((p) => p.id)), []);
   const filtered = useMemo(
@@ -56,6 +72,7 @@ function BrandPage() {
       >
         <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20">
           <div className="text-[11px] uppercase tracking-[0.25em] opacity-80">Brand</div>
+          {logo ? <HeroLogo brand={brand} logo={logo} /> : null}
           <h1 className="mt-2 font-display text-5xl sm:text-6xl">{brand}</h1>
           <div className="mt-3 text-sm opacity-80">
             {all.length} {all.length === 1 ? "product" : "products"} in catalogue

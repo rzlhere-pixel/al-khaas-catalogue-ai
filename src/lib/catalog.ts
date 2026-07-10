@@ -35,6 +35,34 @@ export function brandPalette(brand: string) {
   return BRAND_COLORS[brand] ?? BRAND_COLORS.Other;
 }
 
+// Domains used to resolve official brand logos (via Clearbit's public logo API).
+// Only globally recognized brands with a confident, unambiguous domain are mapped.
+// Local/regional or unclear brands fall back to the text + gradient treatment.
+const BRAND_LOGO_DOMAINS: Record<string, string> = {
+  "Ferrero Rocher": "ferrero.com",
+  Kinder: "kinder.com",
+  Nutella: "nutella.com",
+  "Tic Tac": "tictac.com",
+  Cadbury: "cadbury.co.uk",
+  Mars: "mars.com",
+  Nestle: "nestle.com",
+  Hershey: "thehersheycompany.com",
+  Lindt: "lindt.com",
+  Loacker: "loacker.com",
+  Lotus: "lotusbakeries.com",
+  Haribo: "haribo.com",
+  "Chupa Chups": "chupachups.com",
+  "Wrigley Extra": "wrigley.com",
+  "Red Bull": "redbull.com",
+  Ulker: "ulker.com.tr",
+  "Chips Ahoy": "chipsahoy.com",
+};
+
+export function brandLogo(brand: string): string | null {
+  const domain = BRAND_LOGO_DOMAINS[brand];
+  return domain ? `https://logo.clearbit.com/${domain}?size=160` : null;
+}
+
 // --- Precomputed indexes to avoid repeated O(N) scans ---
 const PRODUCT_BY_ID: Map<string, Product> = new Map();
 const BRAND_INDEX: Map<string, Product[]> = new Map();

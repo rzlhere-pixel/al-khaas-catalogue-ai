@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { AppShell } from "@/components/app-shell";
-import { ALL_BRANDS, brandPalette, productsByBrand } from "@/lib/catalog";
+import { useState } from "react";
+import { ALL_BRANDS, brandLogo, brandPalette, productsByBrand } from "@/lib/catalog";
 
 export const Route = createFileRoute("/brands")({
   head: () => ({
@@ -11,6 +12,22 @@ export const Route = createFileRoute("/brands")({
   }),
   component: Brands,
 });
+
+function BrandLogoChip({ brand, logo }: { brand: string; logo: string }) {
+  const [failed, setFailed] = useState(false);
+  if (failed) return null;
+  return (
+    <div className="mb-3 inline-flex h-12 w-20 items-center justify-center rounded-lg bg-white/95 p-2 shadow-sm">
+      <img
+        src={logo}
+        alt={`${brand} logo`}
+        className="max-h-full max-w-full object-contain"
+        loading="lazy"
+        onError={() => setFailed(true)}
+      />
+    </div>
+  );
+}
 
 function Brands() {
   const brands = ALL_BRANDS;
@@ -28,6 +45,7 @@ function Brands() {
             {brands.map((brand) => {
               const palette = brandPalette(brand);
               const count = productsByBrand(brand).length;
+              const logo = brandLogo(brand);
               return (
                 <Link
                   key={brand}
@@ -38,6 +56,7 @@ function Brands() {
                 >
                   <div className="p-6 flex flex-col justify-between h-full">
                     <div>
+                      {logo ? <BrandLogoChip brand={brand} logo={logo} /> : null}
                       <h3 className="font-display text-2xl tracking-tight">{brand}</h3>
                       <p className="mt-2 text-sm opacity-80">{count} products available</p>
                     </div>
