@@ -83,16 +83,29 @@ for (const p of PRODUCTS) {
       .toLowerCase()
       .replace(/[·\-_/]+/g, " ")
       .replace(/\s+/g, " ")
-      .trim()
+      .trim(),
   );
 }
 
 // Precompute some commonly used derived lists
 const PROMO_LIST: Product[] = PRODUCTS.filter((p) => p.is_promo === true);
-const NEW_ARRIVALS_SORTED: Product[] = PRODUCTS.filter((p) => p.itemCode.startsWith("AKG")).sort((a, b) => b.itemCode.localeCompare(a.itemCode));
+const NEW_ARRIVALS_SORTED: Product[] = PRODUCTS.filter((p) => p.itemCode.startsWith("AKG")).sort(
+  (a, b) => b.itemCode.localeCompare(a.itemCode),
+);
 
 // Helper for best sellers ordering
-const BEST_ORDER = ["Ferrero Rocher", "Kinder", "Cadbury", "Mars", "Nestle", "Nutella", "Lindt", "Haribo", "Lotus", "Tic Tac"];
+const BEST_ORDER = [
+  "Ferrero Rocher",
+  "Kinder",
+  "Cadbury",
+  "Mars",
+  "Nestle",
+  "Nutella",
+  "Lindt",
+  "Haribo",
+  "Lotus",
+  "Tic Tac",
+];
 const BEST_ORDER_MAP = new Map(BEST_ORDER.map((b, i) => [b, i]));
 
 export function getProduct(id: string): Product | undefined {
@@ -100,7 +113,12 @@ export function getProduct(id: string): Product | undefined {
 }
 
 export function searchProducts(q: string, limit = 50): Product[] {
-  const term = q.trim().toLowerCase().replace(/[·\-_/]+/g, " ").replace(/\s+/g, " ").trim();
+  const term = q
+    .trim()
+    .toLowerCase()
+    .replace(/[·\-_/]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
   if (!term) return [];
   const tokens = term.split(/\s+/);
   const matches: Product[] = [];
@@ -156,7 +174,7 @@ const HIDDEN_CATEGORIES = new Set(["Accessories", "Beverages"]);
 
 export const ALL_BRANDS = Array.from(new Set(PRODUCTS.map((p) => p.brand))).sort();
 export const ALL_CATEGORIES = Array.from(
-  new Set(PRODUCTS.filter((p) => !HIDDEN_CATEGORIES.has(p.category)).map((p) => p.category))
+  new Set(PRODUCTS.filter((p) => !HIDDEN_CATEGORIES.has(p.category)).map((p) => p.category)),
 ).sort();
 
 export function productsByCategory(cat: string) {
@@ -168,16 +186,28 @@ export function productsByBrand(brand: string) {
 
 export function relatedProducts(p: Product, limit = 8): Product[] {
   const sameBrand = (BRAND_INDEX.get(p.brand) ?? []).filter((x) => x.id !== p.id);
-  const sameCat = (CATEGORY_INDEX.get(p.category) ?? []).filter((x) => x.id !== p.id && x.brand !== p.brand);
+  const sameCat = (CATEGORY_INDEX.get(p.category) ?? []).filter(
+    (x) => x.id !== p.id && x.brand !== p.brand,
+  );
   return [...sameBrand, ...sameCat].slice(0, limit);
 }
 
 export function alternatives(p: Product, limit = 6): { premium: Product[]; budget: Product[] } {
   const ref = p.casePrice ?? p.piecePrice ?? 0;
   const peers = (CATEGORY_INDEX.get(p.category) ?? []).filter((x) => x.id !== p.id);
-  const withPrice = peers.map((x) => ({ x, price: x.casePrice ?? x.piecePrice ?? 0 })).filter((r) => r.price > 0);
-  const premium = withPrice.filter((r) => r.price > ref).sort((a, b) => a.price - b.price).slice(0, limit).map((r) => r.x);
-  const budget = withPrice.filter((r) => r.price < ref).sort((a, b) => b.price - a.price).slice(0, limit).map((r) => r.x);
+  const withPrice = peers
+    .map((x) => ({ x, price: x.casePrice ?? x.piecePrice ?? 0 }))
+    .filter((r) => r.price > 0);
+  const premium = withPrice
+    .filter((r) => r.price > ref)
+    .sort((a, b) => a.price - b.price)
+    .slice(0, limit)
+    .map((r) => r.x);
+  const budget = withPrice
+    .filter((r) => r.price < ref)
+    .sort((a, b) => b.price - a.price)
+    .slice(0, limit)
+    .map((r) => r.x);
   return { premium, budget };
 }
 

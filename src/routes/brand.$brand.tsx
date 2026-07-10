@@ -2,8 +2,20 @@ import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { AppShell } from "@/components/app-shell";
 import { ProductCard } from "@/components/product-card";
-import { FilterChips, applyFilters, useCatalogFilters, type CatalogFilters } from "@/components/filter-chips";
-import { ALL_BRANDS, brandLogo, brandPalette, productsByBrand, bestSellers, newArrivals } from "@/lib/catalog";
+import {
+  FilterChips,
+  applyFilters,
+  useCatalogFilters,
+  type CatalogFilters,
+} from "@/components/filter-chips";
+import {
+  ALL_BRANDS,
+  brandLogo,
+  brandPalette,
+  productsByBrand,
+  bestSellers,
+  newArrivals,
+} from "@/lib/catalog";
 
 export const Route = createFileRoute("/brand/$brand")({
   validateSearch: (s: Record<string, unknown>): CatalogFilters => ({
@@ -14,7 +26,10 @@ export const Route = createFileRoute("/brand/$brand")({
   head: ({ params }) => ({
     meta: [
       { title: `${params.brand} — Al Khaas Catalogue` },
-      { name: "description", content: `Browse ${params.brand} products available from Al Khaas General Trading. Premium confectionery and FMCG distributed across the UAE.` },
+      {
+        name: "description",
+        content: `Browse ${params.brand} products available from Al Khaas General Trading. Premium confectionery and FMCG distributed across the UAE.`,
+      },
     ],
   }),
   loader: ({ params }) => {
@@ -26,7 +41,9 @@ export const Route = createFileRoute("/brand/$brand")({
     <AppShell>
       <div className="mx-auto max-w-3xl px-6 py-20 text-center">
         <h1 className="font-display text-3xl text-foreground">Brand not found</h1>
-        <p className="mt-2 text-sm text-muted-foreground">This brand is not available in our catalogue.</p>
+        <p className="mt-2 text-sm text-muted-foreground">
+          This brand is not available in our catalogue.
+        </p>
         <Link to="/brands" className="mt-4 inline-block text-sm text-gold hover:text-gold/80">
           ← Back to brands
         </Link>
@@ -68,7 +85,10 @@ function BrandPage() {
     <AppShell>
       <section
         className="relative overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${palette.from}, ${palette.to})`, color: palette.ink }}
+        style={{
+          background: `linear-gradient(135deg, ${palette.from}, ${palette.to})`,
+          color: palette.ink,
+        }}
       >
         <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20">
           <div className="text-[11px] uppercase tracking-[0.25em] opacity-80">Brand</div>
@@ -87,7 +107,9 @@ function BrandPage() {
         </div>
         {filtered.length > 0 ? (
           <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {filtered.map((p) => <ProductCard key={p.id} p={p} />)}
+            {filtered.map((p) => (
+              <ProductCard key={p.id} p={p} />
+            ))}
           </div>
         ) : (
           <div className="rounded-2xl border border-border bg-secondary/40 p-8 text-center text-sm text-muted-foreground">
@@ -98,4 +120,3 @@ function BrandPage() {
     </AppShell>
   );
 }
-

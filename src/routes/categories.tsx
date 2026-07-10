@@ -34,7 +34,11 @@ export const Route = createFileRoute("/categories")({
   head: () => ({
     meta: [
       { title: "Categories — Al Khaas Catalogue" },
-      { name: "description", content: "Browse chocolates, biscuits, candy, wafers, gum, mints, spreads and more from Al Khaas." },
+      {
+        name: "description",
+        content:
+          "Browse chocolates, biscuits, candy, wafers, gum, mints, spreads and more from Al Khaas.",
+      },
     ],
   }),
   component: Categories,
@@ -48,7 +52,10 @@ function Categories() {
       <section className="mx-auto max-w-7xl px-6 py-12 sm:py-16">
         <div className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">Shop by</div>
         <h1 className="mt-2 font-display text-4xl text-foreground sm:text-5xl">Categories</h1>
-        <p className="mt-4 max-w-2xl text-sm text-muted-foreground">Browse all product categories from Al Khaas General Trading. Find everything from premium chocolates to specialty candies.</p>
+        <p className="mt-4 max-w-2xl text-sm text-muted-foreground">
+          Browse all product categories from Al Khaas General Trading. Find everything from premium
+          chocolates to specialty candies.
+        </p>
         <div className="gold-divider mt-3 w-16" />
 
         {categories.length > 0 ? (
@@ -65,12 +72,16 @@ function Categories() {
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <h3 className="font-display text-2xl text-foreground">{cat}</h3>
-                      <p className="mt-1 text-xs text-muted-foreground">{CATEGORY_DESCRIPTION[cat] ?? "Browse products"}</p>
+                      <p className="mt-1 text-xs text-muted-foreground">
+                        {CATEGORY_DESCRIPTION[cat] ?? "Browse products"}
+                      </p>
                       <p className="mt-3 text-sm font-medium text-gold">{count} products</p>
                     </div>
                     <span className="text-4xl">{CATEGORY_ICON[cat] ?? "✨"}</span>
                   </div>
-                  <div className="mt-4 inline-flex text-sm text-muted-foreground group-hover:text-foreground">Explore →</div>
+                  <div className="mt-4 inline-flex text-sm text-muted-foreground group-hover:text-foreground">
+                    Explore →
+                  </div>
                 </Link>
               );
             })}
