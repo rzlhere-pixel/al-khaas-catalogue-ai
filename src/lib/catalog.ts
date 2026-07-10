@@ -48,10 +48,12 @@ for (const p of PRODUCTS) {
   if (!CATEGORY_INDEX.has(p.category)) CATEGORY_INDEX.set(p.category, []);
   CATEGORY_INDEX.get(p.category)!.push(p);
   // Precompute a normalized searchable string once
+  // Precompute a normalized searchable string once (includes subtitle/weight)
   SEARCH_TEXT.set(
     p.id,
-    `${p.displayName} ${p.name} ${p.itemCode} ${p.barcode} ${p.brand} ${p.category}`
+    `${p.displayName} ${p.name} ${p.itemCode} ${p.barcode} ${p.brand} ${p.category} ${p.subtitle ?? ""} ${p.packaging ?? ""}`
       .toLowerCase()
+      .replace(/[·\-_/]+/g, " ")
       .replace(/\s+/g, " ")
       .trim()
   );
