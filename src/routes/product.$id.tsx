@@ -193,6 +193,8 @@ function ProductPage() {
         </section>
       )}
 
+      <AdditionalInfo product={product} />
+
       {related.length > 0 && (
         <section className="mx-auto max-w-7xl px-6 py-12 sm:py-16">
           <div className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">Related</div>
@@ -209,7 +211,70 @@ function ProductPage() {
         onClose={() => setPicker(false)}
         message={buildEnquiryMessage([{ name: product.displayName, brand: product.brand, itemCode: product.itemCode, weight: product.subtitle, qty }])}
       />
+
+      {zoom && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setZoom(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={() => setZoom(false)}
+            className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
+            aria-label="Close"
+          >
+            <X className="h-5 w-5" />
+          </button>
+          <div
+            className="max-h-full max-w-full overflow-auto"
+            style={{ touchAction: "pinch-zoom" }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <ProductImage
+              productId={product.id}
+              name={product.displayName}
+              brand={product.brand}
+              className="h-[85vh] w-[85vw] max-w-[1200px]"
+              rounded="rounded-2xl"
+            />
+          </div>
+          <div className="pointer-events-none absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-white/10 px-3 py-1 text-[11px] text-white/80">
+            Pinch or scroll to zoom · tap outside to close
+          </div>
+        </div>
+      )}
     </AppShell>
+  );
+}
+
+function AdditionalInfo({ product }: { product: Product }) {
+  const rows: [string, string | undefined][] = [
+    ["Country of origin", product.origin],
+    ["Ingredients", product.ingredients],
+    ["Nutrition facts", product.nutrition],
+    ["Storage", product.storage],
+    ["Shelf life", product.shelfLife],
+    ["Carton quantity", product.cartonQty],
+  ];
+  const filled = rows.filter(([, v]) => v && v.trim().length > 0);
+  if (filled.length === 0) return null;
+  return (
+    <section className="mx-auto max-w-7xl px-6 pb-4">
+      <div className="rounded-3xl border border-border bg-card p-6 shadow-soft">
+        <div className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">Additional information</div>
+        <h2 className="mt-1 font-display text-2xl text-foreground">Product details</h2>
+        <dl className="mt-4 grid gap-4 sm:grid-cols-2">
+          {filled.map(([k, v]) => (
+            <div key={k} className="rounded-2xl bg-secondary/50 p-4">
+              <dt className="text-[10px] uppercase tracking-widest text-muted-foreground">{k}</dt>
+              <dd className="mt-1 whitespace-pre-line text-sm text-foreground">{v}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
   );
 }
 
