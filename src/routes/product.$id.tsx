@@ -65,6 +65,7 @@ function ProductPage() {
   const { product } = Route.useLoaderData();
   const [qty, setQty] = useState(1);
   const [picker, setPicker] = useState(false);
+  const [zoom, setZoom] = useState(false);
   const enquiry = useEnquiry();
   const hydrated = useHydrated();
   const inEnquiry = hydrated && enquiry.has(product.id);
