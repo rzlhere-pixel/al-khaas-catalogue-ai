@@ -3,27 +3,31 @@ import { AppShell } from "@/components/app-shell";
 import { ALL_CATEGORIES, productsByCategory } from "@/lib/catalog";
 
 const CATEGORY_DESCRIPTION: Record<string, string> = {
-  Chocolates: "Premium chocolates from global brands",
+  "Chocolate Bars": "Bars, sticks and multipacks",
+  "Boxed & Praline Chocolates": "Assortments, pralines and gift boxes",
+  "Chocolate Countlines": "Individually wrapped and sharing bags",
+  "Chocolate Spreads": "Hazelnut and cocoa spreads",
+  "Seasonal & Gift Chocolate": "Eggs, calendars and holiday shapes",
+  Wafers: "Light and crispy wafer products",
   "Biscuits & Cookies": "Crispy and delicious biscuit varieties",
   "Candy & Gummies": "Colorful gummies and hard candies",
-  Wafers: "Light and crispy wafer products",
   "Gum & Mints": "Chewing gums and breath mints",
   Beverages: "Soft drinks and beverage options",
   Spreads: "Hazelnut and other spreads",
-  Accessories: "Promotional items and gifts",
-  Other: "Miscellaneous products",
 };
 
 const CATEGORY_ICON: Record<string, string> = {
-  Chocolates: "🍫",
+  "Chocolate Bars": "🍫",
+  "Boxed & Praline Chocolates": "🎁",
+  "Chocolate Countlines": "🍫",
+  "Chocolate Spreads": "🫙",
+  "Seasonal & Gift Chocolate": "🎀",
+  Wafers: "🥮",
   "Biscuits & Cookies": "🍪",
   "Candy & Gummies": "🍬",
-  Wafers: "🥮",
   "Gum & Mints": "🌿",
   Beverages: "🥤",
   Spreads: "🫙",
-  Accessories: "🧾",
-  Other: "✨",
 };
 
 export const Route = createFileRoute("/categories")({
