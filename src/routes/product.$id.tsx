@@ -14,7 +14,7 @@ import {
 import { useEnquiry, useHydrated } from "@/lib/enquiry-store";
 import { buildEnquiryMessage } from "@/lib/contacts";
 import { lookupProductImage } from "@/lib/product-images.functions";
-import { ChevronLeft, Minus, Plus, ShoppingBag, Check, Sparkles, Wand2, Loader2, AlertCircle } from "lucide-react";
+import { ChevronLeft, Minus, Plus, ShoppingBag, Check, Sparkles, Wand2, Loader2, AlertCircle, X, ZoomIn } from "lucide-react";
 import { useState } from "react";
 import type { Product } from "@/data/products";
 
