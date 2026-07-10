@@ -12,6 +12,13 @@ export interface Product {
   category: string;
   packaging: string;
   is_promo?: boolean;
+  // Optional enrichment fields (rendered only when populated)
+  ingredients?: string;
+  nutrition?: string;
+  origin?: string;
+  storage?: string;
+  shelfLife?: string;
+  cartonQty?: string;
 }
 
 export const PRODUCTS: Product[] = [
@@ -24,7 +31,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 38.75,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Boxed & Praline Chocolates",
     "packaging": "24X4 · 269.4 GR",
     "displayName": "Ferrero Collection Tray",
     "subtitle": "24×4 · 269g"
@@ -38,7 +45,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 21.48,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Boxed & Praline Chocolates",
     "packaging": "16X5X4 · 200 GR",
     "displayName": "Ferrero Rocher Tray",
     "subtitle": "16×5×4 · 200g"
@@ -52,7 +59,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 34.5,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Boxed & Praline Chocolates",
     "packaging": "24X4 · 300 GR",
     "displayName": "Ferrero Rocher Tray",
     "subtitle": "24×4 · 300g"
@@ -66,7 +73,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 63.33,
     "piecePrice": null,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Boxed & Praline Chocolates",
     "packaging": "3X16X6 · 37.5 GR",
     "displayName": "Ferrero Rocher Tray",
     "subtitle": "3×16×6 · 38g"
@@ -80,7 +87,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 12.62,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Seasonal & Gift Chocolate",
     "packaging": "10X21 · 105 GR",
     "displayName": "Ferrero Collection Eggs Hazelnut Tray",
     "subtitle": "10×21 · 105g"
@@ -94,7 +101,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 12.19,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "2X5 · 215 GR",
     "displayName": "Kinder Bueno Tray",
     "subtitle": "2×5 · 215g"
@@ -108,7 +115,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 72.0,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "2X30X4 · 43 GR",
     "displayName": "Kinder Bueno Tray",
     "subtitle": "2×30×4 · 43g"
@@ -122,7 +129,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 72.5,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "2X30X4 · 39 GR",
     "displayName": "Kinder Bueno White Tray",
     "subtitle": "2×30×4 · 39g"
@@ -136,7 +143,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 17.5,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "2X10",
     "displayName": "Kinder Cards Tray",
     "subtitle": "2×10"
@@ -150,7 +157,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 56.25,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "30X4 · 25.6 GR",
     "displayName": "Kinder Cards Tray",
     "subtitle": "30×4 · 26g"
@@ -164,7 +171,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 8.85,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "2X5 · 128GR",
     "displayName": "Kinder Cards Tray",
     "subtitle": "2×5 · 128g"
@@ -178,7 +185,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 60.0,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "10X8 · 100 GR",
     "displayName": "Kinder Chocolate Tray",
     "subtitle": "10×8 · 100g"
@@ -192,7 +199,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 55.5,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X40X6",
     "displayName": "Kinder Country Tray",
     "subtitle": "1×40×6"
@@ -206,7 +213,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 31.25,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "756 GR",
     "displayName": "Kinder Maxi",
     "subtitle": "756g"
@@ -220,7 +227,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 317.5,
     "piecePrice": 11.34,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "11X28X2 · 231 GR",
     "displayName": "Kinder Maxi",
     "subtitle": "11×28×2 · 231g"
@@ -234,7 +241,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 47.5,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X36X8 · 21 GR",
     "displayName": "Kinder Maxi",
     "subtitle": "1×36×8 · 21g"
@@ -248,7 +255,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 11.75,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "5X16 · 170GR",
     "displayName": "Kinder Crispy",
     "subtitle": "5×16 · 170g"
@@ -262,7 +269,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 116.0,
     "piecePrice": 9.67,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "20X12X2 · 108GR",
     "displayName": "Kinder Bueno Mini",
     "subtitle": "20×12×2 · 108g"
@@ -276,7 +283,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 22.0,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "430 GR",
     "displayName": "Kinder Bueno",
     "subtitle": "430g"
@@ -290,7 +297,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 118.75,
     "piecePrice": 9.9,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "20X12X4 · 120 GR",
     "displayName": "Kinder Chocolate Mini",
     "subtitle": "20×12×4 · 120g"
@@ -304,7 +311,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 88.0,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "20X8 · 50 GR",
     "displayName": "Kinder Chocolate",
     "subtitle": "20×8 · 50g"
@@ -318,7 +325,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 49.5,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "24GR",
     "displayName": "Kinder Country",
     "subtitle": "24g"
@@ -332,7 +339,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 45.17,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "1X6X24 · 19 GR",
     "displayName": "Kinder Creamy",
     "subtitle": "1×6×24 · 19g"
@@ -346,7 +353,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 8.5,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "5X20 · 95 GR",
     "displayName": "Kinder Creamy",
     "subtitle": "5×20 · 95g"
@@ -360,7 +367,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 17.5,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "10X14 · 390 GR",
     "displayName": "Kinder Delice",
     "subtitle": "10×14 · 390g"
@@ -374,7 +381,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 4.05,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X20X2 · 39GR",
     "displayName": "Kinder Delice",
     "subtitle": "1×20×2 · 39g"
@@ -388,7 +395,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 82.5,
     "piecePrice": 8.25,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "105 GR",
     "displayName": "Kinder Happy Hippo",
     "subtitle": "105g"
@@ -402,7 +409,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 145.0,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "1X48X2 · 20 GR",
     "displayName": "Kinder Joy Boy",
     "subtitle": "1×48×2 · 20g"
@@ -416,7 +423,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 145.0,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "1X48X2 · 20 GR",
     "displayName": "Kinder Joy Girl",
     "subtitle": "1×48×2 · 20g"
@@ -430,7 +437,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 8.9,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "3X32 · 60 GR",
     "displayName": "Kinder Joy Boy",
     "subtitle": "3×32 · 60g"
@@ -444,7 +451,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 8.9,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "3X32 · 60 GR",
     "displayName": "Kinder Joy Girl",
     "subtitle": "3×32 · 60g"
@@ -458,7 +465,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 132.5,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "48X2",
     "displayName": "Kinder Joy Unisex",
     "subtitle": "48×2"
@@ -472,7 +479,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 11.71,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Seasonal & Gift Chocolate",
     "packaging": "182X24 · 180GR",
     "displayName": "Kinder Mini Eggs",
     "subtitle": "182×24 · 180g"
@@ -486,7 +493,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 35.28,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Seasonal & Gift Chocolate",
     "packaging": "236X7 · 7 GRM",
     "displayName": "Kinder Mix Big Calendar",
     "subtitle": "236×7 · 7g"
@@ -500,7 +507,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 152.0,
     "piecePrice": 9.5,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "25X16X5 · 125 GRM",
     "displayName": "Kinder Schokobons Milky",
     "subtitle": "25×16×5 · 125g"
@@ -514,7 +521,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 3.33,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "1X72 · 20GR",
     "displayName": "Kinder Surprise",
     "subtitle": "1×72 · 20g"
@@ -528,7 +535,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 59.38,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "1X48X8 · 18GR",
     "displayName": "Kinder Tronky",
     "subtitle": "1×48×8 · 18g"
@@ -542,7 +549,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 6.21,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "5X20",
     "displayName": "Kinder Tronky",
     "subtitle": "5×20"
@@ -556,7 +563,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 16.5,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Seasonal & Gift Chocolate",
     "packaging": "5X12",
     "displayName": "Kinder Uovo Maxi",
     "subtitle": "5×12"
@@ -570,7 +577,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 13.0,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "20X10 · 250 GR",
     "displayName": "Kinderini",
     "subtitle": "20×10 · 250g"
@@ -584,7 +591,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 15.12,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "10X16 · 220 GR",
     "displayName": "Nutella B-Ready",
     "subtitle": "10×16 · 220g"
@@ -598,7 +605,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 9.38,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "6X16 · 132 GR",
     "displayName": "Nutella B-Ready",
     "subtitle": "6×16 · 132g"
@@ -612,7 +619,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 4.54,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Chocolate Spreads",
     "packaging": "1X24 · 52 GR",
     "displayName": "Nutella Nut & Go",
     "subtitle": "1×24 · 52g"
@@ -626,7 +633,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 0.86,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Chocolate Spreads",
     "packaging": "15X120 · 15 GR",
     "displayName": "Nutella",
     "subtitle": "15×120 · 15g"
@@ -640,7 +647,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 86.0,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Chocolate Spreads",
     "packaging": "3 KG",
     "displayName": "Nutella",
     "subtitle": "2 · 3kg"
@@ -654,7 +661,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 11.86,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Chocolate Spreads",
     "packaging": "350X15 · 350GR",
     "displayName": "Nutella",
     "subtitle": "15 · 350g"
@@ -668,7 +675,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 24.25,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Chocolate Spreads",
     "packaging": "",
     "displayName": "Nutella",
     "subtitle": "12 · 825g"
@@ -682,7 +689,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 14.58,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "22X12 · 304 GR",
     "displayName": "Nutella Biscuits Tray",
     "subtitle": "12 · 304g"
@@ -696,7 +703,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 60.0,
     "piecePrice": null,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "3X28X4 · 41.4GR",
     "displayName": "Nutella Biscuits Tray",
     "subtitle": "3×28×4 · 41g"
@@ -710,7 +717,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 187.5,
     "piecePrice": 9.38,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "12X20X2 · 166 GR",
     "displayName": "Nutella Biscuits Tray Tub",
     "subtitle": "12×20×2 · 166g"
@@ -724,7 +731,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 12.81,
     "piecePrice": null,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "1X8 · 220 GR",
     "displayName": "Nutella B-Ready",
     "subtitle": "16 · 220g"
@@ -738,7 +745,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 58.75,
     "piecePrice": null,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "1X36X4 · 22.65 GR",
     "displayName": "Nutella B-Ready Tray",
     "subtitle": "1×36×4 · 23g"
@@ -752,7 +759,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 15.25,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Chocolate Spreads",
     "packaging": "440GR",
     "displayName": "Nutella",
     "subtitle": "15 · 440g"
@@ -766,7 +773,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 28.67,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Chocolate Spreads",
     "packaging": "1000X6 · 1000GR",
     "displayName": "Nutella",
     "subtitle": "6 · 1000g"
@@ -780,7 +787,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 10.13,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Chocolate Spreads",
     "packaging": "200X15 · 200 GR",
     "displayName": "Nutella",
     "subtitle": "15 · 200g"
@@ -794,7 +801,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 20.83,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Chocolate Spreads",
     "packaging": "750X12 · 750 GR",
     "displayName": "Nutella",
     "subtitle": "12 · 750g"
@@ -808,7 +815,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 14.67,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Chocolate Spreads",
     "packaging": "400 GRM",
     "displayName": "Nutella Offer",
     "subtitle": "15 · 400g",
@@ -823,7 +830,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 21.38,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Boxed & Praline Chocolates",
     "packaging": "260 GR",
     "displayName": "Raffaello Tray",
     "subtitle": "8 · 260g"
@@ -837,7 +844,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 14.17,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Boxed & Praline Chocolates",
     "packaging": "150 GR",
     "displayName": "Raffaello Tray",
     "subtitle": "6 · 150g"
@@ -851,7 +858,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 45.0,
     "piecePrice": null,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Boxed & Praline Chocolates",
     "packaging": "16X4 · 30 GR",
     "displayName": "Raffaello",
     "subtitle": "16×4 · 30g"
@@ -865,7 +872,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 17.67,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Seasonal & Gift Chocolate",
     "packaging": "14X9 · 140 GR",
     "displayName": "Raffaello Heart",
     "subtitle": "14×9 · 140g"
@@ -879,7 +886,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 21.0,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Boxed & Praline Chocolates",
     "packaging": "23X8 · 230 GR",
     "displayName": "Raffaello",
     "subtitle": "23×8 · 230g"
@@ -893,7 +900,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X14 · 34GRM",
     "displayName": "Kinder Crispy",
     "subtitle": "1×14 · 34g"
@@ -907,7 +914,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 34.17,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Seasonal & Gift Chocolate",
     "packaging": "18X6",
     "displayName": "Ferrero Rocher Lantern Ramadan",
     "subtitle": "18×6",
@@ -922,7 +929,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 115.0,
     "piecePrice": 38.33,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Boxed & Praline Chocolates",
     "packaging": "30X3X4 · 375 GRM",
     "displayName": "Ferrero Rocher",
     "subtitle": "30×3×4 · 375g"
@@ -936,7 +943,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 72.5,
     "piecePrice": 9.1,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "90X8X2",
     "displayName": "Ferrero Rocher Tablets Dark",
     "subtitle": "90×8×2"
@@ -950,7 +957,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 75.0,
     "piecePrice": 9.38,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "90X8X2 · 90 GR",
     "displayName": "Ferrero Rocher Tablets Hazelnut And Almond",
     "subtitle": "90×8×2 · 90g"
@@ -964,7 +971,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 72.5,
     "piecePrice": 9.1,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "90X8X2 · 90GR",
     "displayName": "Ferrero Rocher Tablets Hazelnut And Macadamia",
     "subtitle": "90×8×2 · 90g"
@@ -978,7 +985,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 9.0,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "3X32 · 60 GR",
     "displayName": "Kinder Joy Boy Fairy",
     "subtitle": "3×32 · 60g"
@@ -992,7 +999,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 9.0,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "3X32 · 60 GR",
     "displayName": "Kinder Joy Girl Fairy",
     "subtitle": "3×32 · 60g"
@@ -1006,7 +1013,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 113.5,
     "piecePrice": 10.32,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "16X11X2 · 89 GR",
     "displayName": "Kinder Schoko Bons Crispy",
     "subtitle": "16×11×2 · 89g"
@@ -1020,7 +1027,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 8.42,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Seasonal & Gift Chocolate",
     "packaging": "8X12 · 80 GM",
     "displayName": "Kinder Bueno Eggs",
     "subtitle": "8×12 · 80g"
@@ -1034,7 +1041,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 11.39,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "9X18 · 211.5 GRM",
     "displayName": "Kinder Country",
     "subtitle": "9×18 · 212g"
@@ -1048,7 +1055,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 48.17,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X28X6 · 21 GR",
     "displayName": "Kinder Happy Hippo",
     "subtitle": "1×28×6 · 21g"
@@ -1062,7 +1069,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 8.91,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "3X32 · 60 GR",
     "displayName": "Kinder Joy Unisex",
     "subtitle": "3×32 · 60g"
@@ -1076,7 +1083,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 7.9,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Boxed & Praline Chocolates",
     "packaging": "8X10X80 · 80GM",
     "displayName": "Raffaello",
     "subtitle": "8×10 · 80g"
@@ -1090,7 +1097,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 21.67,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Boxed & Praline Chocolates",
     "packaging": "24X6 · 245GR",
     "displayName": "Raffaello Tray",
     "subtitle": "24×6 · 245g"
@@ -1104,7 +1111,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 3.2,
     "brand": "Nutella",
-    "category": "Chocolates",
+    "category": "Chocolate Spreads",
     "packaging": "30X64",
     "displayName": "Nutella Glass",
     "subtitle": "30×64"
@@ -1118,7 +1125,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 24.0,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "",
     "displayName": "Kinder Minis Mix",
     "subtitle": "10 · 259g"
@@ -1132,7 +1139,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 15.0,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "",
     "displayName": "Kinder Minis Mix",
     "subtitle": "15 · 150g"
@@ -1202,7 +1209,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 8.3,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "95GM",
     "displayName": "Kinder Creamy Tray",
     "subtitle": "5×20 · 95g"
@@ -1216,7 +1223,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 42.0,
     "piecePrice": null,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "",
     "displayName": "Kinder Maxi Tray",
     "subtitle": "36×8"
@@ -1230,7 +1237,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 72.5,
     "piecePrice": 9.1,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "90X8X2",
     "displayName": "Ferrero Rocher Tablets Original Tray",
     "subtitle": "90×8×2"
@@ -1244,7 +1251,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 72.5,
     "piecePrice": 9.1,
     "brand": "Ferrero Rocher",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "90X8X2",
     "displayName": "Raffaello Tablets Tray",
     "subtitle": "90×8×2"
@@ -1258,7 +1265,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 13.0,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X12 · 150GR",
     "displayName": "Kinder Duo Tray",
     "subtitle": "12×12 · 150g"
@@ -1272,7 +1279,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 17.5,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "225X18 · 225GM",
     "displayName": "Kinder Schokobons Milky",
     "subtitle": "18×225 · 225g"
@@ -1286,7 +1293,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 50.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X24X57 · 57GRM",
     "displayName": "Bounty Arabic",
     "subtitle": "12×24 · 57g"
@@ -1300,7 +1307,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 10.08,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "24X5X55 · 55 GRM",
     "displayName": "Bounty 5 Pack",
     "subtitle": "24×5 · 55g"
@@ -1314,7 +1321,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 12.1,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "12X285 · 285 GM",
     "displayName": "Bounty Minis",
     "subtitle": "12 · 285g"
@@ -1328,7 +1335,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 45.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X12X24 · 57 GRM",
     "displayName": "Bounty",
     "subtitle": "12×24 · 57g"
@@ -1342,7 +1349,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 70.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X24 · 40 GRM",
     "displayName": "Galaxy Caramel",
     "subtitle": "6×24 · 40g"
@@ -1356,7 +1363,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 70.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X24 · 36 GRM",
     "displayName": "Galaxy Coconut Brittle",
     "subtitle": "6×24 · 36g"
@@ -1370,7 +1377,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 70.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X24 · 36 GRM",
     "displayName": "Galaxy Crispy",
     "subtitle": "6×24 · 36g"
@@ -1384,7 +1391,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 69.5,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X6X24 · 40 GRM",
     "displayName": "Galaxy Dark",
     "subtitle": "6×24 · 40g"
@@ -1398,7 +1405,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 22.46,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X24X22 · 22.5 GR",
     "displayName": "Galaxy Flute",
     "subtitle": "12×24 · 23g"
@@ -1412,7 +1419,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 35.75,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X8 · 22.G",
     "displayName": "Galaxy Flutes Offer",
     "subtitle": "8×36 · 23g",
@@ -1427,7 +1434,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 38.5,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X8X42",
     "displayName": "Galaxy Flutes Offer",
     "subtitle": "8×42",
@@ -1442,7 +1449,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 68.5,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X24 · 36GRM",
     "displayName": "Galaxy Fruit & Nut",
     "subtitle": "6×24 · 36g"
@@ -1456,7 +1463,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 64.25,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X6X24X36 · 36 GRM",
     "displayName": "Galaxy Hazelnut",
     "subtitle": "6×24 · 36g"
@@ -1470,7 +1477,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 21.5,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "36 GRM",
     "displayName": "Galaxy Milk Gulf Offer",
     "subtitle": "10×12 · 36g"
@@ -1484,7 +1491,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 10.63,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "12X137 · 137.5 GR",
     "displayName": "Galaxy Mini",
     "subtitle": "12×137 · 138g"
@@ -1498,7 +1505,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 3.6,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "40X42 · 42 GRM",
     "displayName": "Galaxy Minstrels",
     "subtitle": "40×42 · 42g"
@@ -1512,7 +1519,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X36X33 · 33 GRM",
     "displayName": "Galaxy Ripple",
     "subtitle": "36×33 · 33g"
@@ -1526,7 +1533,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 64.5,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X6X24 · 36GRM",
     "displayName": "Galaxy Smooth",
     "subtitle": "6×24 · 36g"
@@ -1540,7 +1547,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 70.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X24 · 36GRM",
     "displayName": "Galaxy Strawberry",
     "subtitle": "6×24 · 36g"
@@ -1554,7 +1561,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 64.25,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X6X24 · 38 GRM",
     "displayName": "Galaxy White",
     "subtitle": "6×24 · 38g"
@@ -1568,7 +1575,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 2.2,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "24X45 · 45 GR",
     "displayName": "M&M Chocolate",
     "subtitle": "24×45 · 45g"
@@ -1582,7 +1589,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 2.06,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "1X24X45 · 45 GRM",
     "displayName": "M&M Peanut",
     "subtitle": "24×45 · 45g"
@@ -1596,7 +1603,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 55.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "24X45 · 45 GM",
     "displayName": "M&M Peanut Arabic",
     "subtitle": "24×45 · 45g"
@@ -1610,7 +1617,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 66.25,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "1X12X24X30 · 6GRM",
     "displayName": "M&M Tube",
     "subtitle": "12×24×30 · 6g"
@@ -1624,7 +1631,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 11.81,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "27X250 · 250 GR",
     "displayName": "M&Ms Chocolate",
     "subtitle": "27×250 · 250g"
@@ -1638,7 +1645,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 3.0,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "25X37 · 37 GRM",
     "displayName": "Maltesers",
     "subtitle": "25×37 · 37g"
@@ -1652,7 +1659,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 20.24,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "6X28 · 37 GR",
     "displayName": "Maltesers Offer Tray",
     "subtitle": "6×28 · 37g",
@@ -1667,7 +1674,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 9.5,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "225GRM",
     "displayName": "Mars 5 Pack Offer",
     "subtitle": "Pack of 15 · 225g",
@@ -1682,7 +1689,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 50.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X12X24 · 51 GRM",
     "displayName": "Mars",
     "subtitle": "12×24 · 51g"
@@ -1696,7 +1703,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 34.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X20X45 · 45GM",
     "displayName": "Snickers Chocolate",
     "subtitle": "12×20×45 · 45g"
@@ -1710,7 +1717,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 43.75,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X24 · 50 GRM",
     "displayName": "Snickers Chocolate Arabic",
     "subtitle": "12×24 · 50g"
@@ -1724,7 +1731,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 8.5,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "30X5X45 · 45 GRM",
     "displayName": "Snickers Chocolate 5 Pack",
     "subtitle": "30×5×45 · 45g"
@@ -1738,7 +1745,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 11.46,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "12X180 · 180G",
     "displayName": "Snickers Minis",
     "subtitle": "12×180 · 180g"
@@ -1752,7 +1759,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 26.58,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X12X20 · 30GRM",
     "displayName": "Snickers Small",
     "subtitle": "1×12×20 · 30g"
@@ -1766,7 +1773,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 38.1,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X12X24 · 50 GRM",
     "displayName": "Snickers Chocolate Tray",
     "subtitle": "1×12×24 · 50g"
@@ -1780,7 +1787,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 50.04,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "25G",
     "displayName": "Twix Single Finger",
     "subtitle": "Pack of 40 · 25g"
@@ -1794,7 +1801,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 12.25,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "18X5X50 · 50GRM",
     "displayName": "Twix Twin Chocolate Gulf",
     "subtitle": "18×5×50 · 50g"
@@ -1808,7 +1815,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 56.67,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X12X80 · 80GM",
     "displayName": "Galaxy Smooth Milk",
     "subtitle": "6×12×80 · 80g"
@@ -1822,7 +1829,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 12.0,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "1X12X200 · 200 GM",
     "displayName": "Twix Mini",
     "subtitle": "1×12×200 · 200g"
@@ -1836,7 +1843,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 3.44,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X24X70 · 70GM",
     "displayName": "Snickers Chocolate Tray",
     "subtitle": "1×24×70 · 70g"
@@ -1850,7 +1857,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 16.5,
     "piecePrice": null,
     "brand": "Barni",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X12X30 · 30GR",
     "displayName": "Barni Chocolate",
     "subtitle": "12×12×30 · 30g"
@@ -1864,7 +1871,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 35.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X24X25 · 25GR",
     "displayName": "Bounty Chocolate",
     "subtitle": "12×24×25 · 25g"
@@ -1878,7 +1885,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 21.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X12X30 · 30GR",
     "displayName": "Cadbury Dairy Milk",
     "subtitle": "12×12×30 · 30g"
@@ -1892,7 +1899,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 23.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X12X30 · 30GR",
     "displayName": "Cadbury Dairy Milk Hazelnut",
     "subtitle": "12×12×30 · 30g"
@@ -1906,7 +1913,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 21.0,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "24X500 · 500GR",
     "displayName": "Mars Minis",
     "subtitle": "24×500 · 500g"
@@ -1920,7 +1927,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 10.65,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "30X5X40 · 40GR",
     "displayName": "Mars",
     "subtitle": "30×5×40 · 40g"
@@ -1934,7 +1941,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 55.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "10X14X45 · 45 GR",
     "displayName": "M&M Chocolate Arabic",
     "subtitle": "10×14×45 · 45g"
@@ -1948,7 +1955,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 11.0,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "30X5X50 · 50 GR",
     "displayName": "Bounty 5 Pack",
     "subtitle": "30×5×50 · 50g"
@@ -1962,7 +1969,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 10.5,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "30X5X40 · 40 GR",
     "displayName": "Snickers 5 Pack",
     "subtitle": "30×5×40 · 40g"
@@ -1976,7 +1983,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 20.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X12X32 · 32 GR",
     "displayName": "Dairy Milk",
     "subtitle": "12×12×32 · 32g"
@@ -1990,7 +1997,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 23.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X12X30 · 30 GR",
     "displayName": "Dairy Milk Fruit & Nut",
     "subtitle": "12×12×30 · 30g"
@@ -2004,7 +2011,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 73.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X24X36 · 36 GR",
     "displayName": "Galaxy Cookie Crumble",
     "subtitle": "6×24×36 · 36g"
@@ -2018,7 +2025,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 9.5,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "36X4X37 · 37GR",
     "displayName": "Maltesers",
     "subtitle": "36×4×37 · 37g"
@@ -2032,7 +2039,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 6.5,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "67X5X23 · 23GR",
     "displayName": "Snicker Small",
     "subtitle": "67×5×23 · 23g"
@@ -2046,7 +2053,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 9.0,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "22X4X30 · 30GR",
     "displayName": "Galaxy Ripple",
     "subtitle": "22×4×30 · 30g"
@@ -2060,7 +2067,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 50.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X24X40 · 40 GR",
     "displayName": "Snicker",
     "subtitle": "12×24×40 · 40g"
@@ -2074,7 +2081,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 9.0,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "36X4X45 · 45GM",
     "displayName": "M&M Peanut",
     "subtitle": "36×4×45 · 45g"
@@ -2088,7 +2095,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 62.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "8X24X50 · 50GM",
     "displayName": "Bounty Chocolate",
     "subtitle": "8×24×50 · 50g"
@@ -2102,7 +2109,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 49.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X24X40 · 40GM",
     "displayName": "Mars Chocolate",
     "subtitle": "12×24×40 · 40g"
@@ -2116,7 +2123,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 37.1,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X28X23 · 23GM",
     "displayName": "Snickers",
     "subtitle": "12×28×23 · 23g"
@@ -2130,7 +2137,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 9.0,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "36X4X45 · 45GM",
     "displayName": "M&M Chocolate",
     "subtitle": "36×4×45 · 45g"
@@ -2144,7 +2151,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 59.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "10X24X50 · 50GM",
     "displayName": "Twix Chocolate",
     "subtitle": "10×24×50 · 50g"
@@ -2158,7 +2165,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 15.25,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "2X28 · 45GM",
     "displayName": "M&M Peanut",
     "subtitle": "2×28 · 45g"
@@ -2172,7 +2179,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 15.25,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "2X28 · 45GM",
     "displayName": "M&M Chocolate",
     "subtitle": "2×28 · 45g"
@@ -2186,7 +2193,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 33.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X24X18 · 18GM",
     "displayName": "Galaxy Smooth Milk",
     "subtitle": "12×24×18 · 18g"
@@ -2200,7 +2207,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "36X30 · 30GM",
     "displayName": "Galaxy Ripple",
     "subtitle": "36×30g"
@@ -2214,7 +2221,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 64.0,
     "piecePrice": null,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X24X30 · 30GM",
     "displayName": "Galaxy Hazelnut",
     "subtitle": "6×24×30 · 30g"
@@ -2228,7 +2235,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 22.5,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X12X12 · 26 GR",
     "displayName": "Cadbury Bubbly",
     "subtitle": "1×12×12 · 26g"
@@ -2242,7 +2249,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 49.0,
     "piecePrice": 4.1,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X6X12 · 87 GRM",
     "displayName": "Cadbury Bubbly",
     "subtitle": "1×6×12 · 87g"
@@ -2256,7 +2263,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 20.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X12X35 · 35G",
     "displayName": "Dairy Milk",
     "subtitle": "12×12×35 · 35g"
@@ -2270,7 +2277,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 24.5,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X12 · 28GRM",
     "displayName": "Cadbury Flake",
     "subtitle": "12×12 · 28g"
@@ -2284,7 +2291,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 10.63,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "12X159 · 159.5GM",
     "displayName": "Cadbury Flakes Minis",
     "subtitle": "12×160g"
@@ -2298,7 +2305,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 39.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "4X36X15 · 15GRM",
     "displayName": "Cadbury Flakes",
     "subtitle": "4×36×15 · 15g"
@@ -2312,7 +2319,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 49.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X12X90 · 90 GRM",
     "displayName": "Cadbury Dairy Milk Fruit & Nut",
     "subtitle": "6×12×90 · 90g"
@@ -2326,7 +2333,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 19.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X12X12 · 35 GR",
     "displayName": "Cadbury Dairy Milk Fruit & Nut",
     "subtitle": "1×12×12 · 35g"
@@ -2340,7 +2347,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 27.5,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X12X12 · 35 GR",
     "displayName": "Cadbury Dairy Milk Hazelnut",
     "subtitle": "1×12×12 · 35g"
@@ -2354,7 +2361,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 9.58,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X12X20 · 20.8 GRM",
     "displayName": "Cadbury Time Out",
     "subtitle": "12×12×20 · 21g"
@@ -2368,7 +2375,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 9.5,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X5X35 · 35G",
     "displayName": "Cadbury Dairy Milk",
     "subtitle": "12×5×35 · 35g"
@@ -2382,7 +2389,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 49.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X6X12 · 90 GRM",
     "displayName": "Cadbury Dairy Milk",
     "subtitle": "1×6×12 · 90g"
@@ -2396,7 +2403,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 48.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X12X90 · 90 GM",
     "displayName": "Cadbury Dairy Milk Hazelnut",
     "subtitle": "6×12×90 · 90g"
@@ -2410,7 +2417,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 27.5,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X12X35 · 35 G",
     "displayName": "Cadbury Dairy Milk Caramel",
     "subtitle": "12×12×35 · 35g"
@@ -2424,7 +2431,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 10.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X5X35 · 35G",
     "displayName": "Cadbury Dairy Milk Fruit & Nut",
     "subtitle": "12×5×35 · 35g"
@@ -2438,7 +2445,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 10.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X5X35 · 35G",
     "displayName": "Cadbury Dairy Milk Hazelnut",
     "subtitle": "12×5×35 · 35g"
@@ -2452,7 +2459,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 47.67,
     "piecePrice": 3.97,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X12X90 · 90G",
     "displayName": "Cadbury Dairy Milk Hazelnut",
     "subtitle": "6×12×90 · 90g"
@@ -2466,7 +2473,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 11.5,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "12X168 · 168 GRM",
     "displayName": "Cadbury Dairy Milk Mini",
     "subtitle": "12×168 · 168g"
@@ -2480,7 +2487,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 11.18,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "12X168 · 168 GRM",
     "displayName": "Cadbury Dairy Milk Mini Hazelnut",
     "subtitle": "12×168 · 168g"
@@ -2494,7 +2501,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 11.17,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "12X159 · 159.5 GRM",
     "displayName": "Cadbury Dairy Milk Mini Oreo",
     "subtitle": "12×159 · 160g"
@@ -2508,7 +2515,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 24.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X12X35 · 35G",
     "displayName": "Cadbury Dairy Milk Oreo",
     "subtitle": "12×12×35 · 35g"
@@ -2522,7 +2529,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 10.25,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "12X24X9 · 9GM",
     "displayName": "Cadbury Dairy Milk Small Lupe",
     "subtitle": "12×24×9 · 9g"
@@ -2550,7 +2557,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 56.75,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X8X24 · 35 GRM",
     "displayName": "Toblerone Chocolate",
     "subtitle": "1×8×24 · 35g"
@@ -2564,7 +2571,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 77.0,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X4X20X100 · 100 GRM",
     "displayName": "Toblerone Milk Chocolate",
     "subtitle": "1×4×20×100 · 100g"
@@ -2578,7 +2585,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 49.0,
     "piecePrice": 4.1,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X12X95 · 95GM",
     "displayName": "Cadbury Dairy Milk Oreo",
     "subtitle": "6×12×95 · 95g"
@@ -2606,7 +2613,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 86.67,
     "piecePrice": 7.22,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X12 · 230 GRM",
     "displayName": "Cadbury Dairy Milk Fruit & Nut",
     "subtitle": "6×12 · 230g"
@@ -2620,7 +2627,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 86.67,
     "piecePrice": 7.22,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X12 · 230 GRM",
     "displayName": "Cadbury Dairy Milk Hazelnut",
     "subtitle": "6×12 · 230g"
@@ -2634,7 +2641,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 86.67,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "6X12 · 230 GRM",
     "displayName": "Cadbury Dairy Milk Plain",
     "subtitle": "6×12 · 230g"
@@ -2648,7 +2655,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 7.25,
     "piecePrice": null,
     "brand": "Cadbury",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "32 GRM",
     "displayName": "Cadbury Flake",
     "subtitle": "Pack of 4×36 · 32g"
@@ -2662,7 +2669,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 48.9,
     "piecePrice": null,
     "brand": "Nestle",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X24X36 · 36.5 GM",
     "displayName": "Kit Kat 4 Finger Arabic",
     "subtitle": "12×24×36 · 37g"
@@ -2676,7 +2683,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 25.21,
     "piecePrice": null,
     "brand": "Nestle",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X20X12X38 · 38 GRM",
     "displayName": "Kit Kat Chunky English",
     "subtitle": "1×20×12×38 · 38g"
@@ -2690,7 +2697,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 7.5,
     "brand": "Nestle",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "36X4X36 · 36.5GM",
     "displayName": "Kit Kat Value Pack",
     "subtitle": "36×4×36 · 37g"
@@ -2704,7 +2711,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 60.63,
     "piecePrice": null,
     "brand": "Nestle",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X8X24 · 40GRM",
     "displayName": "Kit Kat Chunky",
     "subtitle": "1×8×24 · 40g"
@@ -2718,7 +2725,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 79.75,
     "piecePrice": null,
     "brand": "Nestle",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "8X24X42 · 42G",
     "displayName": "Kit Kat Chunky Lotus Arabic",
     "subtitle": "8×24×42 · 42g"
@@ -2732,7 +2739,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 66.65,
     "piecePrice": null,
     "brand": "Nestle",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "8X30 · 40 GRM",
     "displayName": "Nestle Kit Kat Chunky Offer",
     "subtitle": "8×30 · 40g",
@@ -2747,7 +2754,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 16.35,
     "piecePrice": null,
     "brand": "Nestle",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "32X18X17 · 7GRM",
     "displayName": "Nestle Kit Kat Small",
     "subtitle": "32×18×17 · 7g"
@@ -2761,7 +2768,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 34.38,
     "piecePrice": null,
     "brand": "Nestle",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X16X36 · 20.5 GR",
     "displayName": "Nestle Kit Kat Tray Arabic",
     "subtitle": "1×16×36 · 21g"
@@ -2775,7 +2782,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 51.7,
     "piecePrice": null,
     "brand": "Nestle",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "10X54X12 · 12G",
     "displayName": "Nestle Milky Bar",
     "subtitle": "10×54 · 12g"
@@ -2789,7 +2796,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 35.0,
     "piecePrice": null,
     "brand": "Nestle",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "18X36X20 · 20.5 GRM",
     "displayName": "Nestle Kit Kat 2 Finger",
     "subtitle": "18×36×20 · 21g"
@@ -2803,7 +2810,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 49.93,
     "piecePrice": null,
     "brand": "Nestle",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "4X12X36 · 36.5 GRM",
     "displayName": "Nestle Kit Kat 4 Finger",
     "subtitle": "4×12×36 · 37g"
@@ -2817,7 +2824,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 26.5,
     "brand": "Nestle",
-    "category": "Chocolates",
+    "category": "Boxed & Praline Chocolates",
     "packaging": "6X410 · 410GM",
     "displayName": "Nestle Quality Street",
     "subtitle": "6×410g"
@@ -2831,7 +2838,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 27.5,
     "brand": "Nestle",
-    "category": "Chocolates",
+    "category": "Boxed & Praline Chocolates",
     "packaging": "8X550 · 550GM",
     "displayName": "Nestle Quality Street",
     "subtitle": "8×550g"
@@ -2943,7 +2950,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 28.0,
     "piecePrice": null,
     "brand": "Choki Choki",
-    "category": "Chocolates",
+    "category": "Chocolate Spreads",
     "packaging": "6X24X3X12 · 12GM",
     "displayName": "Choki Choki Chocolate Stick",
     "subtitle": "6×24×3 · 12g"
@@ -2971,7 +2978,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 66.75,
     "piecePrice": null,
     "brand": "Hershey",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "1X12X24 · 40GRM",
     "displayName": "Hershey's Chocolate Bar",
     "subtitle": "1×12×24 · 40g"
@@ -2985,7 +2992,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 66.75,
     "piecePrice": null,
     "brand": "Hershey",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "12X24",
     "displayName": "Hershey's Cookies & Cream",
     "subtitle": "12×24"
@@ -2999,7 +3006,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 36.44,
     "brand": "Hershey",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "16X100 · 100G",
     "displayName": "Hershey's Kisses Cookies",
     "subtitle": "16×100 · 100g"
@@ -3071,7 +3078,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 42.17,
     "piecePrice": null,
     "brand": "Hershey",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "16X18X47 · 47 GR",
     "displayName": "Reese's Nut Bar",
     "subtitle": "16×18×47 · 47g"
@@ -3085,7 +3092,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 16.0,
     "piecePrice": null,
     "brand": "Hershey",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "24X6X42 · 42 GR",
     "displayName": "Reese's Peanut Butter Cup Offer",
     "subtitle": "24×6×42 · 42g",
@@ -3128,7 +3135,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 8.95,
     "brand": "Lindt",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "21X100 · 100G",
     "displayName": "Lindt Classic Milk Chocolate",
     "subtitle": "21×100 · 100g"
@@ -3142,7 +3149,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 9.43,
     "brand": "Lindt",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "20X100 · 100G",
     "displayName": "Lindt Lindor Caramel",
     "subtitle": "20×100 · 100g"
@@ -3156,7 +3163,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 9.72,
     "brand": "Lindt",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "18X100 · 100G",
     "displayName": "Lindt Lindor Salted Caramel",
     "subtitle": "18×100 · 100g"
@@ -3184,7 +3191,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 65.0,
     "piecePrice": null,
     "brand": "Ulker",
-    "category": "Chocolates",
+    "category": "Chocolate Spreads",
     "packaging": "6X24X40 · 40GM",
     "displayName": "Ulker Cokorem Tube",
     "subtitle": "6×24×40 · 40g"
@@ -3324,7 +3331,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 16.0,
     "piecePrice": null,
     "brand": "Sando",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "12X24X32 · 32GR",
     "displayName": "Sando Chocolate Wafer",
     "subtitle": "12×24×32 · 32g"
@@ -3548,7 +3555,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 16.5,
     "brand": "Mars",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "12X400 · 400GR",
     "displayName": "Galaxy Mix Minis",
     "subtitle": "12×400g"
@@ -3660,7 +3667,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 5.5,
     "brand": "Casabite",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "10X80 · 80GM",
     "displayName": "Casabite Chocolate Hazelnut Kunafa",
     "subtitle": "10×80 · 80g"
@@ -3688,7 +3695,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 1.19,
     "brand": "Casabite",
-    "category": "Chocolates",
+    "category": "Chocolate Bars",
     "packaging": "48X20 · 20GM",
     "displayName": "Casabite Chocolate Hazelnut Kunafa",
     "subtitle": "48×20 · 20g"
@@ -3786,7 +3793,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 103.0,
     "piecePrice": 2.8,
     "brand": "Hershey",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "12X36X42 · 42GM",
     "displayName": "Reeses Cup",
     "subtitle": "12×36×42 · 42g"
@@ -3982,7 +3989,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": 23.5,
     "piecePrice": null,
     "brand": "Alpenliebe",
-    "category": "Chocolates",
+    "category": "Chocolate Countlines",
     "packaging": "12X20X32 · 32.4GM",
     "displayName": "Alpenliebe Milk Chew Rich & Creamy",
     "subtitle": "12×20×32 · 32g"
@@ -3996,7 +4003,7 @@ export const PRODUCTS: Product[] = [
     "outerPrice": null,
     "piecePrice": 6.21,
     "brand": "Kinder",
-    "category": "Chocolates",
+    "category": "Wafers",
     "packaging": "5X20",
     "displayName": "Kinder Tronky",
     "subtitle": "5×20"
