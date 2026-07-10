@@ -12,6 +12,13 @@ export interface Product {
   category: string;
   packaging: string;
   is_promo?: boolean;
+  // Optional enrichment fields (rendered only when populated)
+  ingredients?: string;
+  nutrition?: string;
+  origin?: string;
+  storage?: string;
+  shelfLife?: string;
+  cartonQty?: string;
 }
 
 export const PRODUCTS: Product[] = [
