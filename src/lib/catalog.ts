@@ -72,7 +72,7 @@ export function getProduct(id: string): Product | undefined {
 }
 
 export function searchProducts(q: string, limit = 50): Product[] {
-  const term = q.trim().toLowerCase();
+  const term = q.trim().toLowerCase().replace(/[·\-_/]+/g, " ").replace(/\s+/g, " ").trim();
   if (!term) return [];
   const tokens = term.split(/\s+/);
   const matches: Product[] = [];
@@ -84,6 +84,43 @@ export function searchProducts(q: string, limit = 50): Product[] {
     }
   }
   return matches;
+}
+
+// Extract weight in grams from subtitle/packaging strings like "24×4 · 269g" or "200 GR"
+export function extractGrams(p: Product): number | null {
+  const src = `${p.subtitle ?? ""} ${p.packaging ?? ""}`.toLowerCase();
+  const m = src.match(/(\d+(?:\.\d+)?)\s*(kg|g|gr)\b/);
+  if (!m) return null;
+  const n = parseFloat(m[1]);
+  return m[2] === "kg" ? n * 1000 : n;
+}
+
+export type WeightBucket = "u50" | "50to150" | "150to300" | "o300";
+export function weightBucket(p: Product): WeightBucket | null {
+  const g = extractGrams(p);
+  if (g == null) return null;
+  if (g < 50) return "u50";
+  if (g < 150) return "50to150";
+  if (g < 300) return "150to300";
+  return "o300";
+}
+export const WEIGHT_LABEL: Record<WeightBucket, string> = {
+  u50: "Under 50g",
+  "50to150": "50–150g",
+  "150to300": "150–300g",
+  o300: "Over 300g",
+};
+
+export type PackType = "Tray" | "Box" | "Pouch" | "Bar" | "Jar" | "Tin" | "Other";
+export function packType(p: Product): PackType {
+  const s = `${p.displayName} ${p.packaging} ${p.subtitle}`.toLowerCase();
+  if (/\btray\b|\bt\d/.test(s)) return "Tray";
+  if (/\bjar\b/.test(s)) return "Jar";
+  if (/\btin\b/.test(s)) return "Tin";
+  if (/\bpouch\b|\bbag\b/.test(s)) return "Pouch";
+  if (/\bbox\b/.test(s)) return "Box";
+  if (/\bbar\b|\bstick\b/.test(s)) return "Bar";
+  return "Other";
 }
 
 // Exclude Accessories and Beverages from public-facing category lists
