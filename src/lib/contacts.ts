@@ -18,12 +18,23 @@ export function whatsappLink(phone: string, text: string) {
 }
 
 export function buildEnquiryMessage(
-  items: { name: string; itemCode: string; qty: number }[],
+  items: { name: string; brand?: string; itemCode: string; weight?: string; qty: number }[],
 ) {
   const lines = items
-    .map((i) => `• ${i.name}${i.itemCode ? ` (${i.itemCode})` : ""} — Qty: ${i.qty}`)
+    .map((i) => {
+      const parts: string[] = [`• ${i.name}`];
+      const meta: string[] = [];
+      if (i.brand) meta.push(i.brand);
+      if (i.weight) meta.push(i.weight);
+      if (meta.length) parts[0] += ` — ${meta.join(" · ")}`;
+      const tail: string[] = [];
+      if (i.itemCode) tail.push(`SKU: ${i.itemCode}`);
+      tail.push(`Qty: ${i.qty}`);
+      parts.push(`   ${tail.join(" · ")}`);
+      return parts.join("\n");
+    })
     .join("\n");
-  return `Hello,\n\nI am interested in the following products:\n\n${lines}\n\nPlease contact me regarding pricing and availability.\n\nThank you.`;
+  return `Hello Al Khaas,\n\nI'd like to enquire about the following products:\n\n${lines}\n\nPlease confirm availability and final pricing.\n\nThank you.`;
 }
 
 export function buildVisitMessage(v: {
