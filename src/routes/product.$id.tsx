@@ -196,7 +196,7 @@ function ProductPage() {
       <ContactPicker
         open={picker}
         onClose={() => setPicker(false)}
-        message={buildEnquiryMessage([{ name: product.displayName, itemCode: product.itemCode, qty }])}
+        message={buildEnquiryMessage([{ name: product.displayName, brand: product.brand, itemCode: product.itemCode, weight: product.subtitle, qty }])}
       />
     </AppShell>
   );
