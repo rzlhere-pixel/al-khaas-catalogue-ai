@@ -92,7 +92,17 @@ function ProductPage() {
       <section className="mx-auto max-w-7xl px-6 py-8 sm:py-12">
         <div className="grid gap-10 lg:grid-cols-2">
           <div>
-            <ProductImage productId={product.id} name={product.displayName} brand={product.brand} className="aspect-square w-full" rounded="rounded-3xl" />
+            <button
+              type="button"
+              onClick={() => setZoom(true)}
+              className="group relative block w-full overflow-hidden rounded-3xl"
+              aria-label="Zoom image"
+            >
+              <ProductImage productId={product.id} name={product.displayName} brand={product.brand} className="aspect-square w-full" rounded="rounded-3xl" />
+              <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-[10px] font-medium text-white opacity-0 backdrop-blur transition group-hover:opacity-100">
+                <ZoomIn className="h-3 w-3" /> Zoom
+              </span>
+            </button>
             <AiImageLookup product={product} />
           </div>
           <div>
